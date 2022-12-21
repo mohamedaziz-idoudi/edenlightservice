@@ -1,0 +1,28 @@
+.actualites {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    background-image: url(../../assets/bg.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 580px;
+    z-index: 1;
+    left: 0;
+}
+.eden__part_med {
+    
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../assets/rishab-lamichhane-r1Y2npWGKhU-unsplash.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    left: 0;
+}
+.eden__services {
+    z-index: 10;
+}

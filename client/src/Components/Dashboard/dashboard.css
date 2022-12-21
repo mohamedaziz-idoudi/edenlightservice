@@ -1,0 +1,120 @@
+.eden__dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  border: 2px solid var(--color-blue);
+  border-radius: 25px;
+  margin: 6rem;
+}
+.eden__dashboard-sidebar {
+    background: var(--color-blue-light);
+    width: 100%;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,30%);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 !important;
+  }
+  .eden__dashboard-sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-blue);
+    font-family: var(--font-OS);
+  }
+  .eden__dashboard-sidebar img {
+    position: relative;
+    width: 100%;
+    max-width: 40px;
+  }
+  .eden__dashboard-content {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+  }
+  .eden__dashboard-content_customer {
+    overflow: scroll;
+    width: 80%;
+    height: 100vh;
+  }
+  .nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+    color: var(--color-blue);
+  }
+  
+  .nav-text a {
+    text-decoration: none;
+    color: var(--color-blue);
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+  }
+  
+  .nav-text a:hover {
+    background-color: var(--color-main);
+  }
+  
+  .nav-menu-items {
+    width: 100%;
+    display: flex;
+
+  }
+  
+  .navbar-toggle {
+    background-color: var(--gradient);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .nav_line {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+  }
+  .nav_line:hover {
+    color: white;
+  }
+  .blog_area {
+    width: 100%;
+    height: 50vh;
+    overflow: scroll;
+  }
+  .eden__dashboard-content label {
+    font-family: var(--font-OS);
+    color: var(--color-blue);
+    width: 100%;
+  }
+  @media (max-width:750px)
+  {
+    .eden__dashboard {
+      margin: 8rem 1rem;
+    }
+  }

@@ -1,0 +1,58 @@
+.eden__med_header {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url(../../assets/unique.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.eden__med_header-title {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-blue);
+    padding: 3rem;
+    color: white;
+    font-family: var(--font-family);
+    text-align: center;
+    opacity: 0.8;
+}
+.eden__med_header-title h1 {
+    font-size: 4em;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.eden__med_header-title h3 {
+    font-size: 2.5em;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 20px;
+}
+@media (max-width: 1050px)
+{
+    .eden__med_header {
+        align-items: center;
+    }
+}
+@media (max-width: 750px) {
+    .eden__med_header-title
+    {
+        padding: 2rem;
+    }
+    .eden__med_header-title h1 {
+        font-size: 3.5em;
+    }
+    .eden__med_header-title h3 {
+        letter-spacing: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .eden__med_header {
+        justify-content: end;
+    }
+}

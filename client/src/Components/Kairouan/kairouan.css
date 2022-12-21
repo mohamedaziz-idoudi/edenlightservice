@@ -1,0 +1,108 @@
+.eden__kairouan_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.eden__kairouan_header {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/Tourism/Kairouan.webp");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.eden__kairouan_header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    border: 4px solid white;
+    font-family: var(--font-family);
+    color: white;
+}
+.eden__kairouan_header-content h1 {
+    font-size: 4em;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+.eden__kairouan_header-content h3 {
+    letter-spacing: 5px;
+}
+.eden__kairouan_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.eden__kairouan_content-item {
+    margin: 0 2rem;
+}
+.eden__kairouan_content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.eden__kairouan_content-right_buttom {
+    margin-top: -2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background: var(--color-blue-light);
+    font-family: var(--font-family);
+    text-align: center;
+    opacity: 0.9;
+}
+.eden__kairouan_content-right_buttom h1 {
+    font-size: 3em;
+    font-weight: 800;
+    color: var(--color-blue);
+    letter-spacing: 1px;
+}
+.eden__kairouan_content-right_buttom p {
+    font-weight: 300;
+    color: var(--color-dark-grey);
+    font-style: normal;
+}
+.eden__kairouan_content-left img {
+    display: flex;
+    width: 100%;
+}
+
+.eden__kairouan_content-right_top img {
+    width: 100%;
+}
+@media (max-width: 1050px)
+{
+    .eden__kairouan_content{
+        flex-direction: column;
+    }
+    .eden__kairouan_content-item {
+        margin: 2rem 0;
+    }
+}
+@media (max-width: 650px)
+{
+    .eden__kairouan_header-content {
+        padding: 2rem;
+    }
+    .eden__kairouan_content-right_buttom h1{
+        font-size: 2em;
+    }
+    .eden__kairouan_content {
+        padding: 1rem !important;
+    }
+    .eden__kairouan_content-left img {
+        display: none;
+    }
+}
+

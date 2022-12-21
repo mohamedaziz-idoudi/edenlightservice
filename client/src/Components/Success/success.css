@@ -1,0 +1,103 @@
+.eden__success
+{
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.eden__success_header {
+    height: 550px;
+    width: 100%;
+    background-image: url("../../assets/success.webp");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.eden__success_header-titles {
+    position: relative;
+    top: 60%;
+}
+.eden__success_header h1 {
+    font-family: var(--font-OS);
+    font-size: 4em;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--color-blue-light);
+    text-align: center;
+    letter-spacing: 2px;
+}
+.eden__success-content {
+    display: flex;
+    flex-direction: row;
+}
+.eden__success-content_right_image img {
+    width: 40%;
+}
+.eden__success-content_right-test_image img {
+    width: 40%;
+}
+.eden__success-content_left {
+    display: flex;
+    flex-direction: column;
+}
+.eden__success-content_right {
+    display: flex;
+    flex-direction: row;
+}
+.eden__success_paragraph {
+    margin: 0 1.5rem;
+    
+}
+.eden__success_paragraph h2 {
+    font-family: var(--font-OS);
+    font-size: 2.5em;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--color-dark-grey);
+}
+.eden__success_paragraph p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+.eden__success-content_right-text p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+
+.eden__success_image2 img {
+    width: 60%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -6rem;
+    border-radius: 10px;
+
+}
+@media (max-width: 950px)
+{
+    .eden__success-content {
+        flex-direction: column;
+    }
+    .eden__success_header h1 {
+        font-size: 3em;
+    }
+    .eden__success_image2 img {
+        width: 100%;
+    }
+}
+@media (max-width: 650px)
+{
+    .eden__success-content {
+        padding: 2rem !important;
+    }
+    .eden__success_header h1 {
+        font-size: 2.2em;
+    }
+    
+}

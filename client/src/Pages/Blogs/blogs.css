@@ -1,0 +1,92 @@
+.blogs__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-OS);
+    
+}
+.blogs__container-header {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url("../../assets/blog.jpg");
+    background-size: cover;
+    background-position-y:center;
+    background-attachment: fixed;
+}
+.blogs__container-header h1 {
+    position: relative;
+    width: 10%;
+    font-size: 4em;
+    text-align: justify;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: white;
+    right: 20%;
+}
+.blogs__container-post {
+    padding: 1rem;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    border-radius: 25px;
+    background: white;
+}
+.blogs__container-post img {
+    border-radius: 25px;
+}
+.blogs__container-post:hover {
+    background: rgb(155, 207, 223);
+    transition: color 0.5;
+}
+.blogs__container-post_caption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blogs__container-post_caption h2 {
+    font-family: var(--font-OS);
+    font-size: 2em;
+    letter-spacing: 1px;
+    color: var(--color-blue);
+}
+.blogs__container-post_caption h4 {
+    font-family: var(--font-OS);
+    color: var(--color-blue);
+    font-size: 1.2em;
+    letter-spacing: 5px;
+}
+.blogs__container-post_caption p {
+    font-family: var(--font-OS);
+    font-size: 1em;
+}
+.blogs__container-post_caption button {
+    border: none;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid var(--color-blue);
+    font-family: var(--font-OS);
+    color: var(--color-blue);
+    background: none;
+    
+    
+}
+.blogs__container-content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,40%);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(232, 240, 244);
+}

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('http://fonts.cdnfonts.com/css/ethnocentric');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+:root {
+  --font-family: 'Open Sans',sans-serif;
+  --font-OS: 'Open Sans',sans-serif;
+  --font-ethn: 'Ethnocentric Rg', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --gradient-text: linear-gradient(89.97deg, #4478B6 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  
+  --color-blue: #4478B6;
+  --color-blue-light : #C4EEF2;
+  --color-grey-light: #95B1AF;
+  --color-dark-grey: #324B4B;
+  --color-med-blue: #25E2DC;
+  --color-blue-pal: #009BCE;
+  --color-green: #A6CCA6;
+  --color-green-light: #C1E1C1;
+  --color-orange: #BA5B2C;
+}

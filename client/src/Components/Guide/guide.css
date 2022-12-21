@@ -1,0 +1,72 @@
+.eden__guide_container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.guide__container-caption {
+    margin-left: 1.5rem;
+    width: 50%;
+}
+.guide__header {
+    width: 100%;
+    font-family: var(--font-family);
+}
+.guide__header h3 {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--color-blue);
+}
+.guide__header p {
+    position: relative;
+    left: 5%;
+    font-size: 1.2em;
+    color: var(--color-dark-grey);
+    font-style: normal;
+}
+.guide__container-caption h1 {
+    position: relative;
+    font-family: var(--font-OS);
+    font-weight: 800;
+    font-size: 3em;
+    font-style: normal;
+    color: var(--color-blue);
+    text-align: center;
+    letter-spacing: 1px;
+    
+}
+.guide__container-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 50%;
+    border: 5px solid var(--color-blue-light);
+}
+@media screen and (max-width:700px)
+{
+    .guide__container {
+        flex-direction: column;
+    }
+    .guide__container-caption {
+        width: 100%;
+    }
+    .guide__container-caption h1 {
+        font-size: 2.7em;
+    }
+    
+}
+@media screen and (max-width:550px)
+{
+    
+    .guide__container-caption h1 {
+        font-size: 2em;
+    }
+}

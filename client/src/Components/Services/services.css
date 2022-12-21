@@ -1,0 +1,94 @@
+.services__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-family: var(--font-family);
+}
+.accordio-panel {
+    border-radius: 25px;
+    width: 50%;
+    padding: 2rem;
+    opacity: 0.8;
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
+.grey {
+    background: var(--color-grey-light);
+}
+.dgrey {
+    background: var(--color-dark-grey);
+}
+.bgreen {
+    background: var(--color-med-blue);
+}
+.services__container input {
+    display: none;
+}
+.services__container label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+    padding-block: 7px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.25;
+}
+.services__container label:hover, 
+.services__container input:checked + label {
+    color: var(--color-blue);
+}
+.services__container i {
+    color: var(--color-blue);
+}
+.services__container close {
+    display: none;
+}
+.services__container input:checked + label .close {
+    display: block;
+}
+.services__container input:checked + label .open {
+    display: none;
+}
+.accordion-body {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.25 ease-in-out;
+}
+.accordion-answer {
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top left;
+    transition: opacity 0.75, transform 0.15s;
+
+}
+.services__container input:checked ~ .accordion-body {
+    height: 170px;
+}
+.services__container input:checked ~ .accordion-body
+.accordion-answer {
+    opacity: 1;
+    transform: scale(1);
+}
+@media (max-width: 950px) {
+    .accordio-panel {
+        width: 100%;
+    }
+}
+@media (max-width: 950px) {
+    .services__container {
+        padding: 1rem !important;
+    }
+    .services__container input:checked ~ .accordion-body {
+        height: 300px;
+    }
+}

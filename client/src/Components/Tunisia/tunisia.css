@@ -1,0 +1,104 @@
+.tunisia__container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/globe.webp");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.tunisia__container-item {
+    margin: 1rem;
+    
+}
+.tunisia__container-left {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-OS);
+    font-style: normal;
+    background: white;
+    border-radius: 20px;
+    opacity: 0.9;
+
+}
+.tunisia__container-left h1 {
+    font-family: var(--font-OS);
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--color-blue);
+
+}
+.tunisia__container-left p {
+    font-family: var(--font-OS);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-dark-grey);
+}
+.tunisia__container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.tunisia__container-right_top, .tunisia__container-right_buttom {
+    display: flex;
+    flex-direction: row;
+}
+.tunisia__container-right_item-img {
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.tunisia__container-right_item-img img {
+    width: 40%;
+}
+.tunisia__container-right_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 25px;
+    background: white;
+    font-family: var(--font-OS);
+    text-align: center;
+    opacity: 0.9;
+}
+.tunisia__container-right_item-caption h3 {
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--color-blue);
+    letter-spacing: 2px;
+}
+.tunisia__container-right_item-caption h4 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--color-dark-grey);
+    font-style: normal;
+}
+@media (max-width: 1050px)
+{
+    .tunisia__container {
+        flex-direction: column;
+    }
+}
+@media (max-width: 560px)
+{
+    .tunisia__container-right_top, .tunisia__container-right_buttom
+    {
+        flex-direction: column;
+    }
+    .tunisia__container {
+        padding: 2rem !important;
+    }
+}

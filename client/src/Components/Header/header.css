@@ -1,0 +1,89 @@
+.eden__header_container {
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+.Titles {
+  width: 100%;
+  font-family: var(--font-OS);
+  font-style: normal;
+}
+.Titles h1 {
+  font-size: 5em;
+  font-weight: 800;
+  letter-spacing: 10px;
+  color: white;
+}
+.Titles h4 {
+  font-size: 3em;
+  font-weight: 700;
+  color: white;
+}
+.eden__header_container-doctors {
+  font-family: var(--font-OS);
+  font-style: normal;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 3px;
+}
+.eden__header_container-doctors button {
+  position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    font-family: var(--font-family);
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-style: normal;
+    overflow: hidden;
+  
+}
+.eden__header_container-doctors button::before {
+  content: "";
+    position: absolute;
+    border-radius: 10px;
+    width: 0%;
+    height: 100%;
+    background: var(--color-blue);
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: all 0.3s;
+}
+.eden__header_container-doctors button:hover:before {
+  width: 10%;
+}
+@media screen and (max-width: 700px) {
+  .eden__header_container {
+    margin-top: 9rem !important;
+  }
+  .Titles h1 {
+    font-size: 3em;
+  }
+  .Titles h4 {
+    font-size: 2.5em;
+  }
+  .eden__header_container-doctors button {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .eden__header_container {
+    margin: 3rem 1rem 0 1rem !important;
+  }
+  .Titles h1 {
+    font-size: 2.5em;
+  }
+  .Titles h4 {
+    font-size: 2em;
+  }
+  .eden__header_container-doctors p {
+    font-size: 1.2em;
+  }
+}
