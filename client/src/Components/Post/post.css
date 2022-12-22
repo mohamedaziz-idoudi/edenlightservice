@@ -31,6 +31,8 @@
     max-width: 800px;
 }
 .post__side {
+    height: 220vh;
+    padding: 2rem 0 !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,4 +46,20 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+}
+.single__video iframe {
+    width: 100%;
+    max-height: 300px;
+    max-width: 450px;
+    margin-top: 2rem;
+}
+@media (max-width: 1300px) {
+    .single {
+        flex-direction: column;
+    }
+}
+@media (max-width: 900px) {
+    .single__content {
+        padding: 1rem !important;
+    }
 }

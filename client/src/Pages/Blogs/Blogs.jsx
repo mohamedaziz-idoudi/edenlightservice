@@ -6,11 +6,11 @@ import './blogs.css';
 const Blogs = () => {
   const navigate = useNavigate();
   const [postList, setPostList] = useState([]);
-  useEffect(() => {
+  useEffect((postList) => {
     axios.get("http://localhost:3001/api/getposts").then((data) => {
       setPostList(data.data);
     })
-  })
+  },[postList])
   return (
     <div className='blogs__container'>
       <div className="blogs__container-header">
@@ -20,7 +20,7 @@ const Blogs = () => {
         {Array.from(postList).map((val, key) => {
           return (
             <div className='blogs__container-post' key={key}>
-              <img src={require(`../../assets/uploads/${val.image}`)} alt="placeholder" width="450px" />
+              <img src={require(`../../assets/uploads/${val.image}`)} alt="placeholder" />
               <div className="blogs__container-post_caption">
                 <h4>{new Date(val.date).toDateString()}</h4>
                 <h2>{val.title}</h2>

@@ -27,12 +27,12 @@ const Post = () => {
                 </div>
                 <div className="post__content">
                     <p dangerouslySetInnerHTML={{ __html: post.paragraph }} />
-                    <p dangerouslySetInnerHTML={{ __html: post.video }} />
+                    <p className='single__video' dangerouslySetInnerHTML={{ __html: post.video }} />
                 </div>
             </div>
             <div className="post__side">
                 <h2>Other posts you may like</h2>
-                {Array.from(postList).map((val, key) => {
+                {Array.from(postList).slice(0, 3).map((val, key) => {
                     return (
                         <div className='post__side-item' key={key} >
                             {val.image && <img src={require(`../../assets/uploads/${val?.image}`)} alt="placeholder" width="300px" />}
