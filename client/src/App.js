@@ -1,7 +1,7 @@
 import React, { useState, createContext } from 'react'
 import ReactDOM from 'react-dom/client';
 import { Navbar, Footer, Form, Dashboard, Posted, Post } from './Components';
-import { Home, Partners, MedicalTour, AboutUs, Service, Admin, Redirect,Blogs } from './Pages';
+import { Home, Partners, MedicalTour, AboutUs, Service, Admin, Redirect,Blogs, Pack } from './Pages';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './app.css';
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
@@ -26,6 +26,7 @@ const App = () => {
             <Route path='/redirect' element={<Redirect />} />
             <Route path='/posted' element={<Posted />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/packs" element={<Pack />} />
             <Route path='/post/:postID' exact element={<Post />} />
             <Route path='/dashboard' element={<ProtectedRoute setAuth={setAuth} isAuth={isAuth} Component={Dashboard} />} />
           </Routes>

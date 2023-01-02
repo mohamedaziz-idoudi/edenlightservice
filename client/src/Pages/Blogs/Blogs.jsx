@@ -6,11 +6,11 @@ import './blogs.css';
 const Blogs = () => {
   const navigate = useNavigate();
   const [postList, setPostList] = useState([]);
-  useEffect((postList) => {
+  useEffect(() => {
     axios.get("http://localhost:3001/api/getposts").then((data) => {
       setPostList(data.data);
     })
-  },[postList])
+  })
   return (
     <div className='blogs__container'>
       <div className="blogs__container-header">

@@ -6,3 +6,4 @@ export {default as Service} from './Service/Service';
 export {default as Admin} from './Admin/Admin';
 export {default as Redirect} from './Redirect/Redirect';
 export {default as Blogs} from './Blogs/Blogs';
+export {default as Pack} from './Packs/Pack';
