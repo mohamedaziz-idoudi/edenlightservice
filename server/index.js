@@ -163,6 +163,6 @@ app.get("/api/getPost/:id",(req,res) => {
 
 
 
-app.listen(3001, () => {
-    console.log("Running on server");
+app.listen(process.env.PORT ||3001, () => {
+    console.log("Running on server!");
 });
