@@ -7,7 +7,7 @@ const Blogs = () => {
   const navigate = useNavigate();
   const [postList, setPostList] = useState([]);
   useEffect(() => {
-    axios.get("http://api.edenlightservice.com/api/getposts").then((data) => {
+    axios.get("http://89.116.228.82/api/getposts").then((data) => {
       setPostList(data.data);
     })
   })
@@ -20,7 +20,7 @@ const Blogs = () => {
         {Array.from(postList).map((val, key) => {
           return (
             <div className='blogs__container-post' key={key}>
-              <img src={require(`../../assets/uploads/${val.image}`)} alt="placeholder" />
+              <img src={require(`../../assets/${val.image}`)} alt="placeholder" />
               <div className="blogs__container-post_caption">
                 <h4>{new Date(val.date).toDateString()}</h4>
                 <h2>{val.title}</h2>

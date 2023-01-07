@@ -8,10 +8,9 @@
 
 .eden__packs-header {
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,40%);
-    justify-content: center;
+    height: 400px;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
     background-image: url('../../assets/Packs/packs_bg.jpg');
@@ -27,7 +26,33 @@
     color: white;
     text-align: justify;
 }
-
+.eden__packs_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.eden__packs-item_content-section {
+    border: 2px solid var(--color-blue);
+    border-radius: 50px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.eden__packs-item_content {
+    display: grid;
+    grid-template-columns: repeat(2,40%);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.eden__packs-item_content-section h4 {
+    color: var(--color-blue);
+    letter-spacing: 3px;
+}
 .eden__packs-header_pack {
     padding: 2rem;
     background: linear-gradient(265.92deg, #D9D9D9 -5.21%, rgba(217, 217, 217, 0) 105.22%);
@@ -37,6 +62,21 @@
     justify-content: center;
     align-items: center;
     font-family: var(--font-OS);
+}
+.eden__button-blue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.eden__button-blue button {
+    border: none;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid var(--color-blue);
+    font-family: var(--font-OS);
+    color: var(--color-blue);
+    background: none;
 }
 .eden__form-button button {
     position: relative;
@@ -133,6 +173,76 @@
 }
 .eden__packs img {
     width: 100%;
+}
+.eden__packs_item-romeo {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url("../../assets/Packs/you.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y:center;
+    height: 100%;
+
+}
+.eden__packs-content_item-title-romeo h2 {
+    font-size: 2.5em;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+.eden__packs-content_item-body-romeo {
+    padding: 2rem;
+    background: linear-gradient(265.92deg, #D9D9D9 -5.21%, rgba(217, 217, 217, 0) 105.22%);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.eden__packs-content_item-schedule-romeo {
+    font-family: var(--font-OS);
+    text-align: center;
+}
+.eden__packs-content_item-schedule-romeo h3 {
+    font-size: 1.7em;
+    color: white;
+    font-weight: 500;
+}
+.eden__packs_item-romeo ul {
+    list-style: none;
+}
+.eden__packs-content_item-paragraph-romeo {
+    text-align: center;
+    font-family: var(--font-OS);
+}
+.eden__packs-content_item-paragraph-romeo h3 {
+    font-size: 1.7em;
+    color: white;
+    font-weight: 500;
+}
+.eden__packs-content_item-paragraph-romeo h5 {
+    font-size: 1.7em;
+    color: white;
+    font-weight: 500;
+}
+.form__button-romeo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.form__button-romeo button {
+    border: none;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid white;
+    font-family: var(--font-OS);
+    color: white;
+    background: none;
 }
 @media (max-width:950px) {
     .eden__packs-content_item-body_pic {

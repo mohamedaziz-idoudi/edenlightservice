@@ -116,7 +116,7 @@ app.post("/api/insert_business", (req, res) => {
 
 const storage = multer.diskStorage({
     destination: (req, file, callBack) => {
-        callBack(null, '../client/src/assets/uploads')
+        callBack(null, '../client/src/assets')
     },
     filename: (req, file, callBack) => {
         callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))

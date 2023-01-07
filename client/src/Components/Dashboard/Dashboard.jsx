@@ -30,7 +30,7 @@ const Dashboard = ({setAuth}) => {
     try {
       const formData= new FormData();
       formData.append("file",file);
-      const res = await axios.post("http://api.edenlightservice.com/api/upload",formData);
+      const res = await axios.post("http://89.116.228.82/api/upload",formData);
       return res.data;
     }
     catch(ex) {
@@ -45,26 +45,26 @@ const Dashboard = ({setAuth}) => {
     setVafter(true);
     const imgURL = await uploadFile();
     console.log(imgURL);
-    axios.post("http://api.edenlightservice.com/api/post",{title:title, paragraph:text, image:imgURL, video:video});
+    axios.post("http://89.116.228.82/api/post",{title:title, paragraph:text, image:imgURL, video:video});
 
   }
   const refreshCustomer = () => {
-    Axios.get("http://api.edenlightservice.com/api/get_cus").then((data) => {
+    Axios.get("http://89.116.228.82/api/get_cus").then((data) => {
       setCustomerList(data.data);
     })
   }
   const refreshBusiness = () => {
-    Axios.get("http://api.edenlightservice.com/api/get_bus").then((data) => {
+    Axios.get("http://89.116.228.82/api/get_bus").then((data) => {
       setBusinessList(data.data);
 
     })
   }
   useEffect((e) => {
     setAuth(true);
-    Axios.get("http://api.edenlightservice.com/api/get_cus").then((data) => {
+    Axios.get("http://89.116.228.82/api/get_cus").then((data) => {
       setCustomerList(data.data);
     });
-    Axios.get("http://api.edenlightservice.com/api/get_bus").then((data) => {
+    Axios.get("http://89.116.228.82/api/get_bus").then((data) => {
       setBusinessList(data.data);
     })
     if(e && e.preventDefault()) {e.preventDefault()}
