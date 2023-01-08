@@ -54,10 +54,12 @@ const Pack = () => {
                             Blood test,
                             Neuro-pediatrician or hematologist consultation if necessary</p>
                     </section>
-                    <h5>For logistic details</h5>
-                    <div className='eden__button-blue'>
-                        <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: "smooth" }); }}>Contact Us</button>
-                        <button onClick={() => { navigate('/medicaltourism'); window.scrollTo({ top: 0, behavior: "smooth" }); }}>Visit our Medical Tourism Page</button>
+                    <div className="eden__packs-logistics">
+                        <h5>For logistic details</h5>
+                        <div className='eden__button-blue'>
+                            <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: "smooth" }); }}>Contact Us</button>
+                            <button onClick={() => { navigate('/medicaltourism'); window.scrollTo({ top: 0, behavior: "smooth" }); }}>Visit our Medical Tourism Page</button>
+                        </div>
                     </div>
                 </div>
                 <div className="eden__packs_item-romeo" id='romeo'>
@@ -156,7 +158,34 @@ const Pack = () => {
                         <img src={sousse} alt="Sousse" />
                     </div>
                 </div>
-
+                <div className="eden__packs-honeymoon">
+                    <div className="eden__packs-honeymoon-header">
+                        <h2>Honeymoon Pack</h2>
+                    </div>
+                    <div className="eden__packs-honeymoon-content">
+                        <div className="eden__packs-honeymoon-content_item">
+                            <h3>Medical Details</h3>
+                            <p>
+                                Biological assessment: prostate cancer screening, breast cancer,
+                                cancer of the cervix and body of the uterus, STDs, diabetes prevention, consultation
+                                gynecologist and urologist</p>
+                            <p>
+                                Cardiac assessment: ECG; rhythmic and blood pressure holter, prevention
+                                hypertension, cardiologist consultation
+                            </p>
+                        </div>
+                        <div className="eden__packs-honeymoon-content_item">
+                            <h3>Leisure</h3>
+                            <p>
+                                Claim this pack and enjoy the great tour of Tunisia. It includes sightseeing in Greater Tunis and its historical monuments. It also contains leisure activities in Hammamet, Sousse, Djerba and more...</p>
+                            <h5>For logistic details</h5>
+                            <div className='form__button'>
+                                <button onClick={() => { navigate('/contact'); window.scrollTo({ top: 0, behavior: "smooth" }); }}>Contact Us</button>
+                                <button onClick={() => { navigate('/medicaltourism'); window.scrollTo({ top: 0, behavior: "smooth" }); }}>Visit our Medical Tourism Page</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

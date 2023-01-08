@@ -26,33 +26,65 @@
     color: white;
     text-align: justify;
 }
+
 .eden__packs_item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/Packs/fam.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: center;
 }
+
 .eden__packs-item_content-section {
-    border: 2px solid var(--color-blue);
     border-radius: 50px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(265.4deg, rgba(68, 120, 182, 0) -22.38%, #4478B6 105.01%);
+    border-radius: 50px;
+    color: white;
 }
+
+.eden__packs-logistics h5 {
+    color: var(--color-blue);
+    font-size: 1.7em;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.eden__packs-logistics {
+    background: linear-gradient(172.15deg, rgba(68, 120, 182, 0) -13.23%, #4478B6 105.83%);
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .eden__packs-item_content {
     display: grid;
-    grid-template-columns: repeat(2,40%);
+    grid-template-columns: repeat(2, 49%);
     gap: 20px;
     justify-content: center;
     align-items: center;
 }
+
 .eden__packs-item_content-section h4 {
     color: var(--color-blue);
     letter-spacing: 3px;
 }
+
 .eden__packs-header_pack {
     padding: 2rem;
     background: linear-gradient(265.92deg, #D9D9D9 -5.21%, rgba(217, 217, 217, 0) 105.22%);
@@ -63,6 +95,7 @@
     align-items: center;
     font-family: var(--font-OS);
 }
+
 .eden__button-blue {
     display: flex;
     flex-direction: column;
@@ -70,14 +103,16 @@
     align-items: center;
     gap: 20px;
 }
+
 .eden__button-blue button {
     border: none;
     padding: 0.3rem 0;
-    border-bottom: 2px solid var(--color-blue);
+    border-bottom: 2px solid white;
     font-family: var(--font-OS);
-    color: var(--color-blue);
+    color: white;
     background: none;
 }
+
 .eden__form-button button {
     position: relative;
     padding: 0.5rem 1rem;
@@ -99,9 +134,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
     width: 100%;
 }
+
 .eden__packs-content_item {
     display: flex;
     flex-direction: column;
@@ -109,25 +144,30 @@
     align-items: center;
     gap: 20px;
 }
+
 .eden__packs-content_item-title h2 {
     font-size: 2.5em;
     color: var(--color-blue);
     font-weight: 800;
     letter-spacing: 5px;
 }
+
 .eden__packs-content_item-body {
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: center;
     align-items: center;
+    padding: 0 !important;
 }
+
 .eden__packs-content_item-body_text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
 }
+
 .eden__packs-content_item-paragraph {
     display: flex;
     flex-direction: column;
@@ -135,16 +175,19 @@
     align-items: center;
     gap: 50px;
 }
+
 .eden__packs-content_item-schedule h3 {
     font-size: 1.7em;
     color: var(--color-blue);
     font-weight: 500;
 }
+
 .eden__packs-content_item-paragraph_section h3 {
     font-size: 1.7em;
     color: var(--color-blue);
     font-weight: 500;
 }
+
 .eden__packs-content_item-body_pic {
     width: 100%;
     display: flex;
@@ -153,6 +196,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .eden__packs-content_item-body_pics {
     width: 50%;
     display: flex;
@@ -161,21 +205,25 @@
     justify-content: center;
     align-items: center;
 }
+
 .eden__packs-item_pictures {
     display: grid;
-    grid-template-columns: repeat(3,33%);
+    grid-template-columns: repeat(3, 33%);
     gap: 10px;
     justify-content: center;
     align-items: center;
 }
+
 .eden__packs-item_pictures img {
     height: 100%;
 }
+
 .eden__packs img {
     width: 100%;
 }
+
 .eden__packs_item-romeo {
-    padding: 2rem 0;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -184,16 +232,18 @@
     background-image: url("../../assets/Packs/you.jpg");
     background-size: cover;
     background-attachment: fixed;
-    background-position-y:center;
+    background-position-y: center;
     height: 100%;
 
 }
+
 .eden__packs-content_item-title-romeo h2 {
     font-size: 2.5em;
     color: white;
     font-weight: 800;
     letter-spacing: 5px;
 }
+
 .eden__packs-content_item-body-romeo {
     padding: 2rem;
     background: linear-gradient(265.92deg, #D9D9D9 -5.21%, rgba(217, 217, 217, 0) 105.22%);
@@ -203,32 +253,39 @@
     justify-content: center;
     align-items: center;
 }
+
 .eden__packs-content_item-schedule-romeo {
     font-family: var(--font-OS);
     text-align: center;
 }
+
 .eden__packs-content_item-schedule-romeo h3 {
     font-size: 1.7em;
     color: white;
     font-weight: 500;
 }
+
 .eden__packs_item-romeo ul {
     list-style: none;
 }
+
 .eden__packs-content_item-paragraph-romeo {
     text-align: center;
     font-family: var(--font-OS);
 }
+
 .eden__packs-content_item-paragraph-romeo h3 {
     font-size: 1.7em;
     color: white;
     font-weight: 500;
 }
+
 .eden__packs-content_item-paragraph-romeo h5 {
     font-size: 1.7em;
     color: white;
     font-weight: 500;
 }
+
 .form__button-romeo {
     display: flex;
     flex-direction: column;
@@ -236,6 +293,7 @@
     align-items: center;
     gap: 30px;
 }
+
 .form__button-romeo button {
     border: none;
     padding: 0.3rem 0;
@@ -244,11 +302,76 @@
     color: white;
     background: none;
 }
+
+.eden__packs-honeymoon {
+    width: 100%;
+    height: 100%;
+    padding: 4rem 2rem;
+    background-image: url("../../assets/Packs/honeymoon.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.eden__packs-honeymoon-header h2 {
+    font-family: var(--font-OS);
+    font-size: 2.5em;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.eden__packs-honeymoon-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: var(--font-OS);
+}
+
+.eden__packs-honeymoon-content_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(265.92deg, #D9D9D9 -5.21%, rgba(217, 217, 217, 0) 105.22%);
+    border-radius: 50px;
+}
+
+.eden__packs-honeymoon-content_item h3 {
+    font-size: 1.7em;
+    color: var(--color-blue);
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.eden__packs-honeymoon-content_item h5 {
+    color: var(--color-blue);
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
 @media (max-width:950px) {
     .eden__packs-content_item-body_pic {
         display: none;
     }
 }
+
+@media (max-width:850px) {
+    .eden__packs-item_content {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .eden__packs-honeymoon-content {
+        flex-direction: column;
+    }
+}
+
 @media (max-width:750px) {
     .eden__packs-header {
         display: flex;
@@ -257,10 +380,19 @@
         align-items: center;
         padding: 8rem 2rem;
     }
+
     .eden__packs-header_titles h2 {
         text-align: center;
     }
+
     .eden__packs-content {
-        padding: 1rem !important;
+        padding: 0 !important;
     }
+
+    .eden__packs_item,
+    .eden__packs_item-romeo,
+    .eden__packs-content_item {
+        padding: 2rem 1rem !important;
+    }
+
 }
