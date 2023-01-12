@@ -19,6 +19,9 @@ const Menu = () => {
           <Link to="/packs">Our Packs</Link>
         </p>
         <p onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }}>
+          <Link to="/esth">Cosmetics</Link>
+        </p>
+        <p onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }}>
           <Link to="/partners">Partners</Link>
         </p>
         <p onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }}>
@@ -77,6 +80,9 @@ const Navbar = () => {
                 </p>
                 <p>
                   <Link to="/packs" onClick={() => { setToggleMenu(false); window.scrollTo({ top: 0, behavior: "smooth" }) }}>Our Packs</Link>
+                </p>
+                <p>
+                  <Link to="/esth" onClick={() => { setToggleMenu(false); window.scrollTo({ top: 0, behavior: "smooth" }) }}>Cosmetics</Link>
                 </p>
                 <p>
                   <Link to="/partners" onClick={() => { setToggleMenu(false); window.scrollTo({ top: 0, behavior: "smooth" }) }}>Partners</Link>

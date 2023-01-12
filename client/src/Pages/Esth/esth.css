@@ -1,0 +1,116 @@
+.eden__esth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.eden__esth-header {
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    background-image: url('../../assets/cosmetic.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: bottom;
+    font-family: var(--font-OS);
+}
+
+.eden__esth-header h1 {
+    font-size: 4em;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: white;
+    text-align: center;
+}
+
+.eden__esth-header h4 {
+    font-size: 2em;
+    font-weight: 400;
+    letter-spacing: 10px;
+    color: wheat;
+    text-align: center;
+}
+
+.eden__esth-proph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-OS);
+
+}
+
+.eden__esth-proph h2 {
+    color: var(--color-blue);
+    font-size: 3em;
+    font-weight: 700;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC, -10px 1px 2px rgba(0, 0, 0, 0);
+}
+
+.eden__esth-proph h4 {
+    color: var(--color-blue);
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.eden__esth-proph p {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.eden__esth-proph_procedure {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    gap: 20px;
+}
+
+.eden__esth-proph_procedure-item {
+    height: 200px;
+    padding: 2rem;
+    background-color: rgb(232, 241, 247);
+    border-radius: 50px;
+    -webkit-box-shadow: 10px 11px 15px -4px #545454;
+    box-shadow: 10px 11px 15px -4px #545454;
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+.eden__esth-proph_procedure-item_icon {
+    font-size: 2em;
+    color: var(--color-blue);
+}
+@media (max-width:1260px) {
+    .eden__esth-proph_procedure {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width:700px) {
+    .eden__esth-header {
+        padding: 20rem 2rem;
+    }
+}
+
+@media (max-width:570px) {
+    .eden__esth-header h1 {
+        font-size: 3em;
+    }
+    .eden__esth-proph {
+        padding: 2rem 1rem !important;
+    }
+
+    .eden__esth-header h4 {
+        font-size: 1.6em;
+    }
+}
