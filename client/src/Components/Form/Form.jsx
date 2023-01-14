@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './form.css';
 import Axios from 'axios';
 const Form = () => {
@@ -34,7 +34,7 @@ const Form = () => {
     }
   };
 
-  let navigate= useNavigate();
+  let navigate = useNavigate();
 
   const submit_business = () => {
     Axios.post("http://89.116.228.82/api/insert_business", {
@@ -94,6 +94,10 @@ const Form = () => {
         <div className="form__item">
           {type === "b2c" && (
             <div>
+              <div className="eden__form-title">
+                <h1>Reserve your stay</h1>
+                <p>If you feel like getting more informations before reserving your stay, please <br /> <Link to='/message' target='_blank'>Click here to send us a message</Link></p>
+              </div>
               <legend>Personal Informations</legend>
               <div className='eden__contact_line'>
                 <label className='eden__contact_item'>Name</label>
@@ -107,7 +111,7 @@ const Form = () => {
                   name="user_email" ref={ref_email} onChange={(e) => {
                     setEmail(e.target.value); handleChange(e);
                   }} />
-                  {error && <p style={{color: 'red'}}>{error}</p>}
+                {error && <p style={{ color: 'red' }}>{error}</p>}
 
               </div>
               <div className='eden__contact_line'>

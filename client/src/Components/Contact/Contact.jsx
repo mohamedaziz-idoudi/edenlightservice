@@ -45,7 +45,7 @@ const Contact = () => {
       <div className="formbg">
         <div className='form__title'>
           <h1>Contact Us</h1>
-          <p>If you want to include additional files, please contact this number: 99 999 999</p>
+          <p>If you want to include additional files, please send us and email via: Contact@edenlightservice.com</p>
         </div>
         <form ref={form} onSubmit={sendEmail}>
           <div className='eden__contact_line'>

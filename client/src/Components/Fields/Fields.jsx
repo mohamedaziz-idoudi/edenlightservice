@@ -13,9 +13,7 @@ const Fields = () => {
     <div className="eden__fields-container">
       <div className="eden__fields-titles">
         <h2>Our Medical Services</h2>
-        <p>Sample text. Lorem ipsum dolor sit amet,
-           consectetur<br /> adipiscing elit nullam nunc
-            justo sagittis suscipit ultrices.</p>
+        <p>Our goal is to cover all the medical services needed for our clients</p>
       </div>
       <div className="eden__fields-items">
         <div className="eden__fields-container_item">

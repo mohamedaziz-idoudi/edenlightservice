@@ -30,3 +30,4 @@ export {default as Message} from './Message/Message';
 export {default as Dashboard} from './Dashboard/Dashboard'
 export {default as Posted} from './Posted/Posted'
 export {default as Post} from './Post/Post'
+export {default as Esth_spec} from './Esth_spec/Esth_spec'

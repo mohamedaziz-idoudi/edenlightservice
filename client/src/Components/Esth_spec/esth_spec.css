@@ -1,0 +1,201 @@
+.eden__esth-spec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.eden__esth-spec_header h2 {
+    font-family: var(--font-family);
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    color: var(--color-blue);
+}
+
+.eden__esth-spec_breasts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    height: 100%;
+    background-image: url('../../assets/esth/b.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+    font-family: var(--font-family);
+    color: var(--color-blue);
+}
+.eden__esth-spec_gyn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 1rem;
+    height: 100%;
+    background-image: url('../../assets/esth/gyn.jpg');
+    background-position-x:center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: var(--font-family);
+    color: var(--color-blue);
+}
+.eden__esth-spec_gyn h5 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.eden__esth-spec_breasts h5 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.eden__esth-spec_lipo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 1rem;
+    height: 100%;
+    background-image: url('../../assets/esth/lipo.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: bottom;
+    background-position-x: center;
+    font-family: var(--font-family);
+    color: white;
+}
+.eden__esth-spec_lipo h5 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.eden__esth-spec_lipda {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 1rem;
+    height: 100%;
+    background-image: url('../../assets/esth/lipda.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: bottom;
+    background-position-x: center;
+    font-family: var(--font-family);
+    color: var(--color-blue);
+}
+.eden__esth-spec_lipda h5 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.eden__esth-spec_abs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 1rem;
+    height: 100%;
+    background-image: url('../../assets/esth/abs.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: bottom;
+    background-position-x: center;
+    font-family: var(--font-family);
+    color: white;
+}
+.eden__esth-spec_abs h5 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.eden__esth-spec_bodylift {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 1rem;
+    height: 100%;
+    background-image: url('../../assets/esth/bodylift.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: bottom;
+    background-position-x: center;
+    font-family: var(--font-family);
+    color: white;
+}
+.eden__esth-spec_bodylift h5 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.eden__esth-spec_face {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 1rem;
+    height: 100%;
+    background-image: url('../../assets/esth/face.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+    font-family: var(--font-family);
+    color: var(--color-blue);
+}
+.eden__esth-spec_face h5 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.eden__esth-spec_vag {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 1rem;
+    height: 100%;
+    background-image: url('../../assets/esth/vag.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+    font-family: var(--font-family);
+    color: var(--color-blue);
+}
+.eden__esth-spec_vag h5 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.eden__esth-spec_male {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 1rem;
+    height: 100%;
+    background-image: url('../../assets/esth/male.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+    font-family: var(--font-family);
+    color: var(--color-blue);
+}
+.eden__esth-spec_male h5 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}

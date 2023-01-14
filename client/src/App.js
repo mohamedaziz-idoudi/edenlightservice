@@ -1,6 +1,6 @@
 import React, { useState, createContext } from 'react'
 import ReactDOM from 'react-dom/client';
-import { Navbar, Footer, Form, Dashboard, Posted, Post } from './Components';
+import { Navbar, Footer, Form, Dashboard, Posted, Post, Contact } from './Components';
 import { Home, Partners, MedicalTour, AboutUs, Service, Admin, Redirect,Blogs, Pack, Esth } from './Pages';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './app.css';
@@ -28,6 +28,7 @@ const App = () => {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/packs" element={<Pack />} />
             <Route path="/esth" element={<Esth />} />
+            <Route path="/message" element={<Contact />} />
             <Route path='/post/:postID' exact element={<Post />} />
             <Route path='/dashboard' element={<ProtectedRoute setAuth={setAuth} isAuth={isAuth} Component={Dashboard} />} />
           </Routes>

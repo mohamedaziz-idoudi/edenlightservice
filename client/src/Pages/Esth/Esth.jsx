@@ -1,6 +1,9 @@
 import React from 'react'
 import './esth.css'
 import * as RiIcons from 'react-icons/ri'
+import * as AiIcons from 'react-icons/ai'
+import { Esth_spec } from '../../Components'
+import hayathem from '../../assets/hayathem.jpg';
 const Esth = () => {
   return (
     <div className='eden__esth'>
@@ -39,7 +42,7 @@ const Esth = () => {
             </div>
             <h5>Have a great stay during the treatment period</h5>
             <div className="form__button">
-              <button>Check our Catalog</button>
+              <button>Reserve your stay</button>
             </div>
           </div>
           <div className="eden__esth-proph_procedure-item">
@@ -48,6 +51,30 @@ const Esth = () => {
             </div>
             <h5>When it comes to treatment. EDEN Light Service keeps on monitoring its patients once it's done.</h5>
           </div>
+        </div>
+      </div>
+      <Esth_spec />
+      <div className="eden__blob-associates"></div>
+      <div className="eden__esth-associates section__padding">
+        <div className="eden__esth-associates_item">
+          <div className="eden__esth-associates_item-titles">
+            <h5>ONE OF OUR ASSOCIATES</h5>
+            <h2>Dr. Hayathem Helali</h2>
+            <h3>Aesthetic and maxillofacial surgery، cranio orbital and restorative</h3>
+          </div>
+          <div className="eden__esth-associates_item-content">
+            <p>Dr. Helali: specialist in maxillofacial and aesthetic surgery, reconstructive surgery, malformation of the skull, orbit, whole body, facial cancer, scars and burns, plastic surgeon.</p>
+            <div className="eden__esth-associates_item-content_consult">
+              <h5>Check her instagram and learn more about her:</h5>
+              <div className="eden__esth-associates_item-content_icon">
+                <a href="https://www.instagram.com/drhayathem_helali/?hl=fr" target="_blank"><AiIcons.AiFillInstagram /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="eden__esth-associates_item-image">
+          <img src={hayathem} alt="Picture" loading='lazy' />
+          <p>You can also consult her work on her instagram account</p>
         </div>
       </div>
     </div>

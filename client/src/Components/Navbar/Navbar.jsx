@@ -13,7 +13,7 @@ const Menu = () => {
           <Link to="/">Home</Link>
         </p>
         <p onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }}>
-          <Link to="/services">Services</Link>
+          <Link to="/services">Medical Services</Link>
         </p>
         <p onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }}>
           <Link to="/packs">Our Packs</Link>
@@ -75,7 +75,7 @@ const Navbar = () => {
                 </p>
                 <p>
                   <Link to="/services" onClick={() => { setToggleMenu(false); window.scrollTo({ top: 0, behavior: "smooth" }) }}>
-                    Services
+                    Medical Services
                   </Link>
                 </p>
                 <p>
