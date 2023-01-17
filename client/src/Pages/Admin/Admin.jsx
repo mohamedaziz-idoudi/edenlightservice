@@ -9,7 +9,7 @@ const Admin = ({setAuth}) => {
   const [pwd,setPwd] = useState('');
   const navigate=useNavigate('');
   const sign_in = () => {
-    Axios.get("http://89.116.228.82/api/login", { params: {
+    Axios.get("http://localhost:3001/api/login", { params: {
       user: user,
       pass: pwd
     }}).then((response) => {

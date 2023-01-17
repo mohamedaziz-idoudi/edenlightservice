@@ -131,7 +131,7 @@ const upload = multer({
  
 //@type   POST
 //route for post data
-app.post("/api/upload", upload.single('image_eden'), (req, res) => {
+app.post("/api/upload", upload.single('file'), (req, res) => {
     const file = req.file;
     res.send(file.filename);
 });

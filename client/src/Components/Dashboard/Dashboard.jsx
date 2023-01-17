@@ -30,7 +30,7 @@ const Dashboard = ({setAuth}) => {
     try {
       const formData= new FormData();
       formData.append("file",file);
-      const res = await axios.post("http://89.116.228.82/api/upload",formData);
+      const res = await axios.post("http://localhost:3001/api/upload",formData);
       return res.data;
     }
     catch(ex) {
@@ -45,26 +45,26 @@ const Dashboard = ({setAuth}) => {
     setVafter(true);
     const imgURL = await uploadFile();
     console.log(imgURL);
-    axios.post("http://89.116.228.82/api/post",{title:title, paragraph:text, image:imgURL, video:video});
+    axios.post("http://localhost:3001/api/post",{title:title, paragraph:text, image:imgURL, video:video});
 
   }
   const refreshCustomer = () => {
-    Axios.get("http://89.116.228.82/api/get_cus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_cus").then((data) => {
       setCustomerList(data.data);
     })
   }
   const refreshBusiness = () => {
-    Axios.get("http://89.116.228.82/api/get_bus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_bus").then((data) => {
       setBusinessList(data.data);
 
     })
   }
   useEffect((e) => {
     setAuth(true);
-    Axios.get("http://89.116.228.82/api/get_cus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_cus").then((data) => {
       setCustomerList(data.data);
     });
-    Axios.get("http://89.116.228.82/api/get_bus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_bus").then((data) => {
       setBusinessList(data.data);
     })
     if(e && e.preventDefault()) {e.preventDefault()}
@@ -208,7 +208,7 @@ const Dashboard = ({setAuth}) => {
       {vblog && (
         <div className="eden__dashboard-content">
             <label>Insert an image</label>
-            <input type="file" name='image_eden' onChange={saveFile} />
+            <input type="file" name='file' onChange={saveFile} />
             <label >Insert link to your video (Optional)</label>
             <input type="link" onChange={(e) => {
               setVideo(e.target.value);
