@@ -1,6 +1,6 @@
 import React from 'react'
 import './mission.css';
-import deco from "../../assets/mission.webp";
+import deco from "../../assets/Partners/movenpick.jpg";
 import { useNavigate } from 'react-router-dom';
 
 const Mission = () => {

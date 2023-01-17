@@ -12,12 +12,9 @@ const Esth_spec = () => {
         <h5>Breast Lipofilling</h5>
         <h5>Breast reduction</h5>
       </div>
-      <div className="eden__esth-spec_gyn">
-        <h5>Gynecomastia</h5>
-      </div>
-      <div className="eden__esth-spec_lipo">
-        <h5>Buttock Lipofilling</h5>
-        <h5>Brazilian Buttlift</h5>
+      <div className="eden__esth-spec_abs">
+        <h5>Abdominoplasty</h5>
+        <h5>Abdominal Minilift</h5>
       </div>
       <div className="eden__esth-spec_lipda">
         <h5>Liposuction</h5>
@@ -25,9 +22,12 @@ const Esth_spec = () => {
         <h5>Liposculpture</h5>
         <h5>Thigh Lift</h5>
       </div>
-      <div className="eden__esth-spec_abs">
-        <h5>Abdominoplasty</h5>
-        <h5>Abdominal Minilift</h5>
+      <div className="eden__esth-spec_gyn">
+        <h5>Gynecomastia</h5>
+      </div>
+      <div className="eden__esth-spec_lipo">
+        <h5>Buttock Lipofilling</h5>
+        <h5>Brazilian Buttlift</h5>
       </div>
       <div className="eden__esth-spec_bodylift">
         <h5>Arm Lifting</h5>

@@ -1,6 +1,6 @@
 import React, { useState, createContext } from 'react'
 import ReactDOM from 'react-dom/client';
-import { Navbar, Footer, Form, Dashboard, Posted, Post, Contact } from './Components';
+import { Navbar, Footer, Form, Dashboard, Posted, Post, Contact, FormEs } from './Components';
 import { Home, Partners, MedicalTour, AboutUs, Service, Admin, Redirect,Blogs, Pack, Esth } from './Pages';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './app.css';

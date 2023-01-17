@@ -116,7 +116,7 @@ app.post("/api/insert_business", (req, res) => {
 
 const storage = multer.diskStorage({
     destination: (req, file, callBack) => {
-        callBack(null, '../client/src/assets')
+        callBack(null, '../client/public/uploads')
     },
     filename: (req, file, callBack) => {
         callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
@@ -131,7 +131,7 @@ const upload = multer({
  
 //@type   POST
 //route for post data
-app.post("/api/upload", upload.single('file'), (req, res) => {
+app.post("/api/upload", upload.single('image_eden'), (req, res) => {
     const file = req.file;
     res.send(file.filename);
 });
@@ -159,9 +159,7 @@ app.get("/api/getPost/:id",(req,res) => {
         }
         res.send(result);
     })
-})
-
-
+});
 
 app.listen(process.env.PORT ||3001, () => {
     console.log("Running on server!");

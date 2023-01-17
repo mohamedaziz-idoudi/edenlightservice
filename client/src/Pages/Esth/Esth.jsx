@@ -3,8 +3,11 @@ import './esth.css'
 import * as RiIcons from 'react-icons/ri'
 import * as AiIcons from 'react-icons/ai'
 import { Esth_spec } from '../../Components'
-import hayathem from '../../assets/hayathem.jpg';
+import {useNavigate} from 'react-router-dom'
+import hayathem from
+ '../../assets/hayathem.jpg';
 const Esth = () => {
+  const navigate = useNavigate();
   return (
     <div className='eden__esth'>
       <div className="eden__esth-header">
@@ -24,7 +27,10 @@ const Esth = () => {
             </div>
             <h5>Get in touch with us</h5>
             <div className="form__button">
-              <button>Send us a message</button>
+              <button onClick={()=> {
+                navigate("/message");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}>Send us a message</button>
             </div>
           </div>
           <div className="eden__esth-proph_procedure-item">
@@ -33,7 +39,10 @@ const Esth = () => {
             </div>
             <h5>Get an idea on the prices</h5>
             <div className="form__button">
-              <button>Get your Quote for free</button>
+              <button onClick={()=> {
+                navigate("/devis_esth");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}>Get your Quote for free</button>
             </div>
           </div>
           <div className="eden__esth-proph_procedure-item">
@@ -42,7 +51,10 @@ const Esth = () => {
             </div>
             <h5>Have a great stay during the treatment period</h5>
             <div className="form__button">
-              <button>Reserve your stay</button>
+              <button onClick={()=> {
+                navigate("/contact");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}>Reserve your stay</button>
             </div>
           </div>
           <div className="eden__esth-proph_procedure-item">

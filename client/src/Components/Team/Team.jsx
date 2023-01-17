@@ -20,7 +20,7 @@ const Team = () => {
                     <div className="team__box_right">
                         <div className='team__box_right-titles'>
                             <h5>Co Founder, DGA</h5>
-                            <h3>RACHELRITA, Dian</h3>
+                            <h3>BASSEGA, Diane</h3>
                         </div>
                     </div>
                 </div>
@@ -37,8 +37,24 @@ const Team = () => {
                 <div className='team__box'>
                     <div className="team__box_right">
                         <div className='team__box_right-titles'>
-                            <h5>Communication & Marketing Manager</h5>
+                            <h5>Graphic Design Manager</h5>
                             <h3>MIRI, Mohamed</h3>
+                        </div>
+                    </div>
+                </div>
+                <div className='team__box'>
+                    <div className="team__box_right">
+                        <div className='team__box_right-titles'>
+                            <h5>Communication & Marketing Manager</h5>
+                            <h3>HAMMOUDA, Wael</h3>
+                        </div>
+                    </div>
+                </div>
+                <div className='team__box'>
+                    <div className="team__box_right">
+                        <div className='team__box_right-titles'>
+                            <h5>Chauffeur</h5>
+                            <h3>BOULAARES, Fares</h3>
                         </div>
                     </div>
                 </div>

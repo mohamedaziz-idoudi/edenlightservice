@@ -1,13 +1,9 @@
 import React from 'react'
 import { MDBCarousel, MDBCarouselItem } from "mdb-react-ui-kit";
 import './hospitals.css';
-import hospital1 from "../../assets/Partners/hospital1.webp";
-import hospital2 from "../../assets/Partners/hospital2.webp";
-import hospital3 from "../../assets/Partners/hospital3.webp";
-import hospital4 from "../../assets/Partners/hospital4.webp";
-
-
-
+import hospital1 from "../../assets/Partners/rose.jpg";
+import hospital2 from "../../assets/Partners/beau.jpeg";
+import hospital3 from "../../assets/Partners/carth.jpg";
 const Hospitals = () => {
     return (
         <React.Fragment>
@@ -18,7 +14,7 @@ const Hospitals = () => {
                 <div className='hospitals__sliders'>
                     <MDBCarousel showIndicators showControls fade>
                         <MDBCarouselItem
-                            className="w-100 d-block caption"
+                            className="d-block caption"
                             itemId={1}
                             src={hospital1}
                             alt="..."
@@ -27,6 +23,7 @@ const Hospitals = () => {
                         <MDBCarouselItem
                             className="w-100 d-block caption"
                             itemId={2}
+                            width="600"
                             src={hospital2}
                             alt="..."
                         >

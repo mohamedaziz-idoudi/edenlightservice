@@ -20,7 +20,7 @@ const Blogs = () => {
         {Array.from(postList).map((val, key) => {
           return (
             <div className='blogs__container-post' key={key}>
-              <img src={require(`../../assets/${val.image}`)} alt="placeholder" />
+              <img src={require(`../../../public/uploads/${val.image}`)} alt="placeholder" />
               <div className="blogs__container-post_caption">
                 <h4>{new Date(val.date).toDateString()}</h4>
                 <h2>{val.title}</h2>
