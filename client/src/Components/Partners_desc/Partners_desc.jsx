@@ -18,7 +18,7 @@ const Partners_desc = () => {
             <h1>Quality Care</h1>
             <h4>Your health is our priority</h4>
             <p>EDEN Light Services with the collaboration of multiple partners and medical centers assures the best medical services for its patients</p>
-            <button type='button' onClick={() => {navigate("/contact"); window.scrollTo({top: 0, behavior: "smooth"})}}>Send us a message</button>
+            <button type='button' onClick={() => {navigate("/message"); window.scrollTo({top: 0, behavior: "smooth"})}}>Send us a message</button>
         </div>
     </div>
     

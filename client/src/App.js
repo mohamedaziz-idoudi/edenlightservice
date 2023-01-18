@@ -28,6 +28,7 @@ const App = () => {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/packs" element={<Pack />} />
             <Route path="/esth" element={<Esth />} />
+            <Route path="/devis_esth" element={<FormEs />} />
             <Route path="/message" element={<Contact />} />
             <Route path='/post/:postID' exact element={<Post />} />
             <Route path='/dashboard' element={<ProtectedRoute setAuth={setAuth} isAuth={isAuth} Component={Dashboard} />} />

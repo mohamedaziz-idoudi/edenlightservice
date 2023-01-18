@@ -22,10 +22,11 @@ const FormEs = () => {
     const [lodgingType, setLodgingType] = useState('');
     const [persons, setPersons] = useState(0);
     const [rooms, setRooms] = useState(0);
-    const [bname, setBname] = useState('');
-    const [bemail, setBemail] = useState('');
-    const [bphone, setBphone] = useState('');
-    const [work, setWork] = useState('');
+    const [surgery,setSurgery] = useState(0);
+
+    const handleSelection = (e) => {
+        setSurgery({val: e.target.value});
+    }
     const sendEmail = (e) => {
 
         e.preventDefault();
@@ -109,20 +110,46 @@ const FormEs = () => {
                     </div>
                     <div className="eden__contact_line">
                         <label className='eden__contact_item'>Choose the operation you desire</label>
-                        <select multiple name="operation" id="operation">
-                            <optgroup label='Cosmetic Surgery'>
-                                <option value="Augmentation mammaire avec prothèses">Augmentation mammaire avec prothèses</option>
-                                <option value="Lifting mammaire avec prothèses">Lifting mammaire avec prothèses</option>
-                                <option value="Lifting mammaires sans prothèses">Lifting mammaires sans prothèses</option>
-                                <option value="Lipofilling mammaire">Lipofilling mammaire</option>
-                                <option value="Réduction mammaire">Réduction mammaire</option>
+                        <select multiple name="operation" id="operation" onChange={handleSelection}>
+                            <optgroup label='Chirurgie des seins'>
+                                <option value={1}>Augmentation mammaire avec prothèses</option>
+                                <option value={2}>Lifting mammaire avec prothèses</option>
+                                <option value={26}>Lifting mammaires sans prothèses</option>
+                                <option value={3}>Lipofilling mammaire</option>
+                                <option value={4}>Réduction mammaire</option>
+                                <option value={5}>Changement de prothèses</option>
+                                <option value={6}>Gynécomastie</option>
                             </optgroup>
-                            <optgroup label='Cosmetic Surgery'>
-                                <option value="Augmentation mammaire avec prothèses">Augmentation mammaire avec prothèses</option>
-                                <option value="Lifting mammaire avec prothèses">Lifting mammaire avec prothèses</option>
-                                <option value="Lifting mammaires sans prothèses">Lifting mammaires sans prothèses</option>
-                                <option value="Lipofilling mammaire">Lipofilling mammaire</option>
-                                <option value="Réduction mammaire">Réduction mammaire</option>
+                            <optgroup label='Chirurgie de la Silhouette'>
+                                <option value={7}>Augmentation des fesses(Brazilian Buttlift)</option>
+                                <option value={8}>Liposuccion VASER</option>
+                                <option value={9}>Liposuccion classique</option>
+                                <option value={10}>Lipo-Abdominoplastie</option>
+                                <option value={11}>Minilift abdominal</option>
+                                <option value={12}>Lifting des bras</option>
+                                <option value={13}>Lifting des cuisses</option>
+                                <option value={14}>Bodylift</option>
+                            </optgroup>
+                            <optgroup label='Chirurgie du visage'>
+                                <option value={15}>Rhinoplastie</option>
+                                <option value={16}>Lifting cervico facial (visage)</option>
+                                <option value={17}>Blépharoplastie</option>
+                            </optgroup>
+                            <optgroup label="Chirurgie intime">
+                                <option value={18}>Vaginoplastie</option>
+                                <option value={19}>Labioplastie</option>
+                            </optgroup>
+                            <optgroup label="Chirurgie de l'obésité">
+                                <option value={20}>Vaginoplastie</option>
+                                <option value={21}>ByPass / Mini ByPass</option>
+                            </optgroup>
+                            <optgroup label='Implants dentaires'>
+                                <option value={22}>Implant dentaire</option>
+                                <option value={23}>Couronne en céramo-métallique sur implant</option>
+                                <option value={24}>Facettes</option>
+                            </optgroup>
+                            <optgroup label='Implants capillaires'>
+                                <option value={25}>Greffe Capillaire FUE</option>
                             </optgroup>
                         </select>
                     </div>

@@ -14,16 +14,14 @@ const Partners = () => {
       <div className="partners__hospitals">
         <Hospitals />
       </div>
-      <div className="partners__amilcar">
-          </div>
-          <div className="partners__success" id="success">
-            <Success />
-          </div>
-          <div className="partners__desc">
-            <Partners_desc />
-          </div>
-        </React.Fragment>
-        );
+      <div className="partners__success" id="success">
+        <Success />
+      </div>
+      <div className="partners__desc">
+        <Partners_desc />
+      </div>
+    </React.Fragment>
+  );
 };
 
-        export default Partners;
+export default Partners;

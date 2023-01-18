@@ -76,17 +76,10 @@ const Esth = () => {
           </div>
           <div className="eden__esth-associates_item-content">
             <p>Dr. Helali: specialist in maxillofacial and aesthetic surgery, reconstructive surgery, malformation of the skull, orbit, whole body, facial cancer, scars and burns, plastic surgeon.</p>
-            <div className="eden__esth-associates_item-content_consult">
-              <h5>Check her instagram and learn more about her:</h5>
-              <div className="eden__esth-associates_item-content_icon">
-                <a href="https://www.instagram.com/drhayathem_helali/?hl=fr" target="_blank"><AiIcons.AiFillInstagram /></a>
-              </div>
-            </div>
           </div>
         </div>
         <div className="eden__esth-associates_item-image">
           <img src={hayathem} alt="Picture" loading='lazy' />
-          <p>You can also consult her work on her instagram account</p>
         </div>
       </div>
     </div>

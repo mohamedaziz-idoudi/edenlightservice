@@ -30,7 +30,8 @@ const Blogs = () => {
                 <h2>{val.title}</h2>
                 <p dangerouslySetInnerHTML={{ __html: val.paragraph.length > 118 ? val.paragraph.substring(0, 118) + "..." : val.paragraph }} />
                 <button onClick={() => {
-                  navigate(`/post/${val.id}`)
+                  navigate(`/post/${val.id}`);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}>Read more..</button>
               </div>
             </div>
