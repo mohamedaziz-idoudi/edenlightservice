@@ -50,24 +50,6 @@ const Team = () => {
                         </div>
                     </div>
                 </div>
-                <div className='team__box'>
-                    <div className="team__box_right">
-                        <div className='team__box_right-titles'>
-                            <h5>Chauffeur</h5>
-                            <h3>BOULAARES, Fares</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className='team__container_buttom'>
-                <div className='team__box'>
-                    <div className="team__box_right">
-                        <div className='team__box_right-titles'>
-                            <h5>Chauffeur</h5>
-                            <h3>BOULAARES, Fares</h3>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     )
