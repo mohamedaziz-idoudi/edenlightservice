@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import './post.css';
+import { Image } from 'cloudinary-react';
 
 const Post = () => {
     const navigate = useNavigate()
@@ -10,10 +11,10 @@ const Post = () => {
     const [post, setPost] = useState({});
     const [postList, setPostList] = useState({});
     useEffect(() => {
-        Axios.get(`http://89.116.228.82/api/getPost/${postID}`).then((result) => {
+        Axios.get(`http://localhost:3001/api/getPost/${postID}`).then((result) => {
             setPost({ title: result.data[0].title, paragraph: result.data[0].paragraph, image: result.data[0].image, video: result.data[0].video, date: result.data[0].date });
         })
-        Axios.get("http://89.116.228.82/api/getposts").then((result) => {
+        Axios.get("http://localhost:3001/api/getposts").then((result) => {
             setPostList(result.data);
         })
     })
@@ -21,7 +22,10 @@ const Post = () => {
         <div className='single'>
             <div className='single__content section__padding'>
                 <div className="post__header">
-                    {post.image && <img src={require(`../../../public/uploads/${post?.image}`)} alt="placeholder" />}
+                    {post.image && <Image
+                        cloudName="djrgpqres"
+                        publicId={post?.image}
+                        id="cloud_image" />}
                     <h4>{new Date(post.date).toDateString()}</h4>
                     <h1>{post.title}</h1>
                 </div>
@@ -35,7 +39,10 @@ const Post = () => {
                 {Array.from(postList).slice(0, 3).map((val, key) => {
                     return (
                         <div className='post__side-item' key={key} >
-                            {val.image && <img src={require(`../../../public/uploads/${val?.image}`)} alt="placeholder" width="300px" />}
+                            {val.image && <Image
+                                cloudName="djrgpqres"
+                                publicId={val.image}
+                                id="cloud_image_side" />}
                             <h4>{val.title}</h4>
                             <p dangerouslySetInnerHTML={{ __html: val.paragraph.length > 118 ? val.paragraph.substring(0, 118) + "..." : val.paragraph }} />
                         </div>

@@ -10,64 +10,53 @@ import logo from '../../assets/logo.png'
 import Table from 'react-bootstrap/Table';
 
 
-const Dashboard = ({setAuth}) => {
+
+const Dashboard = ({ setAuth }) => {
   const [vmessage, setVmessage] = useState(false);
   const [vblog, setVblog] = useState(false);
   const [view, setView] = useState('');
   const [customerList, setCustomerList] = useState({});
   const [businessList, setBusinessList] = useState({});
   const [text, setText] = useState('');
-  const [file, setFile] = useState();
   const [title, setTitle] = useState("");
   const [video, setVideo] = useState("");
-  const [vAfter,setVafter] = useState(false);
+  const [vAfter, setVafter] = useState(false);
+  const [image, setImage] = useState();
+  const uploadImage = (e) => {
+    const formData = new FormData();
+    formData.append("file", image);
+    formData.append("upload_preset", "eden_upload_image");
 
-  const saveFile = (e) => {
-    setFile(e.target.files[0]);
-  };
-
-  const uploadFile = async(e) => {
-    try {
-      const formData= new FormData();
-      formData.append("file",file);
-      const res = await axios.post("http://89.116.228.82/api/upload",formData);
-      return res.data;
-    }
-    catch(ex) {
-      console.log(ex);
-    }
-
-  };
-  const handleSubmit = async e => {
-    await e.preventDefault();
+    Axios.post("https://api.cloudinary.com/v1_1/djrgpqres/image/upload", formData).then(async(response) => {
+      console.log(response);
+      await e.preventDefault();
     await e.stopPropagation();
     setVblog(false);
     setVafter(true);
-    const imgURL = await uploadFile();
-    console.log(imgURL);
-    axios.post("http://89.116.228.82/api/post",{title:title, paragraph:text, image:imgURL, video:video});
-
+    axios.post("http://localhost:3001/api/post", { title: title, paragraph: text, image: response.data.secure_url, video: video });
+    })
   }
+
   const refreshCustomer = () => {
-    Axios.get("http://89.116.228.82/api/get_cus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_cus").then((data) => {
       setCustomerList(data.data);
     })
   }
   const refreshBusiness = () => {
-    Axios.get("http://89.116.228.82/api/get_bus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_bus").then((data) => {
       setBusinessList(data.data);
 
     })
   }
   useEffect((e) => {
     setAuth(true);
-    Axios.get("http://89.116.228.82/api/get_cus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_cus").then((data) => {
       setCustomerList(data.data);
     });
-    Axios.get("http://89.116.228.82/api/get_bus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_bus").then((data) => {
       setBusinessList(data.data);
     })
-    if(e && e.preventDefault()) {e.preventDefault()}
+    if (e && e.preventDefault()) { e.preventDefault() }
   }, [setAuth])
   return (
     <div className='eden__dashboard'>
@@ -207,21 +196,23 @@ const Dashboard = ({setAuth}) => {
       )}
       {vblog && (
         <div className="eden__dashboard-content">
-            <label>Insert an image</label>
-            <input type="file" name='file' onChange={saveFile} />
-            <label >Insert link to your video (Optional)</label>
-            <input type="link" onChange={(e) => {
-              setVideo(e.target.value);
-            }} />
-            <label>Title: </label>
-            <input type="text" onChange={(e) => {
-              setTitle(e.target.value);
-            }} />
-            <label>BLOG: </label>
-            <ReactQuill theme="snow" value={text} onChange={setText} className='blog_area' />
-            <div className='form__button'>
-            <button onClick={handleSubmit}>Submit</button>
-            </div>
+          <label>Insert an image</label>
+          <input type="file" name='file' onChange={(e) => {
+            setImage(e.target.files[0]);
+          }} />
+          <label >Insert link to your video (Optional)</label>
+          <input type="link" onChange={(e) => {
+            setVideo(e.target.value);
+          }} />
+          <label>Title: </label>
+          <input type="text" onChange={(e) => {
+            setTitle(e.target.value);
+          }} />
+          <label>BLOG: </label>
+          <ReactQuill theme="snow" value={text} onChange={setText} className='blog_area' />
+          <div className='form__button'>
+            <button onClick={uploadImage}>Submit</button>
+          </div>
         </div>
       )}
       {vAfter && (

@@ -40,7 +40,7 @@
     border-radius: 25px;
     background: white;
 }
-.blogs__container-post img {
+.blogs__container-post #cloud_image {
     border-radius: 25px;
     width: 90%;
     max-width: 400px;

@@ -37,7 +37,7 @@ const Form = () => {
   let navigate = useNavigate();
 
   const submit_business = () => {
-    Axios.post("http://89.116.228.82/api/insert_business", {
+    Axios.post("http://localhost:3001/api/insert_business", {
       name: name,
       email: email,
       phone: phone,
@@ -53,7 +53,7 @@ const Form = () => {
   }
 
   const submit_customer = () => {
-    Axios.post("http://89.116.228.82/api/insert_customer", {
+    Axios.post("http://localhost:3001/api/insert_customer", {
       name: name,
       email: email,
       phone: phone,

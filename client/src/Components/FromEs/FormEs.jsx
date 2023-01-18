@@ -60,7 +60,7 @@ const FormEs = () => {
         setMessage(event.target.value);
     };
     const submit_customer = () => {
-        Axios.post("http://89.116.228.82/api/insert_customer", {
+        Axios.post("http://localhost:3001/api/insert_customer", {
             name: name,
             email: email,
             phone: phone,
