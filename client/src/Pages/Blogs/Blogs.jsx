@@ -8,7 +8,7 @@ const Blogs = () => {
   const navigate = useNavigate();
   const [postList, setPostList] = useState([]);
   useEffect(() => {
-    axios.get("http://api.edenlightservice.com/api/getposts").then((data) => {
+    axios.get("https://api.edenlightservice.com/api/getposts").then((data) => {
       setPostList(data.data);
     })
   })

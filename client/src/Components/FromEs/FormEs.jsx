@@ -28,19 +28,19 @@ const FormEs = () => {
     const [beach, setBeach] = useState(false);
     const [priceOps, setPriceOps] = useState(0);
     useEffect(() => {
-        Axios.get("http://api.edenlightservice.com/api/getops").then((data) => {
+        Axios.get("https://api.edenlightservice.com/api/getops").then((data) => {
             setOpList(data.data);
         })
     }, [])
     const handleSubmit = async (e) => {
         await e.preventDefault();
-        let ops_sum = await Axios.get("http://api.edenlightservice.com/api/sum_ops", {
+        let ops_sum = await Axios.get("https://api.edenlightservice.com/api/sum_ops", {
             params: {
                 operations: surgery
             }
         });
         setPriceOps(ops_sum.data[0].sum);
-        let logistics_sum = await Axios.get("http://api.edenlightservice.com/api/sum_logistics", {
+        let logistics_sum = await Axios.get("https://api.edenlightservice.com/api/sum_logistics", {
             params: {
                 car: car,
                 stars: stars,
