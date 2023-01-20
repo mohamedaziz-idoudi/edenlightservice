@@ -7,7 +7,7 @@
     border-radius: 4px;
     box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }
-form
+.formbg form
 {
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ form
     margin: 1rem;
     width: 100%;
 }
-input {
+.formbg input {
     font-size: 16px;
     line-height: 28px;
     padding: 8px 16px;

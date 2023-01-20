@@ -20,12 +20,44 @@ const FormEs = () => {
     const [pension, setPension] = useState('');
     const [stars, setStars] = useState('');
     const [lodgingType, setLodgingType] = useState('');
-    const [persons, setPersons] = useState(0);
-    const [rooms, setRooms] = useState(0);
-    const [surgery,setSurgery] = useState(0);
+    const [surgery, setSurgery] = useState([]);
+    const [opList, setOpList] = useState([]);
+    const [stay, setStay] = useState('');
+    const [car, setCar] = useState('');
+    const [sahara, setSahara] = useState(false);
+    const [beach, setBeach] = useState(false);
+    const [priceOps, setPriceOps] = useState(0);
+    useEffect(() => {
+        Axios.get("http://localhost:3001/api/getops").then((data) => {
+            setOpList(data.data);
+        })
+    }, [])
+    const handleSubmit = async (e) => {
+        await e.preventDefault();
+        let ops_sum = await Axios.get("http://localhost:3001/api/sum_ops", {
+            params: {
+                operations: surgery
+            }
+        });
+        setPriceOps(ops_sum.data[0].sum);
+        let logistics_sum = await Axios.get("http://localhost:3001/api/sum_logistics", {
+            params: {
+                car: car,
+                stars: stars,
+                stay: stay,
+                sahara: sahara,
+                beach: beach
+            }
+        })
+        let max = await logistics_sum.data.Maximum;
+        let min = await logistics_sum.data.Minimum;
+        max= await max + priceOps;
+        min=await min + priceOps;
+        document.getElementById("overall_price").innerHTML = `The price will be in between ${min}€ and ${max}€`;
 
+    }
     const handleSelection = (e) => {
-        setSurgery({val: e.target.value});
+        setSurgery({ val: e.target.value });
     }
     const sendEmail = (e) => {
 
@@ -60,23 +92,6 @@ const FormEs = () => {
 
         setMessage(event.target.value);
     };
-    const submit_customer = () => {
-        Axios.post("http://89.116.228.82/api/insert_customer", {
-            name: name,
-            email: email,
-            phone: phone,
-            message: contact,
-            lodgingType: lodgingType,
-            nb_stars: stars,
-            resort: pension,
-            nb_rooms: rooms,
-            nb_persons: persons
-        }).then(() => {
-            alert("successful insert");
-        })
-        navigate('/redirect');
-
-    }
     return (
         <React.Fragment>
             <div className="formbg">
@@ -84,7 +99,7 @@ const FormEs = () => {
                     <h1>Get your cosmetic quote for free</h1>
                     <p>If you want to include additional files, please send us an email via: Contact@edenlightservice.com</p>
                 </div>
-                <form ref={form} onSubmit={sendEmail}>
+                <form ref={form} onSubmit={handleSubmit}>
                     <div className='eden__contact_line'>
                         <label className='eden__contact_item'>Name</label>
                         <input className='eden__contact_item' type="text" name="user_name" ref={ref_name} />
@@ -108,50 +123,36 @@ const FormEs = () => {
                         </select>
 
                     </div>
-                    <div className="eden__contact_line">
-                        <label className='eden__contact_item'>Choose the operation you desire</label>
-                        <select multiple name="operation" id="operation" onChange={handleSelection}>
-                            <optgroup label='Chirurgie des seins'>
-                                <option value={1}>Augmentation mammaire avec prothèses</option>
-                                <option value={2}>Lifting mammaire avec prothèses</option>
-                                <option value={26}>Lifting mammaires sans prothèses</option>
-                                <option value={3}>Lipofilling mammaire</option>
-                                <option value={4}>Réduction mammaire</option>
-                                <option value={5}>Changement de prothèses</option>
-                                <option value={6}>Gynécomastie</option>
-                            </optgroup>
-                            <optgroup label='Chirurgie de la Silhouette'>
-                                <option value={7}>Augmentation des fesses(Brazilian Buttlift)</option>
-                                <option value={8}>Liposuccion VASER</option>
-                                <option value={9}>Liposuccion classique</option>
-                                <option value={10}>Lipo-Abdominoplastie</option>
-                                <option value={11}>Minilift abdominal</option>
-                                <option value={12}>Lifting des bras</option>
-                                <option value={13}>Lifting des cuisses</option>
-                                <option value={14}>Bodylift</option>
-                            </optgroup>
-                            <optgroup label='Chirurgie du visage'>
-                                <option value={15}>Rhinoplastie</option>
-                                <option value={16}>Lifting cervico facial (visage)</option>
-                                <option value={17}>Blépharoplastie</option>
-                            </optgroup>
-                            <optgroup label="Chirurgie intime">
-                                <option value={18}>Vaginoplastie</option>
-                                <option value={19}>Labioplastie</option>
-                            </optgroup>
-                            <optgroup label="Chirurgie de l'obésité">
-                                <option value={20}>Vaginoplastie</option>
-                                <option value={21}>ByPass / Mini ByPass</option>
-                            </optgroup>
-                            <optgroup label='Implants dentaires'>
-                                <option value={22}>Implant dentaire</option>
-                                <option value={23}>Couronne en céramo-métallique sur implant</option>
-                                <option value={24}>Facettes</option>
-                            </optgroup>
-                            <optgroup label='Implants capillaires'>
-                                <option value={25}>Greffe Capillaire FUE</option>
-                            </optgroup>
-                        </select>
+                    <div className="eden__contact-ops_title">
+                        <h3>Choose the operation(s) you desire</h3>
+                    </div>
+                    <div className="eden__contact_selection">
+
+                        {Array.from(opList).map((val, key) => {
+                            return (
+                                <div className="eden__contact_selection-item">
+                                    <li key={key}>
+                                        <div className="toppings-list-item">
+                                            <div className="left-section">
+                                                <input
+                                                    type="checkbox"
+                                                    id={`custom-checkbox-${key}`}
+                                                    name={val.operation}
+                                                    value={key + 1}
+                                                    onChange={(e) => {
+                                                        surgery.push(+e.target.value);
+                                                        console.log(surgery);
+
+                                                    }}
+                                                />
+                                                <label htmlFor={`custom-checkbox-${key}`}>{val.operation}</label>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </div>
+                            )
+                        })}
                     </div>
                     <div className="eden__form-title">
                         <h1>Reserve your stay</h1>
@@ -176,63 +177,57 @@ const FormEs = () => {
                                 <select name="lodging" id="lodging" onChange={(e) => {
                                     setStars(e.target.value);
                                 }}>
-                                    <option value="">Please select</option>
-
-                                    <option value="4_stars">4 Stars</option>
-                                    <option value="5_stars">5 Stars</option>
-                                </select>
-                            </div>
-                            <div className='eden__contact_line'>
-                                <label>Type of Lodging:</label>
-                                <select name="type_lod" id="type_lod" onChange={(e) => {
-                                    setPension(e.target.value);
-
-                                }}>
-                                    <option value="">Please select</option>
-                                    <option value="all_inclusive">All Inclusive</option>
-                                    <option value="standard">Standard</option>
+                                    <option value="">---Please Select---</option>
+                                    <option value="Hotel 4 etoiles">4 Stars</option>
+                                    <option value="Hotel 5 etoiles">5 Stars</option>
                                 </select>
                             </div>
                         </React.Fragment>
                     )}
                     {lodgingType === 'House' && (
-                        <div>
-                            <label>Number of Persons</label>
-                            <input type="number" onChange={(e) => {
-                                setPersons(e.target.value);
-                            }} />
-                            <label>Number of Rooms</label>
-                            <input type="number" onChange={(e) => {
-                                setRooms(e.target.value);
-                            }} />
+                        <div className='eden__contact_line'>
+                            <label >Please specify where you want to pass your stay</label>
+                            <select name="villa_apart" id="villa_apart" onChange={(e) => {
+                                setStay(e.target.value);
+                            }}>
+                                <option value="">---Please Select----</option>
+                                <option value="Villa">Villa</option>
+                                <option value="Apartment">Apartment</option>
+                            </select>
                         </div>
                     )}
                     <div className='eden__contact_line'>
                         <label>Car (Optional)</label>
-                        <select name='car'>
+                        <select name='car' onChange={(e) => {
+                            setCar(e.target.value);
+                        }}>
                             <option value="">---Please Select---</option>
-                            <option value="Luxe">Luxury Car</option>
-                            <option value="Standard">Standard Car</option>
+                            <option value="Voiture de Luxe">Luxury Car</option>
+                            <option value="Voiture Standard">Standard Car</option>
                         </select>
                     </div>
-                    <div className="eden__contact-line">
+                    <div className="eden__contact_line">
                         <label>Are you interested in visiting El Sahara</label>
-                        <select name="sahara" id="sahara">
+                        <select name="sahara" id="sahara" onChange={(e) => {
+                            setSahara(e.target.value);
+                        }}>
                             <option value="">---Please Select---</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
                     </div>
-                    <div className="eden__contact-line">
+                    <div className="eden__contact_line">
                         <label>Are you interested in visiting Beach Leisure</label>
-                        <select name="sahara" id="sahara">
+                        <select name="beach" id="beach" onChange={(e) => {
+                            setBeach(e.target.value);
+                        }}>
                             <option value="">---Please Select---</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
                     </div>
                     <input type="submit" value="Send" />
-                    <p id='notification'></p>
+                    <p id='overall_price'></p>
                 </form>
             </div >
         </React.Fragment >

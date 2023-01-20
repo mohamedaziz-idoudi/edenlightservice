@@ -1,0 +1,97 @@
+.topping {
+    margin-top: 0.3rem;
+    vertical-align: text-bottom;
+}
+
+.result {
+    margin-top: 1rem;
+}
+.eden__contact_selection-item li {
+    list-style: none;
+}
+.eden__contact_selection {
+    height: 300px;
+    width: 100%;
+    overflow: scroll;
+}
+.eden__contact_selection::-webkit-scrollbar {
+    width: 5px;
+}
+
+.eden__contact_selection::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(130, 153, 233, 0.3); 
+    border-radius: 10px;
+}
+
+.eden__contact_selection::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(130, 153, 236, 0.3); 
+}
+.eden__contact-ops_title h3 {
+    font-family: var(--font-family);
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--color-blue);
+}
+.toppings-list,
+.total {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.toppings-list {
+    list-style: none;
+    padding: 0;
+}
+
+.toppings-list li {
+    margin-bottom: 0.5rem;
+}
+
+.toppings-list-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.toppings-list li:last-child {
+    border-top: 1px solid #ccc;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.toppings-list-item label {
+    vertical-align: text-bottom;
+    margin-left: 0.2rem;
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    outline: none;
+}
+
+.total {
+    margin-top: 1rem;
+}
+
+#overall_price {
+    font-family: var(--font-family);
+    color: var(--color-blue);
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 1rem;
+}
+@media screen and (max-width: 600px) {
+
+    .toppings-list,
+    .total {
+        width: 90%;
+    }
+}

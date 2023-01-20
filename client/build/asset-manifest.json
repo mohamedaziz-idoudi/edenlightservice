@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a745acd.css",
-    "main.js": "/static/js/main.e9d68e6b.js",
+    "main.css": "/static/css/main.c83882a6.css",
+    "main.js": "/static/js/main.9dcfddb6.js",
     "static/media/about.png": "/static/media/about.e8313a6aab95c8fa9ae2.png",
     "static/media/cathedral.webp": "/static/media/cathedral.d3b71b3d19bc6a7fa668.webp",
     "static/media/RafRaf.webp": "/static/media/RafRaf.901a3b08c89cad10e61a.webp",
@@ -51,8 +51,8 @@
     "static/media/b.jpg": "/static/media/b.cb414e00cb9994c1620d.jpg",
     "static/media/male.jpg": "/static/media/male.73d588b50fdab6cc195e.jpg",
     "static/media/globe.webp": "/static/media/globe.100b11c44bf616f7783a.webp",
+    "static/media/novotel.jpg": "/static/media/novotel.ae6c10d7df05048c6071.jpg",
     "static/media/test.webp": "/static/media/test.587bfd1db498d3c9615a.webp",
-    "static/media/carth.jpg": "/static/media/carth.358f6de848990438c7c7.jpg",
     "static/media/bejaoui.jpg": "/static/media/bejaoui.c472b856f8b3d9631fa2.jpg",
     "static/media/tataouine2.webp": "/static/media/tataouine2.84e6136d4d116b34744e.webp",
     "static/media/medical_service.webp": "/static/media/medical_service.b5ef2eb716c7b6762b83.webp",
@@ -60,12 +60,13 @@
     "static/media/ss.webp": "/static/media/ss.958d9c1a5f60ca470f10.webp",
     "static/media/abs.jpg": "/static/media/abs.981100130b60ae91dd6c.jpg",
     "static/media/docpng.png": "/static/media/docpng.6a41170bee6b008b9273.png",
-    "static/media/beau.jpeg": "/static/media/beau.af9190130976fe6ac051.jpeg",
     "static/media/gyn.jpg": "/static/media/gyn.952c9d996ba34900e4c5.jpg",
+    "static/media/mov1.jpg": "/static/media/mov1.392413f76251df904022.jpg",
     "static/media/movenpick.jpg": "/static/media/movenpick.392413f76251df904022.jpg",
     "static/media/sousse-palace.jpg": "/static/media/sousse-palace.e0c6a13b4ea024c5ec5e.jpg",
+    "static/media/mov2.jpg": "/static/media/mov2.48f6d284e9d599d0d643.jpg",
     "static/media/support_about.webp": "/static/media/support_about.1d323a2fcad6bf42d1cc.webp",
-    "static/media/rose.jpg": "/static/media/rose.4a61b0cb090ebb41fc84.jpg",
+    "static/media/makni.webp": "/static/media/makni.15b7d9f6be98c6258135.webp",
     "static/media/logo.png": "/static/media/logo.8676ba56ab641f2fcb60.png",
     "static/media/hayathem.jpg": "/static/media/hayathem.d8c4dcfb05b955c35b27.jpg",
     "static/media/language.png": "/static/media/language.781d0288b011bfddc45a.png",
@@ -92,11 +93,11 @@
     "static/media/time.png": "/static/media/time.c7579abd0e162ccfc0f5.png",
     "static/media/child.webp": "/static/media/child.dcca62699658b8d9afc8.webp",
     "index.html": "/index.html",
-    "main.0a745acd.css.map": "/static/css/main.0a745acd.css.map",
-    "main.e9d68e6b.js.map": "/static/js/main.e9d68e6b.js.map"
+    "main.c83882a6.css.map": "/static/css/main.c83882a6.css.map",
+    "main.9dcfddb6.js.map": "/static/js/main.9dcfddb6.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a745acd.css",
-    "static/js/main.e9d68e6b.js"
+    "static/css/main.c83882a6.css",
+    "static/js/main.9dcfddb6.js"
   ]
 }

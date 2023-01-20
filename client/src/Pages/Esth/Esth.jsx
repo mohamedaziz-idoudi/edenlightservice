@@ -3,9 +3,10 @@ import './esth.css'
 import * as RiIcons from 'react-icons/ri'
 import * as AiIcons from 'react-icons/ai'
 import { Esth_spec } from '../../Components'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import hayathem from
- '../../assets/hayathem.jpg';
+  '../../assets/hayathem.jpg';
+  import makni from '../../assets/Partners/makni.webp';
 const Esth = () => {
   const navigate = useNavigate();
   return (
@@ -27,7 +28,7 @@ const Esth = () => {
             </div>
             <h5>Get in touch with us</h5>
             <div className="form__button">
-              <button onClick={()=> {
+              <button onClick={() => {
                 navigate("/message");
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}>Send us a message</button>
@@ -39,7 +40,7 @@ const Esth = () => {
             </div>
             <h5>Get an idea on the prices</h5>
             <div className="form__button">
-              <button onClick={()=> {
+              <button onClick={() => {
                 navigate("/devis_esth");
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}>Get your Quote for free</button>
@@ -51,7 +52,7 @@ const Esth = () => {
             </div>
             <h5>Have a great stay during the treatment period</h5>
             <div className="form__button">
-              <button onClick={()=> {
+              <button onClick={() => {
                 navigate("/contact");
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}>Reserve your stay</button>
@@ -80,6 +81,29 @@ const Esth = () => {
         </div>
         <div className="eden__esth-associates_item-image">
           <img src={hayathem} alt="Picture" loading='lazy' />
+        </div>
+      </div>
+      <div className="eden__esth-associates section__padding">
+        <div className="eden__esth-associates_item">
+          <div className="eden__esth-associates_item-titles">
+            <h5>ONE OF OUR ASSOCIATES</h5>
+            <h2>Pr. MAKNI, Amin</h2>
+            <h3>Specialist in bariatric surgery</h3>
+          </div>
+          <div className="eden__esth-associates_item-content">
+            <p>Professor at the Faculty of Medicine of Tunis</p>
+            <p> Surgery for digestive cancers and peritoneal carcinomatosis.</p>
+            <p> Laparoscopic surgery.</p>
+            <p> Obesity surgery.</p>
+            <p> Hernia surgery.</p>
+            <p> Bile duct surgery.</p>
+            <p> Proctology.</p>
+            <p>Hepatic and pancreatic surgery.</p>
+            <p> Abdominal emergencies.</p>
+          </div>
+        </div>
+        <div className="eden__esth-associates_item-image">
+          <img src={makni} alt="Picture" loading='lazy' />
         </div>
       </div>
     </div>
