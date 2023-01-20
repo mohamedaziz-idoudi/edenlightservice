@@ -26,7 +26,6 @@ const FormEs = () => {
     const [car, setCar] = useState('');
     const [sahara, setSahara] = useState(false);
     const [beach, setBeach] = useState(false);
-    const [priceOps, setPriceOps] = useState(0);
     useEffect(() => {
         Axios.get("https://api.edenlightservice.com/api/getops").then((data) => {
             setOpList(data.data);
@@ -34,12 +33,12 @@ const FormEs = () => {
     }, [])
     const handleSubmit = async (e) => {
         await e.preventDefault();
-        let ops_sum = await Axios.get("https://api.edenlightservice.com/api/sum_ops", {
+        await Axios.get("https://api.edenlightservice.com/api/sum_ops", {
             params: {
                 operations: surgery
             }
-        });
-        setPriceOps(ops_sum.data[0].sum);
+        }).then(async (data) => {
+        let priceOps = await data.data[0].sum;
         let logistics_sum = await Axios.get("https://api.edenlightservice.com/api/sum_logistics", {
             params: {
                 car: car,
@@ -51,10 +50,10 @@ const FormEs = () => {
         })
         let max = await logistics_sum.data.Maximum;
         let min = await logistics_sum.data.Minimum;
-        max= await max + priceOps;
-        min=await min + priceOps;
+        max = await max + priceOps;
+        min = await min + priceOps;
         document.getElementById("overall_price").innerHTML = `The price will be in between ${min}€ and ${max}€`;
-
+    })
     }
     const handleSelection = (e) => {
         setSurgery({ val: e.target.value });
