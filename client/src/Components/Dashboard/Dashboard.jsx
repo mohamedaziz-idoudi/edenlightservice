@@ -33,27 +33,27 @@ const Dashboard = ({ setAuth }) => {
     await e.stopPropagation();
     setVblog(false);
     setVafter(true);
-    axios.post("http://89.116.228.82/api/post", { title: title, paragraph: text, image: response.data.secure_url, video: video });
+    axios.post("http://api.edenlightservice.com/api/post", { title: title, paragraph: text, image: response.data.secure_url, video: video });
     })
   }
 
   const refreshCustomer = () => {
-    Axios.get("http://89.116.228.82/api/get_cus").then((data) => {
+    Axios.get("http://api.edenlightservice.com/api/get_cus").then((data) => {
       setCustomerList(data.data);
     })
   }
   const refreshBusiness = () => {
-    Axios.get("http://89.116.228.82/api/get_bus").then((data) => {
+    Axios.get("http://api.edenlightservice.com/api/get_bus").then((data) => {
       setBusinessList(data.data);
 
     })
   }
   useEffect((e) => {
     setAuth(true);
-    Axios.get("http://89.116.228.82/api/get_cus").then((data) => {
+    Axios.get("http://api.edenlightservice.com/api/get_cus").then((data) => {
       setCustomerList(data.data);
     });
-    Axios.get("http://89.116.228.82/api/get_bus").then((data) => {
+    Axios.get("http://api.edenlightservice.com/api/get_bus").then((data) => {
       setBusinessList(data.data);
     })
     if (e && e.preventDefault()) { e.preventDefault() }
