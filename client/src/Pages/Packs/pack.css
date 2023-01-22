@@ -16,6 +16,7 @@
     background-image: url('../../assets/Packs/packs_bg.jpg');
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     padding: 6rem 2rem;
 }
 
@@ -39,6 +40,7 @@
     background-size: cover;
     background-attachment: fixed;
     background-position-y: center;
+    background-position: center;
 }
 
 .eden__packs-item_content-section {
@@ -54,7 +56,7 @@
 }
 
 .eden__packs-logistics h5 {
-    color: var(--color-blue);
+    color: white;
     font-size: 1.7em;
     font-weight: 600;
     letter-spacing: 3px;
@@ -81,7 +83,7 @@
 }
 
 .eden__packs-item_content-section h4 {
-    color: var(--color-blue);
+    color: white;
     letter-spacing: 3px;
 }
 
@@ -142,16 +144,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("../../assets/Packs/adam & eve.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     gap: 20px;
 }
 
 .eden__packs-content_item-title h2 {
     font-size: 2.5em;
-    color: var(--color-blue);
+    color: white;
     font-weight: 800;
     letter-spacing: 5px;
 }
-
+#eden__packs-w100 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .eden__packs-content_item-body {
     display: flex;
     flex-direction: row;
@@ -169,22 +183,38 @@
 }
 
 .eden__packs-content_item-paragraph {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
-
+.eden__packs-content_item-paragraph_section {
+    background: linear-gradient(172.15deg, rgba(68, 120, 182, 0) -13.23%, #4478B6 105.83%);
+    border-radius: 50px;
+    padding: 2rem;
+    color: white;
+    
+}
+.eden__packs-content_item-schedule {
+    color: white;
+    font-family: var(--font-family);
+    background: linear-gradient(172.15deg, rgba(68, 120, 182, 0) -13.23%, #4478B6 105.83%);
+    padding: 2rem;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
 .eden__packs-content_item-schedule h3 {
     font-size: 1.7em;
-    color: var(--color-blue);
     font-weight: 500;
 }
 
 .eden__packs-content_item-paragraph_section h3 {
     font-size: 1.7em;
-    color: var(--color-blue);
     font-weight: 500;
 }
 
@@ -215,7 +245,10 @@
 }
 
 .eden__packs-item_pictures img {
-    height: 100%;
+    width: 100%;
+    height: 300px;
+    border-radius: 50px;
+    opacity: 0.9;
 }
 
 .eden__packs img {
@@ -233,6 +266,7 @@
     background-size: cover;
     background-attachment: fixed;
     background-position-y: center;
+    background-position-x: right;
     height: 100%;
 
 }
@@ -360,6 +394,19 @@
     .eden__packs-content_item-body_pic {
         display: none;
     }
+    .eden__packs-content_item-paragraph {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .eden__packs-item_pictures {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
 @media (max-width:850px) {

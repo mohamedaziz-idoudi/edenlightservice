@@ -20,7 +20,7 @@ const Team = () => {
                     <div className="team__box_right">
                         <div className='team__box_right-titles'>
                             <h5>Co Founder, DGA</h5>
-                            <h3>BASSEGA, Diane</h3>
+                            <h3>BASSEGA, Diane Rachel</h3>
                         </div>
                     </div>
                 </div>

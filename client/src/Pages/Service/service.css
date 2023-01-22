@@ -208,6 +208,12 @@
     font-style: normal;
     margin: 0 1rem;
 }
+.eden__service_container-blog_content-left ul {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 1px;
+}
 .eden__service_container-blog_content-right img {
     width: 100%;
     max-width: 700px;

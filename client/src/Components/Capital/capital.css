@@ -15,6 +15,7 @@
     background-image: url(../../assets/Tourism/tunis_background.webp);
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 }
 .eden__capital_container-header_content {
     display: flex;

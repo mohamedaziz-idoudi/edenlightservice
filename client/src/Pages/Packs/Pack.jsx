@@ -1,6 +1,5 @@
 import React from 'react'
 import './pack.css';
-import pic from '../../assets/Packs/adam & eve.jpg'
 import sidibou from '../../assets/Packs/sidibou.jpg';
 import sousse from '../../assets/Packs/sousse-palace.jpg';
 import skate from '../../assets/Packs/skate.jpg';
@@ -139,7 +138,7 @@ const Pack = () => {
                                         <li>Dentist and ophthalmologist consultation</li>
                                     </ul>
                                 </section>
-                                <section className="eden__packs-content_item-paragraph_section">
+                                <section className="eden__packs-content_item-paragraph_section" id='eden__packs-w100'>
                                     <h3>Schedule</h3>
                                     <p>Visit of Tunis the historic city and the remains of Carthage</p>
                                     <p>Visit of the city of Hammamet and Sousse (boat trip, tour
@@ -147,9 +146,6 @@ const Pack = () => {
                                         discovery of the medina, skiing)</p>
                                 </section>
                             </div>
-                        </div>
-                        <div className="eden__packs-content_item-body_pic">
-                            <img src={pic} alt="Adam & Eve" />
                         </div>
                     </div>
                     <div className="eden__packs-item_pictures">

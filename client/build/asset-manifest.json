@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.9185ce16.css",
-    "main.js": "/static/js/main.0ab0f2d6.js",
+    "main.css": "/static/css/main.612069a7.css",
+    "main.js": "/static/js/main.cd397515.js",
     "static/media/about.png": "/static/media/about.e8313a6aab95c8fa9ae2.png",
     "static/media/cathedral.webp": "/static/media/cathedral.d3b71b3d19bc6a7fa668.webp",
     "static/media/RafRaf.webp": "/static/media/RafRaf.901a3b08c89cad10e61a.webp",
     "static/media/honeymoon.jpg": "/static/media/honeymoon.13fb07a3e5c8fa9250be.jpg",
     "static/media/medina.webp": "/static/media/medina.f7c84c4409b87d269742.webp",
     "static/media/djerba2.webp": "/static/media/djerba2.7384cac1343986a37e00.webp",
+    "static/media/skate.jpg": "/static/media/skate.8176a5b7742174e99e73.jpg",
     "static/media/marsa.webp": "/static/media/marsa.347ffaec706369413afa.webp",
     "static/media/djerba1.webp": "/static/media/djerba1.e35ee3b52448cd33cf29.webp",
     "static/media/adam & eve.jpg": "/static/media/adam & eve.433d914ac8fded1f8259.jpg",
@@ -33,7 +34,6 @@
     "static/media/face.jpg": "/static/media/face.73802166683c6a11861a.jpg",
     "static/media/BG_SidiBou.webp": "/static/media/BG_SidiBou.1c8a612c3ef58372d3d1.webp",
     "static/media/islam.webp": "/static/media/islam.4a85c6f1970cca0c443c.webp",
-    "static/media/skate.jpg": "/static/media/skate.8fa408f40c4b3b17f37f.jpg",
     "static/media/tataouine1.webp": "/static/media/tataouine1.af5521d24bdeead5a403.webp",
     "static/media/blog.jpg": "/static/media/blog.29726918978e00b06b0b.jpg",
     "static/media/rishab-lamichhane-r1Y2npWGKhU-unsplash.webp": "/static/media/rishab-lamichhane-r1Y2npWGKhU-unsplash.b46fa97bde890be1ed15.webp",
@@ -93,11 +93,11 @@
     "static/media/time.png": "/static/media/time.c7579abd0e162ccfc0f5.png",
     "static/media/child.webp": "/static/media/child.dcca62699658b8d9afc8.webp",
     "index.html": "/index.html",
-    "main.9185ce16.css.map": "/static/css/main.9185ce16.css.map",
-    "main.0ab0f2d6.js.map": "/static/js/main.0ab0f2d6.js.map"
+    "main.612069a7.css.map": "/static/css/main.612069a7.css.map",
+    "main.cd397515.js.map": "/static/js/main.cd397515.js.map"
   },
   "entrypoints": [
-    "static/css/main.9185ce16.css",
-    "static/js/main.0ab0f2d6.js"
+    "static/css/main.612069a7.css",
+    "static/js/main.cd397515.js"
   ]
 }
