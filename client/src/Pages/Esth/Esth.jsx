@@ -4,65 +4,65 @@ import * as RiIcons from 'react-icons/ri'
 import * as AiIcons from 'react-icons/ai'
 import { Esth_spec } from '../../Components'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import hayathem from
   '../../assets/hayathem.jpg';
   import makni from '../../assets/Partners/makni.webp';
 const Esth = () => {
+  const {t} = useTranslation();
   const navigate = useNavigate();
   return (
     <div className='eden__esth'>
       <div className="eden__esth-header">
-        <h1>Cosmetic Surgery in Tunisia</h1>
-        <h4>Consult the informations related to cosmetic services we assure</h4>
+        <h1>{t('esth.header.title')}</h1>
+        <h4>{t('esth.header.caption')}</h4>
       </div>
       <div className="eden__esth-proph section__padding">
-        <h2>"Having Surgery Is An Act Of Love Towards Oneself"</h2>
-        <p>Let 2023 be the year of resolutions for your lifestyle.
-          Since a long time ago, Tunisia has been the center of medical assistance in Africa specifically in the field of cosmetics.
-          EDEN Light Service accompanies you to perform cosmetic surgery in Tunisia and seeks the satisfaction of its patients.</p>
-        <h4>Learn about the procedure</h4>
+        <h2>{`"${t('esth.procedure.quote')}"`}</h2>
+        <p>{t('esth.procedure.paragraph')}</p>
+        <h4>{t('esth.procedure.learn')}</h4>
         <div className="eden__esth-proph_procedure">
           <div className="eden__esth-proph_procedure-item">
             <div className="eden__esth-proph_procedure-item_icon">
               <RiIcons.RiNumber1 />
             </div>
-            <h5>Get in touch with us</h5>
+            <h5>{t('esth.procedure.touch')}</h5>
             <div className="form__button">
               <button onClick={() => {
                 navigate("/message");
                 window.scrollTo({ top: 0, behavior: "smooth" });
-              }}>Send us a message</button>
+              }}>{t('esth.procedure.contact')}</button>
             </div>
           </div>
           <div className="eden__esth-proph_procedure-item">
             <div className="eden__esth-proph_procedure-item_icon">
               <RiIcons.RiNumber2 />
             </div>
-            <h5>Get an idea on the prices</h5>
+            <h5>{t('esth.procedure.prices')}</h5>
             <div className="form__button">
               <button onClick={() => {
                 navigate("/devis_esth");
                 window.scrollTo({ top: 0, behavior: "smooth" });
-              }}>Get your Quote for free</button>
+              }}>{t('esth.procedure.devis')}</button>
             </div>
           </div>
           <div className="eden__esth-proph_procedure-item">
             <div className="eden__esth-proph_procedure-item_icon">
               <RiIcons.RiNumber3 />
             </div>
-            <h5>Have a great stay during the treatment period</h5>
+            <h5>{t('esth.procedure.stay')}</h5>
             <div className="form__button">
               <button onClick={() => {
                 navigate("/contact");
                 window.scrollTo({ top: 0, behavior: "smooth" });
-              }}>Reserve your stay</button>
+              }}>{t('esth.procedure.reserve')}</button>
             </div>
           </div>
           <div className="eden__esth-proph_procedure-item">
             <div className="eden__esth-proph_procedure-item_icon">
               <RiIcons.RiNumber4 />
             </div>
-            <h5>When it comes to treatment. EDEN Light Service keeps on monitoring its patients once it's done.</h5>
+            <h5>{t('esth.procedure.after')}</h5>
           </div>
         </div>
       </div>
@@ -71,12 +71,12 @@ const Esth = () => {
       <div className="eden__esth-associates section__padding">
         <div className="eden__esth-associates_item">
           <div className="eden__esth-associates_item-titles">
-            <h5>ONE OF OUR ASSOCIATES</h5>
+            <h5>{t('esth.associates.hayathem.subtitle')}</h5>
             <h2>Dr. Hayathem Helali</h2>
-            <h3>Aesthetic and maxillofacial surgery، cranio orbital and restorative</h3>
+            <h3>{t('esth.associates.hayathem.specs')}</h3>
           </div>
           <div className="eden__esth-associates_item-content">
-            <p>Dr. Helali: specialist in maxillofacial and aesthetic surgery, reconstructive surgery, malformation of the skull, orbit, whole body, facial cancer, scars and burns, plastic surgeon.</p>
+            <p>{t('esth.associates.hayathem.content')}</p>
           </div>
         </div>
         <div className="eden__esth-associates_item-image">
@@ -86,20 +86,20 @@ const Esth = () => {
       <div className="eden__esth-associates section__padding">
         <div className="eden__esth-associates_item">
           <div className="eden__esth-associates_item-titles">
-            <h5>ONE OF OUR ASSOCIATES</h5>
+            <h5>{t('esth.associates.amin.subtitle')}</h5>
             <h2>Pr. MAKNI, Amin</h2>
-            <h3>Specialist in bariatric surgery</h3>
+            <h3>{t('esth.associates.amin.specs')}</h3>
           </div>
           <div className="eden__esth-associates_item-content">
-            <p>Professor at the Faculty of Medicine of Tunis</p>
-            <p> Surgery for digestive cancers and peritoneal carcinomatosis.</p>
-            <p> Laparoscopic surgery.</p>
-            <p> Obesity surgery.</p>
-            <p> Hernia surgery.</p>
-            <p> Bile duct surgery.</p>
-            <p> Proctology.</p>
-            <p>Hepatic and pancreatic surgery.</p>
-            <p> Abdominal emergencies.</p>
+            <p>{t('esth.associates.amin.content1')}</p>
+            <p>{t('esth.associates.amin.content2')}</p>
+            <p>{t('esth.associates.amin.content3')}</p>
+            <p>{t('esth.associates.amin.content4')}</p>
+            <p>{t('esth.associates.amin.content5')}</p>
+            <p>{t('esth.associates.amin.content6')}</p>
+            <p>{t('esth.associates.amin.content7')}</p>
+            <p>{t('esth.associates.amin.content8')}</p>
+            <p>{t('esth.associates.amin.content9')}</p>
           </div>
         </div>
         <div className="eden__esth-associates_item-image">

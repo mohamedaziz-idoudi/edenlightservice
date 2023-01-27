@@ -1,23 +1,25 @@
 import React from 'react'
 import './chose.css';
+import { useTranslation } from 'react-i18next';
 const Chose = () => {
+  const {t} = useTranslation()
   return (
     <div className='eden__chose_container'>
       <div className="eden__chose_container-header">
-        <h1>Why Chose Us?</h1>
+        <h1>{t('about.why.title')}</h1>
       </div>
       <div className="eden__chose_container-buttom">
         <div className='eden__chose_container-buttom_item'>
-            <h3>Immediate Response</h3>
+            <h3>{t('about.why.one')}</h3>
         </div>
         <div className='eden__chose_container-buttom_item'>
-            <h3>We choose to promote only the best</h3>
+            <h3>{t('about.why.two')}</h3>
         </div>
         <div className='eden__chose_container-buttom_item'>
-            <h3>Accurate informations provided</h3>
+            <h3>{t('about.why.three')}</h3>
         </div>
         <div className='eden__chose_container-buttom_item'>
-            <h3>Long Distance Follow Up</h3>
+            <h3>{t('about.why.four')}</h3>
         </div>
       </div>
     </div>

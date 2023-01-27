@@ -41,6 +41,10 @@
 }
 .eden__navbar-links_logo
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     margin-right: 1rem;
 }
 .eden__navbar-links_logo img{

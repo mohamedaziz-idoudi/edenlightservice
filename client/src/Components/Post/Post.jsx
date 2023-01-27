@@ -14,7 +14,7 @@ const Post = () => {
         Axios.get(`https://api.edenlightservice.com/api/getPost/${postID}`).then((result) => {
             setPost({ title: result.data[0].title, paragraph: result.data[0].paragraph, image: result.data[0].image, video: result.data[0].video, date: result.data[0].date });
         })
-        Axios.get("https://api.edenlightservice.com/api/getposts").then((result) => {
+        Axios.get("https://api.edenlightservice.com/api/getblogs").then((result) => {
             setPostList(result.data);
         })
     })

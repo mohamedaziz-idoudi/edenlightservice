@@ -1,0 +1,352 @@
+{
+    "home" : {
+        "header" : {
+            "country": "La Tunisie",
+            "title": "Capitale des Soins Médicaux en Afrique",
+            "subtitle": "En savoir plus sur les dernières inventions et les réussites des médecins tunisiens",
+            "button": "En Savoir Plus"
+        },
+        "latest" : {
+            "button": "Consultez Notre Dernier Blog"
+        },
+        "mission" : {
+            "about": "A PROPOS DE NOUS",
+            "title": "Notre Mission",
+            "paragraph1": "Eden Light Service c'est voyager pour recouvrer la santé , mais pas seulement..Pour découvrir aussi… et parfois l’inverse. ",
+            "paragraph2": " Parce que la santé c'est la vie, et que la vie c'est d'abord le temps.Temps que nous aimerions employer pour vaquer à nos convenances. Nous mettons un accent particulier et rehaussé sur tout ce qui touche à votre séjour pour qu'il devienne inoubliable. Eden Light vous accompagne pour un séjour de qualité , exceptionnel et personnalisé ",
+            "button": "En Savoir Plus"
+        },
+        "esth": {
+            "title": "Découvrez notre rubrique cosmétique",
+            "paragraph": "Que 2023 soit l'année des résolutions pour votre style de vie. Depuis longtemps, la Tunisie est le centre de l'assistance médicale en Afrique spécifiquement dans le domaine des cosmétiques. EDEN Light Service vous accompagne pour pratiquer la chirurgie esthétique en Tunisie et recherche la satisfaction de ses patients.",
+            "button": "Consultez Notre Rebrique"
+        },
+        "stories": {
+            "title": "Voir la dernière invention du <br /> Dr. Mohamed Bejaoui",
+            "paragraph":"En 2015, lui et son équipe ont été les premiers à réaliser des allogreffes haplo-identiques, c'est-à-dire à partir d'un donneur familial non HLA-identique. En 2018, il a été le premier avec son équipe à réaliser la première autogreffe de cellules souches hématopoïétiques dans les tumeurs solides de l'enfant...",
+            "button":"En Savoir Plus"
+        },
+        "vision" : {
+            "caption" : "NOTRE VISION",
+            "title": "Les objectifs spécifiques de votre thérapie seront déterminés par vous et votre médecin",
+            "paragraph": "Eden Light est le guide pour retrouver votre santé physique, psychologique et sociale dans des cliniques internationales de référence, avec des médecins expérimentés, entourés d'une équipe de professionnels de santé qui s'occupe de chaque détail de votre séjour.",
+            "goal_title": "Notre But",
+            "goal_content": "La vision d'EDEN Light Services est d'assurer le confort et les meilleurs services de santé à ses patients.",
+            "couns_title": "Nos Conseillers",
+            "couns_content":"Nous sommes des professionnels passionnés et compatissants, animés par la mission d'aider plus de gens à vivre une vie meilleure et plus heureuse chaque jour.",
+            "support_title": "Notre Assistance",
+            "support_content": "Notre équipe d'assistance est toujours là pour répondre à toute question et résoudre tout problème."
+        },
+        "medtour" : {
+            "partners_title": "Nos Partenaires",
+            "partners_content": "EDEN Light Services avec la collaboration de multiples partenaires couvre tous les besoins médicaux.",
+            "button": "En Savoir Plus",
+            "med_title": "Tourisme Médical",
+            "med_content": "En savoir plus sur la météo, la langue, les curiosités de la Tunisie et plus encore.."
+        },
+        "services" : {
+            "pre_tunisia": {
+                "list_1": "Devis Estimatif",
+                "list_2": "Assistance aux démarches et formalités d'entrée en Tunisie",
+                "list_3": "Hébergement-transfert aéroport",
+                "list_4": "Préparation de votre arrivée (choix de l'hôtel, de la compagnie aérienne, de la voiture, des repas, des sites à visiter)"
+            },
+            "in_tunisia" : {
+                "list_1": "Accueil à l'aéroport et transfert soit à l'hôtel soit à la clinique",
+                "list_2": "Gestion et planification des rendez-vous",
+                "list_3": "Suivi personnalisé de chaque patient selon les critères choisis par lui-même",
+                "list_4": "Visiter les sites de Tunis",
+                "list_5": "Excursion dans d'autres villes et lieux touristiques (facultatif)"
+            },
+            "post_tunisia" : {
+                "list_1": "Suivi des patients",
+                "list_2": "Rappel des échéances des prochains rendez-vous d'inspection"
+                
+            },
+            "procedure" : {
+                "subtitle": "PROCEDURE",
+                "title": "Trouver des soins de santé à l'étranger",
+                "para1": "Nous vous aiderons à planifier l'ensemble de la procédure",
+                "explore_title": "Explorer",
+                "explore_content": "Découvrez les différents hôpitaux et cliniques",
+                "match_title": "Match",
+                "match_content":"En fonction de vos besoins, EDEN Light Service vous recommande les meilleures destinations",
+                "arrange_title": "Organiser",
+                "arrange_content": "Une fois mis en correspondance, vous serez contacté sous peu avec les informations nécessaires",
+                "treat_title": "Soigner",
+                "treat_content": "Finalisez votre traitement avec la clinique de votre choix",
+                "caption": "Veuillez nous contacter pour démarrer votre procédure",
+                "button": "Message"
+            }
+        }
+    },
+    "navbar" : {
+        "home": "Accueil",
+        "services": "Services Médicaux",
+        "packs": "Nos Packs",
+        "esth": "Esthétique",
+        "partners": "Nos Partenaires",
+        "medtour": "Tourisme Medical",
+        "about": "A Propos",
+        "blogs": "Blogs",
+        "contact": "Contactez Nous"
+    },
+    "services": {
+        "fields": {
+            "title": "Nos Services Medicaux",
+            "caption": "Notre objectif est de couvrir tous les services médicaux nécessaires à nos clients",
+            "neuro": "Neurologie",
+            "dental": "Soins dentaires",
+            "hc": "Soins cardiaques",
+            "emer": "Urgences",
+            "esth": "Esthétique",
+            "eye": "Soin des yeux"
+        },
+        "offer" : {
+            "title": "Que proposons-nous ?",
+            "caption" : "EDEN Light Service propose plusieurs catégories de services pour couvrir tous les besoins de ses patients",
+            "button" : "Message"
+
+        },
+        "child": {
+            "title": "Services aux enfants",
+            "services" : {
+                "ped" : "Pédiatrie",
+                "pedo": "Pédodontie",
+                "neur": "Neurologie pédiatrique",
+                "hema" : "Hématologie pédiatrique",
+                "oph": "Ophtalmologie",
+                "har": "Bec-de-lièvre"
+            }
+        },
+        "woman": {
+            "title": "Services aux femmes",
+            "services" : {
+                "proc" : "Procréation Médicalement Assistée (MPA)",
+                "myom": "Myomectomie (myomes, fibromes)",
+                "cosm": "Chirurgie esthétique et reconstructrice (Ventre, Visage, Seins, etc...)",
+                "baria" : "Chirurgie Bariatrique (Sleeve, Bypass, Anneau Gastrique)",
+                "lith": "Lithiase",
+                "ret": "Décollement de la rétine",
+                "cor": "Greffe de cornée"
+            }
+        },
+        "men": {
+            "title": "Services masculins",
+            "services" : {
+                "uro" : "Urologie de la lithiase urinaire",
+                "var": "Varicocèle",
+                "inf": "Infertilité",
+                "pen" : "Prothèse pénienne",
+                "pros": "Prostate",
+                "diab": "Diabète",
+                "hypert": "Hypertension",
+                "ortho": "Orthopédie (fracture de la hanche, colonne lombaire, arthrose, gonarthrose, ligament croisé, ménisque discoïde, arthrite, arthroplastie, cataracte, etc.)",
+                "glauc": "Glaucome"
+            }
+        }
+    }, 
+    "pack" : {
+        "title" : "Nos Packs",
+        "famille" : {
+            "husband" : {
+                "title": "Check-up pour le mari:",
+                "bio": "Bilan biologique et cytologique (dépistage du cancer de la prostate, fertilité, diabète, marqueurs tumoraux)",
+                "radio": "Bilan radiologique (consultation professeur d'orthopédie et traumatologie et consultation professeur neurologue IRM, électroencéphalogramme, dépistage hernie discale, densité osseuse, problèmes sciatiques)",
+                "abdo": "Échographie abdominopelvienne (dépistage des maladies du foie, des hépatites)",
+                "cardiac": "Bilan cardiaque (consultation cardiologue, ECG, holter rythmique et tensionnel, test respiratoire)",
+                "gas": "Bilan gastro-entérologique : consultation + fibroscopie ou coloscopie, dépistage des maladies du foie",
+                "dent": "Consultation dentiste et ophtalmologiste"
+            },
+            "wife" : {
+                "title": "Check-up pour la femme:",
+                "bio": "Bilan biologique et cytologique (dépistage du cancer de la prostate, fertilité, diabète, marqueurs tumoraux)",
+                "radio": "Bilan radiologique (consultation professeur d'orthopédie et traumatologie et consultation professeur neurologue IRM, électroencéphalogramme, dépistage hernie discale, densité osseuse, problèmes sciatiques)",
+                "bre": "Échographie mammaire",
+                "cardiac": "Bilan cardiaque (consultation cardiologue, ECG, holter rythmique et tensionnel, test respiratoire)",
+                "vag": "Création d'un vagin artificiel, labiaplastie, rétrécissement vaginal",
+                "dent": "Consultation dentiste et ophtalmologiste"
+            
+            },
+            "child" : {
+                "title": "Check-up pour les enfants",
+                "soins": "Consultations pédodontiste, pédiatre, ophtalmologiste, ORL, échographie abdomino-pelvienne, radiographie panoramique, prise de sang, consultation neuro-pédiatre ou hématologue si besoin"
+            },
+            "logistic": {
+                "details": "Pour plus de détails logistiques",
+                "contact": "Contactez Nous",
+                "visit": "Visitez notre page Tourisme Médical"
+            }
+        },
+        "romeo": {
+            "stay": {
+                "title": "Détails du séjour",
+                "list_1": "Du mardi 7 février au samedi 18 février",
+                "list_2": "TUNIS : Du 7 février au 13 février",
+                "list_3": "6 jours de contrôle"
+            },
+            "med": {
+                "title": "Caractéristiques médicales",
+                "report_title": "Bilan biologique",
+                "report_content1": "Dépistage du cancer de la prostate, cancer du sein, cancer du col de l'utérus et du corps de l'utérus, MST, prévention du diabète",
+                "report_content2": "Consultation gynécologue et urologue",
+                "cardiac": "Bilan cardiaque (consultation cardiologue, ECG, holter rythmique et tensionnel, test respiratoire)"
+            }
+        },
+        "adam": {
+            "stay": {
+                "title": "Détails du séjour",
+                "content": "14 jours à Tunis"
+            },
+            "cadam": {
+                "bio": "Bilan biologique et cytologique (dépistage du cancer de la prostate, fertilité, diabète, marqueurs tumoraux)",
+                "radio": "Bilan radiologique (consultation professeur d'orthopédie et traumatologie et consultation professeur neurologue IRM, électroencéphalogramme, dépistage hernie discale, densité osseuse, problèmes sciatiques)",
+                "abdo": "Échographie abdominopelvienne (dépistage des maladies du foie, des hépatites)",
+                "cardiac": "Bilan cardiaque (consultation cardiologue, ECG, holter rythmique et tensionnel, test respiratoire)",
+                "gas": "Bilan gastro-entérologique : consultation + fibroscopie ou coloscopie, dépistage des maladies du foie",
+                "dent": "Consultation dentiste et ophtalmologiste"
+            },
+            "ceve": {
+                "bio": "Bilan biologique et cytologique (dépistage du cancer de la prostate, fertilité, diabète, marqueurs tumoraux)",
+                "radio": "Bilan radiologique (consultation professeur d'orthopédie et traumatologie et consultation professeur neurologue IRM, électroencéphalogramme, dépistage hernie discale, densité osseuse, problèmes sciatiques)",
+                "bre": "Échographie mammaire",
+                "cardiac": "Bilan cardiaque (consultation cardiologue, ECG, holter rythmique et tensionnel, test respiratoire)",
+                "dent": "Consultation dentiste et ophtalmologiste"
+            
+            },
+            "schedule": {
+                "title": "Programme",
+                "visit1": "Visite de Tunis la ville historique et les vestiges de Carthage",
+                "visit2": "Visite de la ville de Hammamet et Sousse (promenade en bateau, tour de la ville en calèches ou à dos de dromadaire, quad sur la montagne, découverte de la médina, ski)"
+            }
+        },
+        "honeymoon": {
+            "title": "Forfait lune de miel",
+            "med" : {
+                "title": "Détails médicaux",
+                "p1": "Bilan biologique : dépistage cancer de la prostate, cancer du sein, cancer du col de l'utérus et du corps de l'utérus, MST, prévention du diabète, consultation gynécologue et urologue",
+                "p2": "Bilan cardiaque : ECG ; holter rythmique et tensionnel, prévention hypertension, consultation cardiologue"
+            },
+            "leisure": {
+                "title": "Loisirs",
+                "caption": "Demandez ce pack et profitez du grand tour de la Tunisie. Il comprend des visites touristiques dans le Grand Tunis et ses monuments historiques. Il contient également des activités de loisirs à Hammamet, Sousse, Djerba et plus encore.."
+            }
+        }
+        
+    },
+    "esth": {
+        "header": {
+            "title": "Chirurgie Esthétique en Tunisie",
+            "caption": "Consultez les informations relatives aux services cosmétiques que nous assurons"
+        },
+        "procedure": {
+            "quote": "Se faire opérer est un acte d'amour envers soi-même",
+            "paragraph": "Que 2023 soit l'année des résolutions pour votre style de vie. Depuis longtemps, la Tunisie est le centre de l'assistance médicale en Afrique spécifiquement dans le domaine des cosmétiques. EDEN Light Service vous accompagne pour pratiquer la chirurgie esthétique en Tunisie et recherche la satisfaction de ses patients.",
+            "learn": "En savoir plus sur la procédure",
+            "touch": "Prenez contact avec nous",
+            "contact": "Envoyez-nous un message",
+            "prices": "Se faire une idée sur les tarifs",
+            "devis": "Obtenez votre devis gratuitement",
+            "stay": "Passez un excellent séjour pendant la période de traitement",
+            "reserve": "Réservez votre séjour",
+            "after": "Quand il s'agit de traitement. EDEN Light Service continue de suivre ses patients une fois que c'est fait."
+        },
+        "associates" : {
+            "hayathem" : {
+                "subtitle": "UN DE NOS ASSOCIÉS",
+                "specs": "Chirurgie esthétique et maxillo-faciale, crânio-orbitaire et réparatrice",
+                "content": "Dr Helali : spécialiste en chirurgie maxillo-faciale et esthétique, chirurgie réparatrice, malformation du crâne, orbite, corps entier, cancer du visage, cicatrices et brûlures, chirurgien plasticien."
+            },
+            "amin" : {
+                "subtitle": "UN DE NOS ASSOCIÉS",
+                "specs": "Spécialiste en chirurgie bariatrique",
+                "content1": "Professeur à la Faculté de Médecine de Tunis",
+                "content2": "Chirurgie des cancers digestifs et des carcinoses péritonéales.",
+                "content3": "Chirurgie laparoscopique.",
+                "content4": "Chirurgie de l'obésité.",
+                "content5": "Chirurgie des hernies.",
+                "content6": "Chirurgie des voies biliaires.",
+                "content7": "Proctologie.",
+                "content8": "Chirurgie hépatique et pancréatique.",
+                "content9": "Urgences abdominales."
+            }
+        },
+        "spec": {
+            "title": "Chirurgies esthétiques",
+            "bre": {
+                "enl": "Augmentation mammaire",
+                "lift": "Lifting des seins",
+                "lipo": "Lipofilling des seins",
+                "red": "Réduction mammaire"
+            },
+            "abd": {
+                "pl":"Abdominoplastie",
+                "mini":"Minilift Abdominal"
+            },
+            "lipo": {
+                "suc":"Liposuccion",
+                "asp": "Lipoaspiration",
+                "scu": "Liposculpture",
+                "th": "Lifting des cuisses"
+            },
+            "gyn": "Gynécomastie",
+            "butt": {
+                "lipo": "Lipofilling des fesses",
+                "brazilian":"Brazilian Buttlift"
+            },
+            "body": {
+                "arm":"Levage des bras",
+                "lift":"Body Lift"
+            },
+            "face": {
+                "lift":"Lifting du visage",
+                "lipo":"Lipofilling",
+                "rh":"Rhinoplastie",
+                "ble":"Blépharoplastie",
+                "oto": "Otoplastie"
+            },
+            "vag" : {
+                "pl": "Vaginoplastie",
+                "lab":"Labioplastie"
+            },
+            "male": "Chirurgie intime masculine"
+        }
+    },
+    "partners": {
+        "title": "Nos Partenaires",
+        "hos": {
+            "title": "Découvrez nos Hôtels et Cliniques",
+            "gal": "Galerie",
+            "parag": "Afin d'assurer un séjour parfait à ses clients, EDEN Light Service est ravi de vous informer qu'avec la collaboration de ses partenaires, vous passerez un séjour mémorable."
+        },
+        "success": {
+            "title": "Découvrez les nouvelles inventions et histoires de nos <br /> Top Doctors",
+            "p1": "De 1998 à 2019, il est nommé chef du service de pédiatrie, d'immuno-hématologie et de greffe de cellules souches au Centre National de Greffe de Moelle Osseuse de Tunis. En 1998, il est le premier avec son équipe à réaliser les premières allogreffes intrafamiliales de génotypes HLA. des cellules souches hématopoïétiques (moelle) identiques, destinées à traiter des maladies hématologiques et immunologiques graves et souvent d'évolution fatale, chez l'enfant",
+            "p2": "Fondateur d'une unité spécialisée dans la prise en charge des syndromes thalassémiques et drépanocytaires de l'enfant, au centre national de greffe de moelle osseuse Os de Tunis Auteur ou co-auteur de plus de 200 publications scientifiques internationales Auteur de nombreuses conférences nationales et internationales sur l'hématologie et maladies immunologiques chez les enfants. Fondateur et président de l'association tunisienne de lutte contre l'anémie hémolytique constitutionnelle et les déficits immunitaires 'La joie de vivre' de 2003 à 2019. Co-fondateur et président de 'The African Society for Immunodeficiencys' (ASID) de 2008 à 2012.",
+            "p3": "En 2015, lui et son équipe ont été les premiers à réaliser des allogreffes haplo-identiques, c'est-à-dire à partir d'un donneur familial non HLA-identique. En 2018, il a été le premier avec son équipe à réaliser la première autogreffe de cellules souches hématopoïétiques dans les tumeurs solides de l'enfant",
+            "p4": "Depuis 2003, il est impliqué dans la recherche de médicaments avec Novartis (Suisse), Celgene (USA), Protagonist Therapeutics INC (USA), Apopharma (Canada) et la communauté européenne. Il a ainsi été chercheur principal dans 06 programmes de recherche sur les maladies de l'hémoglobine."
+        },
+        "desc" : {
+            "qual": "Soins de qualité",
+            "caption": "Votre santé est notre priorité",
+            "para": "EDEN Light Services avec la collaboration de multiples partenaires et centres médicaux assure les meilleurs services médicaux pour ses patients",
+            "button":"Envoyez-nous un message"
+        }
+    },
+    "about": {
+        "title": "About Us",
+        "section": {
+            "title": "En savoir plus sur ce que nous faisons",
+            "caption": "Notre travail",
+            "par": "Parce que la santé c'est la vie, et la vie c'est avant tout le temps. Du temps que nous aimerions mettre à profit pour vaquer à nos convenances Nous procédons à un accent particulier et rehaussé sur tout ce qui touche à votre séjour pour qu'il devienne inoubliable Eden Light vous accompagne pour un séjour de qualité , séjour exceptionnel et personnalisé."
+        },
+        "why": {
+            "title":"Pourquoi nous choisir?",
+            "one": "Réponse immédiate",
+            "two": "Nous choisissons de promouvoir uniquement les meilleurs",
+            "three": "Informations précises fournies",
+            "four": "Suivi longue distance"
+        },
+        "team": "Notre équipe"
+    }
+}

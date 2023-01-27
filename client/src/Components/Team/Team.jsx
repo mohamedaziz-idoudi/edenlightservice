@@ -1,11 +1,13 @@
 import React from 'react'
 import './team.css';
+import { useTranslation } from 'react-i18next';
 import photo from "../../assets/john.webp";
 const Team = () => {
+    const {t}= useTranslation()
     return (
         <div className='team__container section__padding'>
             <div className='team__container_title'>
-                <h1>Our Team</h1>
+                <h1>{t('about.team')}</h1>
             </div>
             <div className='team__container_top team__container_two_objects'>
                 <div className='team__box'>

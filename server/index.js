@@ -151,6 +151,12 @@ app.get("/api/getposts", (req, res) => {
         res.send(result);
     })
 })
+app.get("/api/getblogs", (req, res) => {
+    const q = "SELECT * from blogs ORDER BY id DESC";
+    db.query(q, (err, result) => {
+        res.send(result);
+    })
+})
 app.get("/api/getPost/:id", (req, res) => {
     let id = req.params.id;
     db.query("SELECT * FROM blogs WHERE id=?", id, (err, result) => {

@@ -27,3 +27,65 @@
 .eden__services {
     z-index: 10;
 }
+.eden__latest-blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--color-blue);
+    padding: 4rem 1rem;
+    border-radius: 50px;
+}
+.eden__latest-blog_title {
+    font-family: var(--font-family);
+
+}
+.eden__latest-blog_content p {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.eden__latest-esth p {
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.eden__latest-blog_title h2 {
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+.eden__latest-blog_title h5 {
+    font-weight: 300;
+    letter-spacing: 10px;
+    color: var(--color-blue);
+}
+.eden__latest-blog_content {
+    width: 50%;
+}
+.eden__latest-esth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-family);
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/beauty.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+@media (max-width:800px) {
+    .eden__latest-blog {
+        margin: 2rem 1rem !important;
+    }
+    .eden__latest-esth {
+        padding: 4rem 1rem !important;
+    }
+    .eden__latest-blog_content {
+        width: 80%;
+    }
+}

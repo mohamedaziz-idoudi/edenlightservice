@@ -9,6 +9,7 @@
     background-image: url("../../assets/support_about.webp");
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 }
 .eden__chose_container-header {
     display: flex;

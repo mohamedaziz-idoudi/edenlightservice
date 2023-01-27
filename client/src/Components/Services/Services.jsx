@@ -1,7 +1,9 @@
 import React from "react";
 import "./services.css";
 import { Fields, Procedure } from "../../Components";
+import { useTranslation } from "react-i18next";
 const Services = () => {
+  const {t} = useTranslation();
   return (
     <React.Fragment>
       <div className="services__container section__padding">
@@ -14,10 +16,10 @@ const Services = () => {
           </label>
           <div className="accordion-body">
             <ul className="accordion-answer">
-              <li>Estimative quotation</li>
-              <li>Assistance with procedures and formalities for entering Tunisia</li>
-              <li>Accommodation-airport transfer</li>
-              <li>Preparation for your arrival (choice of hotel, airline, car, meals, sites to visit)</li>
+              <li>{t('home.services.pre_tunisia.list_1')}</li>
+              <li>{t('home.services.pre_tunisia.list_2')}</li>
+              <li>{t('home.services.pre_tunisia.list_3')}</li>
+              <li>{t('home.services.pre_tunisia.list_4')}</li>
             </ul>
           </div>
         </article>
@@ -30,11 +32,11 @@ const Services = () => {
           </label>
           <div className="accordion-body">
             <ul className="accordion-answer">
-              <li>Reception at the airport and transfer either to the hotel or to the clinic</li>
-              <li>Appointment management and planning</li>
-              <li>Personalized follow-up of each patient according to the criteria selected by him/herself</li>
-              <li>Visit the sites of Tunis</li>
-              <li>Excursion to other cities and tourist places (optional)</li>
+              <li>{t('home.services.in_tunisia.list_1')}</li>
+              <li>{t('home.services.in_tunisia.list_2')}</li>
+              <li>{t('home.services.in_tunisia.list_3')}</li>
+              <li>{t('home.services.in_tunisia.list_4')}</li>
+              <li>{t('home.services.in_tunisia.list_5')}</li>
             </ul>
           </div>
         </article>
@@ -47,8 +49,8 @@ const Services = () => {
           </label>
           <div className="accordion-body">
             <ul className="accordion-answer">
-              <li>Patient follow-up</li>
-              <li>Reminder of the deadlines for the next inspection appointments</li>
+              <li>{t('home.services.post_tunisia.list_1')}</li>
+              <li>{t('home.services.post_tunisia.list_2')}</li>
             </ul>
           </div>
         </article>

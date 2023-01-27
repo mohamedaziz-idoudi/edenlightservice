@@ -1,17 +1,20 @@
 import React from 'react';
 import './header.css';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import i18next from '../../i18n'
 const Header = () => {
+  const {t} = useTranslation();
   let navigate=useNavigate();
   return (
     <div className='eden__header_container section__margin'>
         <div className='Titles'>
-            <h1>Tunisia: </h1>
-            <h4>Capital of Medical Healthcare in Africa</h4>
+            <h1>{t('home.header.country')} </h1>
+            <h4>{t('home.header.title')}</h4>
         </div>
         <div className='eden__header_container-doctors'>
-            <p>Learn about Tunisian Doctors' latest inventions & success stories</p>
-            <button type='button' onClick={ () => {navigate('/partners')}}>Learn More..</button>
+            <p>{t('home.header.subtitle')}</p>
+            <button type='button' onClick={ () => {navigate('/partners')}}>{t('home.header.button')}</button>
         </div>
     </div>
   )
