@@ -2,7 +2,7 @@ import React, { useState, createContext } from 'react'
 import ReactDOM from 'react-dom/client';
 import { Navbar, Footer, Form, Dashboard, Posted, Post, Contact, FormEs, Devis } from './Components';
 import { Home, Partners, MedicalTour, AboutUs, Service, Admin, Redirect, Blogs, Pack, Esth } from './Pages';
-import WhatsAppWidget from "react-whatsapp-chat-widget";
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import "react-whatsapp-chat-widget/index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './app.css';
@@ -37,29 +37,13 @@ const App = () => {
             <Route path='/dashboard' element={<ProtectedRoute setAuth={setAuth} isAuth={isAuth} Component={Dashboard} />} />
           </Routes>
         </ThemeContext.Provider>
-        <WhatsAppWidget
-          phoneNo="21655884648"
-          position="left"
-          widgetWidth="200px"
-          widgetWidthMobile="150px"
-          autoOpen={false}
-          messageBox={false}
-          iconSize="50"
-          iconColor="white"
-          iconBgColor="green"
-          headerIcon={require("../src/assets/logo.png")}
-          headerIconColor="pink"
-          headerTxtColor="white"
-          headerBgColor="green"
-          headerTitle="EDEN Light Service"
-          headerCaption="Online"
-          bodyBgColor="#bbb"
-          chatPersonName="Support"
-          chatMessage={<>Hi there 👋 <br /><br /> How can I help you?</>}
-          footerBgColor="#999"
-          btnBgColor="green"
-          btnTxt="Start Chat"
-          btnTxtColor="white"
+        <FloatingWhatsApp
+          phoneNumber='21655884648'
+          accountName="EDEN Light Service"
+          statusMessage="Online"
+          avatar={require("./assets/logo.png")}
+          allowEsc
+          allowClickAway
         />
         <Footer />
       </BrowserRouter>
