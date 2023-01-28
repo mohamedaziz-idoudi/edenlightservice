@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import './form.css'
+import { t } from 'i18next';
 const FormEs = () => {
     const navigate = useNavigate();
     const [listeEsth, setListeEsth] = useState([{}]);
@@ -38,22 +39,35 @@ const FormEs = () => {
                 operations: surgery
             }
         }).then(async (data) => {
-        let priceOps = await data.data[0].sum;
-        let logistics_sum = await Axios.get("https://api.edenlightservice.com/api/sum_logistics", {
-            params: {
-                car: car,
-                stars: stars,
-                stay: stay,
-                sahara: sahara,
-                beach: beach
-            }
+            let priceOps = await data.data[0].sum;
+            let logistics_sum = await Axios.get("https://api.edenlightservice.com/api/sum_logistics", {
+                params: {
+                    car: car,
+                    stars: stars,
+                    stay: stay,
+                    sahara: sahara,
+                    beach: beach
+                }
+            })
+            let max = await logistics_sum.data.Maximum;
+            let min = await logistics_sum.data.Minimum;
+            max = await max + priceOps;
+            min = await min + priceOps;
+            document.getElementById("overall_price").innerHTML = `The price will be in between ${min}€ and ${max}€`;
+            
+
+            emailjs.sendForm('service_2x0c7pl', 'template_r9fhtog', form.current, 'cHbwkvU2RmxIvZGi-')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
+
+            ref_name.current.value = null;
+            ref_email.current.value = null;
+            ref_phone.current.value = null;
+            ref_message.current.value = null;
         })
-        let max = await logistics_sum.data.Maximum;
-        let min = await logistics_sum.data.Minimum;
-        max = await max + priceOps;
-        min = await min + priceOps;
-        document.getElementById("overall_price").innerHTML = `The price will be in between ${min}€ and ${max}€`;
-    })
     }
     const handleSelection = (e) => {
         setSurgery({ val: e.target.value });
@@ -95,35 +109,37 @@ const FormEs = () => {
         <React.Fragment>
             <div className="formbg">
                 <div className='form__title'>
-                    <h1>Get your cosmetic quote for free</h1>
-                    <p>If you want to include additional files, please send us an email via: Contact@edenlightservice.com</p>
+                    <h1>{t('formes.title')}</h1>
+                    <p>{t('form.caption')} Contact@edenlightservice.com</p>
                 </div>
                 <form ref={form} onSubmit={handleSubmit}>
                     <div className='eden__contact_line'>
-                        <label className='eden__contact_item'>Name</label>
+                        <label className='eden__contact_item'>{t('form.name')}</label>
                         <input className='eden__contact_item' type="text" name="user_name" ref={ref_name} />
                     </div>
                     <div className='eden__contact_line'>
-                        <label className='eden__contact_item'>Email</label>
+                        <label className='eden__contact_item'>{t('form.email')}</label>
                         <input className='eden__contact_item' type="email" value={message}
                             onChange={handleChange} name="user_email" ref={ref_email} />
                         {error && <p style={{ color: 'red' }}>{error}</p>}
                     </div>
                     <div className='eden__contact_line'>
-                        <label className='eden__contact_item'>Phone Number</label>
+                        <label className='eden__contact_item'>{t('form.ph')}</label>
                         <input className='eden__contact_item' type="tel" pattern="^[0-9]{3,45}$" name='user_phone' ref={ref_phone} />
                     </div>
                     <div className='eden__contact_line'>
                         <label className='eden__contact_item'>Sexe</label>
-                        <select name="gender" id="gender">
-                            <option value="">---Select your gender---</option>
-                            <option value="Homme">Male</option>
-                            <option value="Femme">Female</option>
+                        <select ref={ref_message} name="user_message" id="gender" onChange={(e)=> {
+                            setContact(e.target.value);
+                        }}>
+                            <option value="">{t('formes.g1')}</option>
+                            <option value="Homme">{t('formes.g2')}</option>
+                            <option value="Femme">{t('formes.g3')}</option>
                         </select>
 
                     </div>
                     <div className="eden__contact-ops_title">
-                        <h3>Choose the operation(s) you desire</h3>
+                        <h3>{t('formes.ops')}</h3>
                     </div>
                     <div className="eden__contact_selection">
 
@@ -154,29 +170,29 @@ const FormEs = () => {
                         })}
                     </div>
                     <div className="eden__form-title">
-                        <h1>Reserve your stay</h1>
-                        <p>If you feel like getting more informations before reserving your stay, please <br /> <Link to='/message' target='_blank'>Click here to send us a message</Link></p>
+                        <h1>{t('form.res')}</h1>
+                        <p>{t('form.res_content')} <br /> <Link to='/message' target='_blank'>{t('form.res_link')}</Link></p>
                     </div>
 
-                    <legend>Lodging</legend>
+                    <legend>{t('form.l2')}</legend>
                     <div className='eden__contact_line'>
-                        <label>Please select a type of lodging:</label>
+                        <label>{t('form.type')}</label>
                         <select name="type" id="type" onChange={(e) => {
                             setLodgingType(e.target.value);
                         }}>
-                            <option value="">Please select</option>
-                            <option value="Hotel" >Hotel</option>
-                            <option value="House" >House</option>
+                            <option value="">{t('form.t1')}</option>
+                            <option value="Hotel" >{t('form.t2')}</option>
+                            <option value="House" >{t('form.t3')}</option>
                         </select>
                     </div>
                     {lodgingType === 'Hotel' && (
                         <React.Fragment>
                             <div className='eden__contact_line'>
-                                <label>Please select an option:</label>
+                                <label>{t('form.h_type')}</label>
                                 <select name="lodging" id="lodging" onChange={(e) => {
                                     setStars(e.target.value);
                                 }}>
-                                    <option value="">---Please Select---</option>
+                                    <option value="">{t('form.h_t1')}</option>
                                     <option value="Hotel 4 etoiles">4 Stars</option>
                                     <option value="Hotel 5 etoiles">5 Stars</option>
                                 </select>
@@ -185,47 +201,47 @@ const FormEs = () => {
                     )}
                     {lodgingType === 'House' && (
                         <div className='eden__contact_line'>
-                            <label >Please specify where you want to pass your stay</label>
+                            <label >{t('formes.specs')}</label>
                             <select name="villa_apart" id="villa_apart" onChange={(e) => {
                                 setStay(e.target.value);
                             }}>
                                 <option value="">---Please Select----</option>
                                 <option value="Villa">Villa</option>
-                                <option value="Apartment">Apartment</option>
+                                <option value="Apartment">{t('formes.apt')}</option>
                             </select>
                         </div>
                     )}
                     <div className='eden__contact_line'>
-                        <label>Car (Optional)</label>
+                        <label>{t('formes.car')}</label>
                         <select name='car' onChange={(e) => {
                             setCar(e.target.value);
                         }}>
                             <option value="">---Please Select---</option>
-                            <option value="Voiture de Luxe">Luxury Car</option>
-                            <option value="Voiture Standard">Standard Car</option>
+                            <option value="Voiture de Luxe">{t('formes.lux')}</option>
+                            <option value="Voiture Standard">{t('formes.std')}</option>
                         </select>
                     </div>
                     <div className="eden__contact_line">
-                        <label>Are you interested in visiting El Sahara</label>
+                        <label>{t('formes.sahara')}</label>
                         <select name="sahara" id="sahara" onChange={(e) => {
                             setSahara(e.target.value);
                         }}>
                             <option value="">---Please Select---</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
+                            <option value="yes">{t('formes.yes')}</option>
+                            <option value="no">{t('formes.no')}</option>
                         </select>
                     </div>
                     <div className="eden__contact_line">
-                        <label>Are you interested in visiting Beach Leisure</label>
+                        <label>{t('formes.beach')}</label>
                         <select name="beach" id="beach" onChange={(e) => {
                             setBeach(e.target.value);
                         }}>
                             <option value="">---Please Select---</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
+                            <option value="yes">{t('formes.yes')}</option>
+                            <option value="no">{t('formes.no')}</option>
                         </select>
                     </div>
-                    <input type="submit" value="Send" />
+                    <input type="submit" value={t('form.button')} />
                     <p id='overall_price'></p>
                 </form>
             </div >

@@ -68,9 +68,7 @@ const Home = () => {
       <div className="eden__services" id="services">
         <Services />
       </div>
-      <div className="eden__feedbacks">
-        <Feedbacks />
-      </div>
+      
       {/*
       <div className="eden__footer">
         <Footer />

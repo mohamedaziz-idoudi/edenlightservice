@@ -1,19 +1,18 @@
 import React from "react";
 import "./tunisia.css";
+import { useTranslation } from "react-i18next";
 import language from "../../assets/language.png";
 import currency from "../../assets/money.png";
 import timezone from "../../assets/time.png";
 import capital from "../../assets/capital.png";
 const Tunisia = () => {
+  const {t} = useTranslation()
   return (
     <div className="tunisia__container section__padding">
       <div className="tunisia__container-left tunisia__container-item">
-        <h1>Weather</h1>
+        <h1>{t('medtour.tun.w_title')}</h1>
         <p>
-          Hot-summer Mediterranean climate characterized by hot and dry,
-          prolonged summers and mild winters with moderate rainfall.Winter is
-          the wettest season of the year, when more than a third of the annual
-          rainfall
+        {t('medtour.tun.w_content')}
         </p>
       </div>
       <div className="tunisia__container-right tunisia__container-item">
@@ -23,8 +22,8 @@ const Tunisia = () => {
               <img loading="lazy" src={language} alt="Language" />
             </div>
             <div className="tunisia__container-right_item-caption">
-              <h3>Language</h3>
-              <h4>Arabic, French, English</h4>
+              <h3>{t('medtour.tun.l_title')}</h3>
+              <h4>{t('medtour.tun.l_content')}</h4>
             </div>
           </div>
           <div className="tunisia__container-right_item">
@@ -32,7 +31,7 @@ const Tunisia = () => {
               <img loading="lazy" src={capital} alt="Capital" />
             </div>
             <div className="tunisia__container-right_item-caption">
-              <h3>Capital</h3>
+              <h3>{t('medtour.tun.c_title')}</h3>
               <h4>Tunis</h4>
             </div>
           </div>
@@ -52,8 +51,8 @@ const Tunisia = () => {
               <img loading="lazy" src={currency} alt="Currency" />
             </div>
             <div className="tunisia__container-right_item-caption">
-              <h3>Currency</h3>
-              <h4>Tunisian Dinar</h4>
+              <h3>{t('medtour.tun.cur_title')}</h3>
+              <h4>{t('medtour.tun.cur_content')}</h4>
             </div>
           </div>
         </div>

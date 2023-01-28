@@ -1,15 +1,17 @@
 {
-    "home" : {
-        "header" : {
+    "home": {
+        "header": {
             "country": "Tunisia",
             "title": "Capital of Medical Healthcare in Africa",
             "subtitle": "Learn about Tunisian Doctors' latest inventions & success stories",
-            "button": "Learn More"
+            "button": "Learn More",
+            "devis_title": "Obtain your quote for free and have an idea on our prices",
+            "click": "Click Here"
         },
-        "latest" : {
+        "latest": {
             "button": "Read Our Latest Blog"
         },
-        "mission" : {
+        "mission": {
             "about": "ABOUT US",
             "title": "Our Mission",
             "paragraph1": "Eden Light Service is traveling to recover your health, but not only..To also discover… and sometimes the opposite.",
@@ -23,54 +25,53 @@
         },
         "stories": {
             "title": "See the latest invention of <br /> Dr. Mohamed Bejaoui",
-            "paragraph":"In 2015, he and his team were the first to perform haplo-identical allografts, ie from a non-HLA-identical family donor. In 2018, he was the first with his team to perform the first autograft of hematopoietic stem cells in childhood solid tumors...",
-            "button":"Read More"
+            "paragraph": "In 2015, he and his team were the first to perform haplo-identical allografts, ie from a non-HLA-identical family donor. In 2018, he was the first with his team to perform the first autograft of hematopoietic stem cells in childhood solid tumors...",
+            "button": "Read More"
         },
-        "vision" : {
-            "caption" : "OUR VISION",
+        "vision": {
+            "caption": "OUR VISION",
             "title": "Specific goals for your therapy will be determined by you and your doctor",
             "paragraph": "Eden Light is the guide to regaining your physical, psychological and social health in international reference clinics, with experienced doctors, surrounded by a team of health professionals who take care of every detail of your stay.",
             "goal_title": "Our Goal",
             "goal_content": "EDEN Light Services' vision is to assure the comfort and the best healthcare services to its patients.",
             "couns_title": "Our Counselors",
-            "couns_content":"We are passionate and compassionate professionals, driven by the mission of helping more people live a better and happier life every day.",
+            "couns_content": "We are passionate and compassionate professionals, driven by the mission of helping more people live a better and happier life every day.",
             "support_title": "Our Support",
             "support_content": "Our support team is always here to answer any question and resolve any problem."
         },
-        "medtour" : {
+        "medtour": {
             "partners_title": "Partners",
             "partners_content": "EDEN Light Services with the collaboration of multiple partners covers all medical needs.",
             "button": "Learn More",
             "med_title": "Medical Tourism",
             "med_content": "Learn more about Tunisia's weather, language, sights and more.."
         },
-        "services" : {
+        "services": {
             "pre_tunisia": {
                 "list_1": "Estimative quotation",
                 "list_2": "Assistance with procedures and formalities for entering Tunisia",
                 "list_3": "Accommodation-airport transfer",
                 "list_4": "Preparation for your arrival (choice of hotel, airline, car, meals, sites to visit)"
             },
-            "in_tunisia" : {
+            "in_tunisia": {
                 "list_1": "Reception at the airport and transfer either to the hotel or to the clinic",
                 "list_2": "Appointment management and planning",
                 "list_3": "Personalized follow-up of each patient according to the criteria selected by him/herself",
                 "list_4": "Visit the sites of Tunis",
                 "list_5": "Excursion to other cities and tourist places (optional)"
             },
-            "post_tunisia" : {
+            "post_tunisia": {
                 "list_1": "Patient follow-up",
                 "list_2": "Reminder of the deadlines for the next inspection appointments"
-                
             },
-            "procedure" : {
+            "procedure": {
                 "subtitle": "PROCEDURE",
                 "title": "Finding Healthcare Abroad",
                 "para1": "We'll help you map out the whole procedure",
                 "explore_title": "Explore",
                 "explore_content": "Explore the different hospitals and clinics",
                 "match_title": "Match",
-                "match_content":"Based on your needs, EDEN Light Service recommends the best destinations",
+                "match_content": "Based on your needs, EDEN Light Service recommends the best destinations",
                 "arrange_title": "Arrange",
                 "arrange_content": "Once matched, you'll be contacted shortly with the needed informations",
                 "treat_title": "Treat",
@@ -80,7 +81,7 @@
             }
         }
     },
-    "navbar" : {
+    "navbar": {
         "home": "Home",
         "services": "Medical Services",
         "packs": "Our Packs",
@@ -102,30 +103,29 @@
             "esth": "Cosmetics",
             "eye": "Eye Care"
         },
-        "offer" : {
+        "offer": {
             "title": "What do we offer ?",
-            "caption" : "EDEN Light Service offers multiple categories of services to cover all its patients' needs",
-            "button" : "Contact Us"
-
+            "caption": "EDEN Light Service offers multiple categories of services to cover all its patients' needs",
+            "button": "Contact Us"
         },
         "child": {
             "title": "Child Services",
-            "services" : {
-                "ped" : "Pediatrics",
+            "services": {
+                "ped": "Pediatrics",
                 "pedo": "Pedodontics",
                 "neur": "Pediatric Neurology",
-                "hema" : "Pediatric Hematology",
+                "hema": "Pediatric Hematology",
                 "oph": "Ophthalmology",
                 "har": "Harelip"
             }
         },
         "woman": {
             "title": "Women Services",
-            "services" : {
-                "proc" : "Medically Assisted Procreation (MPA)",
+            "services": {
+                "proc": "Medically Assisted Procreation (MPA)",
                 "myom": "Myomectomy (myomas, fibroids)",
                 "cosm": "Cosmetic and reconstructive surgery (Belly, Face, Breasts, etc...)",
-                "baria" : "Bariatric Surgery (Sleeve, Bypass, Gastric band)",
+                "baria": "Bariatric Surgery (Sleeve, Bypass, Gastric band)",
                 "lith": "Lithiasis",
                 "ret": "Retinal detachment",
                 "cor": "Corneal transplant"
@@ -133,11 +133,11 @@
         },
         "men": {
             "title": "Male Services",
-            "services" : {
-                "uro" : "Urolithiasis urology",
+            "services": {
+                "uro": "Urolithiasis urology",
                 "var": "Varicocella",
                 "inf": "Infertility",
-                "pen" : "Penile prosthesis",
+                "pen": "Penile prosthesis",
                 "pros": "Prostate",
                 "diab": "Diabetes",
                 "hypert": "Hypertension",
@@ -145,11 +145,11 @@
                 "glauc": "Glaucoma"
             }
         }
-    }, 
-    "pack" : {
-        "title" : "Our Packs",
-        "famille" : {
-            "husband" : {
+    },
+    "pack": {
+        "title": "Our Packs",
+        "famille": {
+            "husband": {
                 "title": "Check-up for the husband:",
                 "bio": "Biological and cytological assessment (screening for prostate cancer, fertility, diabetes, tumor markers)",
                 "radio": "Radiological assessment (consultation with Orthopedics and traumatology teacher and consultation with MRI neurologist teacher, electroencephalogram, herniated disc screening, bone density, sciatica problems)",
@@ -158,7 +158,7 @@
                 "gas": "Gastroenterology assessment: consultation + fibroscopy or colonoscopy, screening for diseases of the liver",
                 "dent": "Dentist and ophthalmologist consultation"
             },
-            "wife" : {
+            "wife": {
                 "title": "Check-up for the wife:",
                 "bio": "Biological and cytological assessment (screening for prostate cancer, fertility, diabetes, tumor markers)",
                 "radio": "Radiological assessment (consultation with Orthopedics and traumatology teacher and consultation with MRI neurologist teacher, electroencephalogram, herniated disc screening, bone density, sciatica problems)",
@@ -166,9 +166,8 @@
                 "cardiac": "Cardiac assessment (cardiologist consultation, ECG, rhythmic and blood pressure holter, breath test)",
                 "vag": "Creation of an artificial vagina, labioplasty, vaginal shrinkage",
                 "dent": "Dentist and ophthalmologist consultation"
-            
             },
-            "child" : {
+            "child": {
                 "title": "Check-up for kids:",
                 "soins": "Consultations pedodontist, pediatrician, ophthalmologist, ENT, abdominopelvic ultrasound, panoramic X-ray, Blood test, Neuro-pediatrician or hematologist consultation if necessary"
             },
@@ -205,7 +204,6 @@
                 "cardiac": "Cardiac assessment (cardiologist consultation, ECG, rhythmic and blood pressure holter, breath test)",
                 "gas": "Gastroenterology assessment: consultation + fibroscopy or colonoscopy, screening for diseases of the liver",
                 "dent": "Dentist and ophthalmologist consultation"
-            
             },
             "ceve": {
                 "bio": "Biological and cytological assessment (screening for prostate cancer, fertility, diabetes, tumor markers)",
@@ -213,7 +211,6 @@
                 "bre": "Breast ultrasound",
                 "cardiac": "Cardiac assessment (cardiologist consultation, ECG, rhythmic and blood pressure holter, breath test)",
                 "dent": "Dentist and ophthalmologist consultation"
-            
             },
             "schedule": {
                 "title": "Schedule",
@@ -223,7 +220,7 @@
         },
         "honeymoon": {
             "title": "Honeymoon Pack",
-            "med" : {
+            "med": {
                 "title": "Medical Details",
                 "p1": "Biological assessment: prostate cancer screening, breast cancer, cancer of the cervix and body of the uterus, STDs, diabetes prevention, consultation gynecologist and urologist",
                 "p2": "Cardiac assessment: ECG; rhythmic and blood pressure holter, prevention hypertension, cardiologist consultation"
@@ -233,7 +230,6 @@
                 "caption": "Claim this pack and enjoy the great tour of Tunisia. It includes sightseeing in Greater Tunis and its historical monuments. It also contains leisure activities in Hammamet, Sousse, Djerba and more..."
             }
         }
-        
     },
     "esth": {
         "header": {
@@ -252,13 +248,13 @@
             "reserve": "Reserve your stay",
             "after": "When it comes to treatment. EDEN Light Service keeps on monitoring its patients once it's done."
         },
-        "associates" : {
-            "hayathem" : {
+        "associates": {
+            "hayathem": {
                 "subtitle": "ONE OF OUR ASSOCIATES",
                 "specs": "Aesthetic and maxillofacial surgery، cranio orbital and restorative",
                 "content": "Dr. Helali: specialist in maxillofacial and aesthetic surgery, reconstructive surgery, malformation of the skull, orbit, whole body, facial cancer, scars and burns, plastic surgeon."
             },
-            "amin" : {
+            "amin": {
                 "subtitle": "ONE OF OUR ASSOCIATES",
                 "specs": "Specialist in bariatric surgery",
                 "content1": "Professor at the Faculty of Medicine of Tunis",
@@ -281,11 +277,11 @@
                 "red": "Breast reduction"
             },
             "abd": {
-                "pl":"Abdominoplasty",
-                "mini":"Abdominal Minilift"
+                "pl": "Abdominoplasty",
+                "mini": "Abdominal Minilift"
             },
             "lipo": {
-                "suc":"Liposuction",
+                "suc": "Liposuction",
                 "asp": "Lipoaspiration",
                 "scu": "Liposculpture",
                 "th": "Thigh Lift"
@@ -293,22 +289,22 @@
             "gyn": "Gynecomastia",
             "butt": {
                 "lipo": "Buttock Lipofilling",
-                "brazilian":"Brazilian Buttlift"
+                "brazilian": "Brazilian Buttlift"
             },
             "body": {
-                "arm":"Arm Lifting",
-                "lift":"Body Lift"
+                "arm": "Arm Lifting",
+                "lift": "Body Lift"
             },
             "face": {
-                "lift":"Face Lifting",
-                "lipo":"Lipofilling",
-                "rh":"Rhinoplasty",
-                "ble":"Blepharoplasty",
+                "lift": "Face Lifting",
+                "lipo": "Lipofilling",
+                "rh": "Rhinoplasty",
+                "ble": "Blepharoplasty",
                 "oto": "Otoplasty"
             },
-            "vag" : {
+            "vag": {
                 "pl": "Vaginoplasty",
-                "lab":"Labioplasty"
+                "lab": "Labioplasty"
             },
             "male": "Male intimate surgery"
         }
@@ -327,11 +323,11 @@
             "p3": "In 2015, he and his team were the first to perform haplo-identical allografts, ie from a non-HLA-identical family donor. In 2018, he was the first with his team to perform the first autograft of hematopoietic stem cells in childhood solid tumors",
             "p4": "Since 2003, he has been involved in drug research with Novartis (Switzerland), Celgene (USA), Protagonist Therapeutics INC (USA), Apopharma (Canada) and the European community. He has thus been the principal investigator in 06 research programs on hemoglobin diseases."
         },
-        "desc" : {
+        "desc": {
             "qual": "Quality Care",
             "caption": "Your health is our priority",
             "para": "EDEN Light Services with the collaboration of multiple partners and medical centers assures the best medical services for its patients",
-            "button":"Send us a message"
+            "button": "Send us a message"
         }
     },
     "about": {
@@ -342,12 +338,92 @@
             "par": "Because health is life, and life is first and foremost time.Time that we would like to use to attend to our conveniences We proceed a particular and enhanced accent on everything related to your stay so that it becomes unforgettable Eden Light accompanies you for a quality, exceptional and personalized stay."
         },
         "why": {
-            "title":"Why Choose Us?",
+            "title": "Why Choose Us?",
             "one": "Immediate Response",
             "two": "We choose to promote only the best",
             "three": "Accurate informations provided",
             "four": "Long Distance Follow Up"
         },
         "team": "Our Team"
+    },
+    "medtour": {
+        "guide": {
+            "title": "Tunisian sights: ",
+            "caption": "Enjoy the virtual visit",
+            "tag": "Guide for best travel"
+        },
+        "kairouan" : {
+            "caption" : "Capital of Tradition",
+            "title" : "The Capital of Islamic Culture",
+            "par" : "Kairouan, one of the most celebrated cities of the Islamic world, captivates visitors with the unique charm of its medina. The Great Mosque is a universal architectural masterpiece. A mandatory stop during a trip to Tunisia and a starting point to discover the impressive ancient site of Sbeïtla in the High Steppes region."
+        },
+        "multi": {
+            "title": "A Multi-Religional Country",
+            "caption" : "Tunisia has its respect for all different religions",
+            "islam_title": "Islam",
+            "islam_content": "The main and official religion of Tunisia",
+            "ch_title": "Christianity",
+            "ch_content": "One of the most known cathedrals in Tunisia: Saint-Vincent-de-Paul Cathedral",
+            "jud_title": "Judaism",
+            "jud_content": "Specifically the island of Djerba is known by its Jewish Minority"
+        },
+        "tun" : {
+            "w_title": "Weather",
+            "w_content": "Hot-summer Mediterranean climate characterized by hot and dry, prolonged summers and mild winters with moderate rainfall.Winter is the wettest season of the year, when more than a third of the annual rainfall",
+            "l_title": "Language",
+            "l_content": "Arabic, French, English",
+            "c_title": "Capital",
+            "cur_title": "Currency",
+            "cur_content": "Tunisian Dinar"
+        }
+    },
+    "form" : {
+        "devis": "Obtain your quote for free",
+        "title": "Contact Us",
+        "caption" : "If you want to include additional files, please contact this email:",
+        "rel" : "Please specify the business relation:",
+        "rel_a": "----Are you a----",
+        "rel_c": "Customer", 
+        "rel_b": "Business",
+        "res": "Reserve Your Stay",
+        "res_content": "If you feel like getting more informations before reserving your stay, please",
+        "res_link": "Click here to send us a message",
+        "l1": "Personal Informations",
+        "name": "Name",
+        "email": "Email",
+        "ph": "Phone Number",
+        "l2": "Lodging",
+        "type": "Please Select a type of lodging",
+        "t1": "Please Select", 
+        "t2": "Hotel",
+        "t3":"House",
+        "h_type": "Please select an option",
+        "h_t1": "Please Select", 
+        "hlod": "Type of lodging",
+        "s_num": "Number of Persons",
+        "s_rooms": "Number of Rooms",
+        "button": "Submit",
+        "bus": "Business Name",
+        "bemail": "Business Email",
+        "bph": "Business Phone Number",
+        "desc": "Brief Description of the work",
+        "ms": "Send us a message"
+        
+    },
+    "formes": {
+        "title": "Get your cosmetic quote for free",
+        "g1": "---Please Select Your Gender---",
+        "g2": "Male",
+        "g3": "Female",
+        "ops": "Choose the operation(s) you desire",
+        "specs": "Please specify where you want to pass your stay",
+        "apt": "Apartment",
+        "car": "Car (Optional)",
+        "lux": "Luxury Car",
+        "std": "Standard Car",
+        "sahara": "Are you interested in visiting El Sahara",
+        "yes": "Yes",
+        "no": "No",
+        "beach": "Are you interested in visiting Beach Leisures"
     }
 }

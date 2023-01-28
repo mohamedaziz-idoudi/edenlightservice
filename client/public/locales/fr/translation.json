@@ -4,7 +4,9 @@
             "country": "La Tunisie",
             "title": "Capitale des Soins Médicaux en Afrique",
             "subtitle": "En savoir plus sur les dernières inventions et les réussites des médecins tunisiens",
-            "button": "En Savoir Plus"
+            "button": "En Savoir Plus",
+            "devis_title": "Obtenez votre devis gratuitement et faites-vous une idée sur nos tarifs",
+            "click": "Cliquez ici"
         },
         "latest" : {
             "button": "Consultez Notre Dernier Blog"
@@ -348,5 +350,84 @@
             "four": "Suivi longue distance"
         },
         "team": "Notre équipe"
+    },
+    "medtour": {
+        "guide": {
+            "title": "Sites tunisiens :",
+            "caption": "Profitez de la visite virtuelle",
+            "tag": "Guide pour les meilleurs voyages"
+        },
+        "kairouan" : {
+            "caption" : "Capitale de la tradition",
+            "title" : "La capitale de la culture islamique",
+            "par" : "Kairouan, l'une des villes les plus célèbres du monde islamique, séduit les visiteurs par le charme unique de sa médina. La Grande Mosquée est un chef-d'œuvre architectural universel. Une étape obligatoire lors d'un voyage en Tunisie et un point de départ pour découvrir l'impressionnant site antique de Sbeïtla dans la région des Hautes Steppes."
+        },
+        "multi": {
+            "title": "Un pays multi-religieux",
+            "caption" : "La Tunisie a son respect pour toutes les différentes religions",
+            "islam_title": "Islam",
+            "islam_content": "La religion principale de la Tunisie",
+            "ch_title": "Christianisme",
+            "ch_content": "L'une des cathédrales les plus connues de Tunisie : la cathédrale Saint-Vincent-de-Paul",
+            "jud_title": "Judaïsme",
+            "jud_content": "Plus précisément l'île de Djerba est connue par sa minorité juive"
+        },
+        "tun" : {
+            "w_title": "Climat",
+            "w_content": "Climat méditerranéen d'été chaud caractérisé par des étés chauds et secs, prolongés et des hivers doux avec des précipitations modérées. L'hiver est la saison la plus humide de l'année, lorsque plus d'un tiers des précipitations annuelles",
+            "l_title": "Langue",
+            "l_content": "arabe, français, anglais",
+            "c_title": "Capitale",
+            "cur_title": "Devise",
+            "cur_content": "Dinar tunisien"
+        }
+    },
+    "form" : {
+        "devis": "Obtenez votre devis gratuit",
+        "title": "Contactez Nous",
+        "caption" : "Si vous souhaitez inclure des fichiers supplémentaires, veuillez contacter cet e-mail:",
+        "rel" : "Veuillez préciser la relation commerciale :",
+        "rel_a": "----Êtes-Vous un----",
+        "rel_c": "Un Client", 
+        "rel_b": "Une Entreprise",
+        "res": "Reservez votre séjour",
+        "res_content": "Si vous souhaitez obtenir plus d'informations avant de réserver votre séjour, veuillez",
+        "res_link": "Cliquez ici pour nous envoyer un message",
+        "l1": "Informations Personnelles",
+        "name": "Nom & Prénom",
+        "email": "Adresse Electronique",
+        "ph": "Numéro Téléphone",
+        "l2": "Hébergement",
+        "type": "Veuillez selectionner un type d'hébergement",
+        "t1": "----", 
+        "t2": "Hôtel",
+        "t3":"Maison/Villa",
+        "h_type": "Veuillez Selectionner une option",
+        "h_t1": "-----", 
+        "hlod": "Type d'hébergement",
+        "s_num": "Nombre de personnes",
+        "s_rooms": "Nombre de chambres",
+        "button": "Envoyer",
+        "bus": "Nom d'Entreprise",
+        "bemail": "Adresse Electronique de l'entreprise",
+        "bph": "Téléphone",
+        "desc": "Brève description du travail",
+        "ms": "Envoyez-nous un message"
+    },
+    "formes": {
+        "title": "Obtenez votre devis cosmétique gratuitement",
+        "g1": "---Veuillez sélectionner votre sexe---",
+        "g2": "Homme",
+        "g3": "Femme",
+        "ops": "Choisissez la ou les opérations souhaitées",
+        "specs": "Merci de préciser où vous souhaitez passer votre séjour",
+        "apt": "Appartement",
+        "car": "Voiture (facultatif)",
+        "lux": "Voiture de luxe",
+        "std": "Voiture standard",
+        "sahara": "Êtes-vous intéressé à visiter El Sahara",
+        "yes": "Oui",
+        "no": "Non",
+        "beach": "Êtes-vous intéressé à visiter les loisirs de plage"
     }
 }

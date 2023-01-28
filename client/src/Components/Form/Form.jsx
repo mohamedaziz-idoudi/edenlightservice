@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
+import {useTranslation} from 'react-i18next'
 import { Link, useNavigate } from "react-router-dom";
 import './form.css';
 import Axios from 'axios';
 const Form = () => {
+  const {t} = useTranslation()
   const ref_name = useRef(null);
   const ref_email = useRef(null);
   const ref_phone = useRef(null);
@@ -73,40 +75,40 @@ const Form = () => {
   return (
     <div className='eden__form'>
       <div className="eden__form-title">
-        <h1>Contact Us</h1>
-        <p>If you want to include additional files, please contact this email: <span>contact@edenlightservice.com</span></p>
+        <h1>{t('form.title')}</h1>
+        <p>{t('form.caption')} <span>contact@edenlightservice.com</span></p>
       </div>
       <div className='eden__form_business'>
-        <label>Please specify the business relation:</label>
+        <label>{t('form.rel')}</label>
         <select name="businessModel" id="bus_mod" onChange={(e) => {
           setType(e.target.value);
           console.log(e.target.value);
         }
         }>
-          <option value="">----Are you a..----</option>
-          <option value="b2c">Customer</option>
+          <option value="">{t('form.rel_a')}</option>
+          <option value="b2c">{t('form.rel_c')}</option>
           <option value="b2b" onChange={(e) => {
             setType(e.target.value);
           }
-          }>Business</option>
+          }>{t('form.rel_b')}</option>
         </select>
 
         <div className="form__item">
           {type === "b2c" && (
             <div>
               <div className="eden__form-title">
-                <h1>Reserve your stay</h1>
-                <p>If you feel like getting more informations before reserving your stay, please <br /> <Link to='/message' target='_blank'>Click here to send us a message</Link></p>
+                <h1>{t('form.res')}</h1>
+                <p>{t('form.res_content')} <br /> <Link to='/message' target='_blank'>{t('form.res_link')}</Link></p>
               </div>
-              <legend>Personal Informations</legend>
+              <legend>{t('form.l1')}</legend>
               <div className='eden__contact_line'>
-                <label className='eden__contact_item'>Name</label>
+                <label className='eden__contact_item'>{t('form.name')}</label>
                 <input className='eden__contact_item' type="text" name="user_name" ref={ref_name} onChange={(e) => {
                   setName(e.target.value);
                 }} />
               </div>
               <div className='eden__contact_line'>
-                <label className='eden__contact_item'>Email</label>
+                <label className='eden__contact_item'>{t('form.email')}</label>
                 <input className='eden__contact_item' type="email"
                   name="user_email" ref={ref_email} onChange={(e) => {
                     setEmail(e.target.value); handleChange(e);
@@ -115,7 +117,7 @@ const Form = () => {
 
               </div>
               <div className='eden__contact_line'>
-                <label className='eden__contact_item'>Phone Number</label>
+                <label className='eden__contact_item'>{t('form.ph')}</label>
                 <input className='eden__contact_item' type="tel" pattern="^[0-9]{3,45}$" name='user_phone' ref={ref_phone} onChange={(e) => {
                   setPhone(e.target.value);
                 }} />
@@ -126,32 +128,32 @@ const Form = () => {
                   setContact(e.target.value);
                 }} />
               </div>
-              <legend>Lodging</legend>
+              <legend>{t('form.l2')}</legend>
               <div className='eden__contact_line'>
-                <label>Please select a type of lodging:</label>
+                <label>{t('form.type')}</label>
                 <select name="type" id="type" onChange={(e) => {
                   setLodgingType(e.target.value);
                 }}>
-                  <option value="">Please select</option>
-                  <option value="Hotel" >Hotel</option>
-                  <option value="House" >House</option>
+                  <option value="">{t('form.t1')}</option>
+                  <option value="Hotel" >{t('form.t2')}</option>
+                  <option value="House" >{t('form.t3')}</option>
                 </select>
               </div>
               {lodgingType === 'Hotel' && (
                 <React.Fragment>
                   <div className='eden__contact_line'>
-                    <label>Please select an option:</label>
+                    <label>{t('form.h_type')}</label>
                     <select name="lodging" id="lodging" onChange={(e) => {
                       setStars(e.target.value);
                     }}>
-                      <option value="">Please select</option>
+                      <option value="">{t('form.h_t1')}</option>
                       <option value="3_stars">3 Stars</option>
                       <option value="4_stars">4 Stars</option>
                       <option value="5_stars">5 Stars</option>
                     </select>
                   </div>
                   <div className='eden__contact_line'>
-                    <label>Type of Lodging:</label>
+                    <label>{t('form.hlod')}</label>
                     <select name="type_lod" id="type_lod" onChange={(e) => {
                       setPension(e.target.value);
 
@@ -165,18 +167,18 @@ const Form = () => {
               )}
               {lodgingType === 'House' && (
                 <div>
-                  <label>Number of Persons</label>
+                  <label>{t('form.s_num')}</label>
                   <input type="number" onChange={(e) => {
                     setPersons(e.target.value);
                   }} />
-                  <label>Number of Rooms</label>
+                  <label>{t('form.s_rooms')}</label>
                   <input type="number" onChange={(e) => {
                     setRooms(e.target.value);
                   }} />
                 </div>
               )}
               <div className='form__button'>
-                <button className='form__button' onClick={submit_customer}>Submit</button>
+                <button className='form__button' onClick={submit_customer}>{t('form.button')}</button>
               </div>
               <p id='notification'></p>
             </div>
@@ -186,15 +188,15 @@ const Form = () => {
         <div className="form__item">
           {type === "b2b" && (
             <React.Fragment>
-              <legend>Personal Informations</legend>
+              <legend>{t('form.l1')}</legend>
               <div className='eden__contact_line'>
-                <label className='eden__contact_item'>Personal Name</label>
+                <label className='eden__contact_item'>{t('form.name')}</label>
                 <input className='eden__contact_item' type="text" name="user_name" ref={ref_name} onChange={(e) => {
                   setName(e.target.value);
                 }} />
               </div>
               <div className='eden__contact_line'>
-                <label className='eden__contact_item'>Personal Email</label>
+                <label className='eden__contact_item'>{t('form.email')}</label>
                 <input className='eden__contact_item' type="email" value={email}
                   name="user_email" ref={ref_email} onChange={(e) => {
                     setEmail(e.target.value);
@@ -202,20 +204,20 @@ const Form = () => {
 
               </div>
               <div className='eden__contact_line'>
-                <label className='eden__contact_item'>Personal Phone Number</label>
+                <label className='eden__contact_item'>{t('form.ph')}</label>
                 <input className='eden__contact_item' type="tel" pattern="^[0-9]{3,45}$" name='user_phone' ref={ref_phone} onChange={(e) => {
                   setPhone(e.target.value);
                 }} />
               </div>
               <legend>Business Informations</legend>
               <div className='eden__contact_line'>
-                <label className='eden__contact_item'>Business Name</label>
+                <label className='eden__contact_item'>{t('form.bus')}</label>
                 <input className='eden__contact_item' type="text" name="user_name" ref={ref_name} onChange={(e) => {
                   setBname(e.target.value);
                 }} />
               </div>
               <div className='eden__contact_line'>
-                <label className='eden__contact_item'>Business Email</label>
+                <label className='eden__contact_item'>{t('form.bemail')}</label>
                 <input className='eden__contact_item' type="email" value={bemail}
                   name="user_email" ref={ref_email} onChange={(e) => {
                     setBemail(e.target.value);
@@ -223,18 +225,18 @@ const Form = () => {
 
               </div>
               <div className='eden__contact_line'>
-                <label className='eden__contact_item'>Business Phone Number</label>
+                <label className='eden__contact_item'>{t('form.bph')}</label>
                 <input className='eden__contact_item' type="tel" pattern="^[0-9]{3,45}$" name='user_phone' ref={ref_phone} onChange={(e) => {
                   setBphone(e.target.value);
                 }} />
               </div>
               <div className='eden__contact_line'>
-                <label>Brief Description of the work:</label>
+                <label>{t('form.desc')}</label>
                 <textarea className='eden__contact_item' type="text" onChange={(e) => {
                   setWork(e.target.value);
                 }} />
               </div>
-              <legend>Send us a message</legend>
+              <legend>{t('form.ms')}</legend>
               <div className='eden__contact_line'>
                 <label>Message</label>
                 <textarea className='eden__contact_item' onChange={(e) => {
@@ -243,7 +245,7 @@ const Form = () => {
               </div>
               <div className="eden__contact_line">
                 <div className='form__button'>
-                  <button onClick={submit_business}>Submit</button>
+                  <button onClick={submit_business}>{t('form.button')}</button>
                 </div>
                 <p id='notification'></p>
               </div>
