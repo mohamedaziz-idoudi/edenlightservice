@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.49cdae5a.css",
+    "main.css": "/static/css/main.6d6d6708.css",
     "main.js": "/static/js/main.c84adf48.js",
     "static/media/amilcar.mp4": "/static/media/amilcar.bb0c928042a0ef359b54.mp4",
     "static/media/about.png": "/static/media/about.e8313a6aab95c8fa9ae2.png",
@@ -103,11 +103,11 @@
     "static/media/child.webp": "/static/media/child.dcca62699658b8d9afc8.webp",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.49cdae5a.css.map": "/static/css/main.49cdae5a.css.map",
+    "main.6d6d6708.css.map": "/static/css/main.6d6d6708.css.map",
     "main.c84adf48.js.map": "/static/js/main.c84adf48.js.map"
   },
   "entrypoints": [
-    "static/css/main.49cdae5a.css",
+    "static/css/main.6d6d6708.css",
     "static/js/main.c84adf48.js"
   ]
 }
