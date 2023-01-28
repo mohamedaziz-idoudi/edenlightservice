@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6d6d6708.css",
-    "main.js": "/static/js/main.c84adf48.js",
+    "main.css": "/static/css/main.b1c7dc50.css",
+    "main.js": "/static/js/main.c8c1cfaf.js",
     "static/media/amilcar.mp4": "/static/media/amilcar.bb0c928042a0ef359b54.mp4",
     "static/media/about.png": "/static/media/about.e8313a6aab95c8fa9ae2.png",
     "static/media/cathedral.webp": "/static/media/cathedral.d3b71b3d19bc6a7fa668.webp",
@@ -103,11 +103,11 @@
     "static/media/child.webp": "/static/media/child.dcca62699658b8d9afc8.webp",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.6d6d6708.css.map": "/static/css/main.6d6d6708.css.map",
-    "main.c84adf48.js.map": "/static/js/main.c84adf48.js.map"
+    "main.b1c7dc50.css.map": "/static/css/main.b1c7dc50.css.map",
+    "main.c8c1cfaf.js.map": "/static/js/main.c8c1cfaf.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d6d6708.css",
-    "static/js/main.c84adf48.js"
+    "static/css/main.b1c7dc50.css",
+    "static/js/main.c8c1cfaf.js"
   ]
 }
