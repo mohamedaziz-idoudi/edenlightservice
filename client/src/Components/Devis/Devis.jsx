@@ -25,7 +25,7 @@ const Devis = () => {
     const [priceMax, setPriceMax] = useState();
     const handleSubmit = async (e) => {
         await e.preventDefault();
-        let logistics_sum = await Axios.get("http://localhost:3001/api/sum_logistics", {
+        let logistics_sum = await Axios.get("https://api.edenlightservice.com/api/sum_logistics", {
             params: {
                 car: car,
                 stars: stars,

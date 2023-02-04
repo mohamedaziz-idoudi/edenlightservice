@@ -25,7 +25,7 @@ const FormEs = () => {
     const [priceMin,setPriceMin] = useState();
     const [priceMax,setPriceMax] = useState();
     useEffect(() => {
-        Axios.get("http://localhost:3001/api/getops").then((data) => {
+        Axios.get("https://api.edenlightservice.com/api/getops").then((data) => {
             setOpList(data.data);
         })
     }, [])
@@ -38,14 +38,14 @@ const FormEs = () => {
     const handleSubmit = async (e) => {
         await e.preventDefault();
         
-        await Axios.get("http://localhost:3001/api/sum_ops", {
+        await Axios.get("https://api.edenlightservice.com/api/sum_ops", {
             params: {
                 operations: surgery
             }
         }).then(async (data) => {
             console.log(surgery);
             let priceOps = await data.data[0].sum;
-            let logistics_sum = await Axios.get("http://localhost:3001/api/sum_logistics", {
+            let logistics_sum = await Axios.get("https://api.edenlightservice.com/api/sum_logistics", {
                 params: {
                     car: car,
                     stars: stars,

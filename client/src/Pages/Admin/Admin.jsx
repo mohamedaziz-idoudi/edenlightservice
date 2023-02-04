@@ -9,7 +9,7 @@ const Admin = ({setAuth}) => {
   const [pwd,setPwd] = useState('');
   const navigate=useNavigate('');
   const sign_in = () => {
-    Axios.get("http://localhost:3001/api/login", { params: {
+    Axios.get("https://api.edenlightservice.com/api/login", { params: {
       user: user,
       pass: pwd
     }}).then((response) => {
