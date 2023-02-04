@@ -1,10 +1,13 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import { useTranslation } from 'react-i18next'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import './devis.css'
 const Devis = () => {
+    const navigate= useNavigate();
     const { t } = useTranslation()
     const form = useRef();
     const ref_name = useRef(null);
@@ -18,31 +21,28 @@ const Devis = () => {
     const [sahara, setSahara] = useState(false);
     const [beach, setBeach] = useState(false);
     const [contact, setContact] = useState('');
+    const [priceMin, setPriceMin] = useState();
+    const [priceMax, setPriceMax] = useState();
     const handleSubmit = async (e) => {
         await e.preventDefault();
-        let logistics_sum = await Axios.get("https://api.edenlightservice.com/api/sum_logistics", {
-                params: {
-                    car: car,
-                    stars: stars,
-                    stay: stay,
-                    sahara: sahara,
-                    beach: beach
-                }
-            })
-            let max = await logistics_sum.data.Maximum;
-            let min = await logistics_sum.data.Minimum;
-            document.getElementById("overall_price").innerHTML = `The price will be in between ${min}€ and ${max}€`;
-            emailjs.sendForm('service_2x0c7pl', 'template_2qqh9g8', form.current, 'cHbwkvU2RmxIvZGi-')
-                .then((result) => {
-                    console.log(result.text);
-                }, (error) => {
-                    console.log(error.text);
-                });
-
-            ref_name.current.value = null;
-            ref_email.current.value = null;
-            ref_phone.current.value = null;
-            ref_message.current.value = null;
+        let logistics_sum = await Axios.get("http://localhost:3001/api/sum_logistics", {
+            params: {
+                car: car,
+                stars: stars,
+                stay: stay,
+                sahara: sahara,
+                beach: beach
+            }
+        })
+        let max = await logistics_sum.data.Maximum;
+        let min = await logistics_sum.data.Minimum;
+        setPriceMin(min);
+        setPriceMax(max);
+        setShow(true);
+        ref_name.current.value = null;
+        ref_email.current.value = null;
+        ref_phone.current.value = null;
+        ref_message.current.value = null;
     }
     const [message, setMessage] = useState('');
     const [error, setError] = useState(null);
@@ -60,8 +60,28 @@ const Devis = () => {
 
         setMessage(event.target.value);
     };
+    const [show, setShow] = useState(false);
+    const handleClose = () => {
+        setShow(false);
+        navigate('/')
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
     return (
-        <div className="formbg">
+        <React.Fragment>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>{t('form.mod_header')}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>{t('form.mod_priceMin')}{priceMin}{t('form.mod_priceMax')}{priceMax}€.</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={handleClose}>
+                        {t('form.mod')}
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            <div className="formbg">
                 <div className='form__title'>
                     <h1>{t('form.devis')}</h1>
                     <p>{t('form.caption')} Contact@edenlightservice.com</p>
@@ -83,7 +103,7 @@ const Devis = () => {
                     </div>
                     <div className='eden__contact_line'>
                         <label className='eden__contact_item'>Sexe</label>
-                        <select ref={ref_message} name="user_message" id="gender" onChange={(e)=> {
+                        <select ref={ref_message} name="user_message" id="gender" onChange={(e) => {
                             setContact(e.target.value);
                         }}>
                             <option value="">{t('formes.g1')}</option>
@@ -165,9 +185,9 @@ const Devis = () => {
                         </select>
                     </div>
                     <input type="submit" value={t('form.button')} />
-                    <p id='overall_price'></p>
                 </form>
             </div >
+        </React.Fragment>
     )
 }
 

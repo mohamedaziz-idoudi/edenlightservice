@@ -27,33 +27,33 @@ const Dashboard = ({ setAuth }) => {
     formData.append("file", image);
     formData.append("upload_preset", "eden_upload_image");
 
-    Axios.post("https://api.cloudinary.com/v1_1/djrgpqres/image/upload", formData).then(async(response) => {
+    Axios.post("https://api.cloudinary.com/v1_1/djrgpqres/image/upload", formData).then(async (response) => {
       console.log(response);
       await e.preventDefault();
-    await e.stopPropagation();
-    setVblog(false);
-    setVafter(true);
-    axios.post("https://api.edenlightservice.com/api/post", { title: title, paragraph: text, image: response.data.secure_url, video: video });
+      await e.stopPropagation();
+      setVblog(false);
+      setVafter(true);
+      axios.post("http://localhost:3001/api/post", { title: title, paragraph: text, image: response.data.secure_url, video: video });
     })
   }
 
   const refreshCustomer = () => {
-    Axios.get("https://api.edenlightservice.com/api/get_cus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_cus").then((data) => {
       setCustomerList(data.data);
     })
   }
   const refreshBusiness = () => {
-    Axios.get("https://api.edenlightservice.com/api/get_bus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_bus").then((data) => {
       setBusinessList(data.data);
 
     })
   }
   useEffect((e) => {
     setAuth(true);
-    Axios.get("https://api.edenlightservice.com/api/get_cus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_cus").then((data) => {
       setCustomerList(data.data);
     });
-    Axios.get("https://api.edenlightservice.com/api/get_bus").then((data) => {
+    Axios.get("http://localhost:3001/api/get_bus").then((data) => {
       setBusinessList(data.data);
     })
     if (e && e.preventDefault()) { e.preventDefault() }
@@ -102,7 +102,7 @@ const Dashboard = ({ setAuth }) => {
           {view === 'customer' && (
             <>
               <div className='eden__dashboard-content_customer'>
-                <Table responsive="sm" striped bordered hover size="sm" maxHeight='300px'>
+                <Table responsive="sm" striped bordered hover size="sm" maxheight='300px'>
                   <thead>
                     <tr>
                       <th>ID</th>
@@ -117,10 +117,10 @@ const Dashboard = ({ setAuth }) => {
                       <th>Message</th>
                     </tr>
                   </thead>
-                  {
-                    Array.from(customerList).map((val, key) => {
-                      return (
-                        <tbody>
+                  <tbody>
+                    {
+                      Array.from(customerList).map((val, key) => {
+                        return (
                           <tr key={key}>
                             <td>{val.id}</td>
                             <td>{val.name}</td>
@@ -133,11 +133,11 @@ const Dashboard = ({ setAuth }) => {
                             <td>{val.nb_persons}</td>
                             <td>{val.message}</td>
                           </tr>
-                        </tbody>
+                        )
+                      }
                       )
                     }
-                    )
-                  }
+                  </tbody>
 
                 </Table>
 
@@ -150,7 +150,7 @@ const Dashboard = ({ setAuth }) => {
           {view === 'business' && (
             <>
               <div className='eden__dashboard-content_customer'>
-                <Table striped bordered hover size="sm" maxHeight='300px'>
+                <Table striped bordered hover size="sm" maxheight='300px'>
                   <thead>
                     <tr>
                       <th>ID</th>
@@ -164,10 +164,10 @@ const Dashboard = ({ setAuth }) => {
                       <th>Message</th>
                     </tr>
                   </thead>
+                  <tbody>
                   {
                     Array.from(businessList).map((val, key) => {
                       return (
-                        <tbody>
                           <tr key={key}>
                             <td>{val.id}</td>
                             <td>{val.personal_name}</td>
@@ -179,11 +179,11 @@ const Dashboard = ({ setAuth }) => {
                             <td>{val.business_desc}</td>
                             <td>{val.message}</td>
                           </tr>
-                        </tbody>
                       )
                     }
                     )
                   }
+                  </tbody>
 
                 </Table>
               </div>

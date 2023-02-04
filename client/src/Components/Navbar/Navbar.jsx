@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../assets/logo.png";
-import { useNavigate, useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./navbar.css";
 
@@ -61,8 +61,8 @@ const Navbar = () => {
         <div className="eden__navbar-links_logo">
           <img loading="lazy" src={logo} alt="logo" onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: "smooth" }) }} />
           <div className="">
-            <select class="form-select" aria-label="Default select example" onChange={OnChangeLanguage}>
-              <option selected value="en" className="eden__lang">English</option>
+            <select className="form-select" aria-label="Default select example" onChange={OnChangeLanguage} defaultValue="fr">
+              <option  value="en" className="eden__lang">English</option>
               <option value="fr" className="eden__lang">Français</option>
             </select>
           </div>

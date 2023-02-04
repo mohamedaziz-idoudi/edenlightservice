@@ -39,7 +39,7 @@ const Form = () => {
   let navigate = useNavigate();
 
   const submit_business = () => {
-    Axios.post("https://api.edenlightservice.com/api/insert_business", {
+    Axios.post("http://localhost:3001/api/insert_business", {
       name: name,
       email: email,
       phone: phone,
@@ -55,7 +55,7 @@ const Form = () => {
   }
 
   const submit_customer = () => {
-    Axios.post("https://api.edenlightservice.com/api/insert_customer", {
+    Axios.post("http://localhost:3001/api/insert_customer", {
       name: name,
       email: email,
       phone: phone,

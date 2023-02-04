@@ -40,7 +40,6 @@ app.get("/api/login", (req, res) => {
     const sql = "select * FROM users";
     const password = req.query.pass;
     db.query(sql, (err, response) => {
-        console.log(response[0].password);
         bcrypt.compare(password, response[0].password).then(function (result) {
             res.send(result);
         });
@@ -93,9 +92,7 @@ app.post("/api/insert_customer", (req, res) => {
     const nb_rooms = req.body.nb_rooms;
     const nb_persons = req.body.nb_persons;
     const sqlInsert = "INSERT INTO customer_messages (name,email,phone,type_lodging, nb_stars, resort, nb_rooms, nb_persons, message) VALUES (?,?,?,?,?,?,?,?,?)"
-    db.query(sqlInsert, [name, email, phone, lodgingType, nb_stars, resort, nb_rooms, nb_persons, message], (err, result) => {
-        console.log(result);
-    })
+    db.query(sqlInsert, [name, email, phone, lodgingType, nb_stars, resort, nb_rooms, nb_persons, message])
 })
 
 app.post("/api/insert_business", (req, res) => {
@@ -108,33 +105,10 @@ app.post("/api/insert_business", (req, res) => {
     const work = req.body.work;
     const message = req.body.message;
     const sqlInsert = "INSERT INTO business_messages (personal_name, personal_email, personal_phone, business_name, business_email, business_phone, business_desc, message) VALUES (?,?,?,?,?,?,?,?)";
-    db.query(sqlInsert, [name, email, phone, bname, bemail, bphone, work, message], (err, response) => {
-        console.log(response);
-    })
+    db.query(sqlInsert, [name, email, phone, bname, bemail, bphone, work, message])
 
 })
 
-const storage = multer.diskStorage({
-    destination: (req, file, callBack) => {
-        callBack(null, '../client/public/uploads')
-    },
-    filename: (req, file, callBack) => {
-        callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
-
-    }
-})
-
-const upload = multer({
-    storage: storage
-});
-
-
-//@type   POST
-//route for post data
-app.post("/api/upload", upload.single('file'), (req, res) => {
-    const file = req.file;
-    res.send(file.filename);
-});
 app.post("/api/post", (req, res) => {
     const title = req.body.title;
     const paragraph = req.body.paragraph;
@@ -142,7 +116,7 @@ app.post("/api/post", (req, res) => {
     const video = req.body.video;
     const q = "INSERT INTO blogs (title,paragraph,image,video,date) VALUES (?,?,?,?,now())";
     db.query(q, [title, paragraph, image, video], (err, response) => {
-        console.log(response);
+        
     })
 })
 app.get("/api/getposts", (req, res) => {
@@ -204,7 +178,6 @@ app.get("/api/sum_logistics", async (req, res) => {
         sum_max = result[0].sum_max;
         sum_all_min += sum_min;
         sum_all_max += sum_max;
-        console.log('logs');
         if (sahara == 'yes') {
             db.query("SELECT prix_min,prix_max FROM logistics WHERE object = 'Visite Sahara'", (err, result) => {
                 sahara_min = result[0].prix_min;

@@ -412,7 +412,11 @@
         "bemail": "Adresse Electronique de l'entreprise",
         "bph": "Téléphone",
         "desc": "Brève description du travail",
-        "ms": "Envoyez-nous un message"
+        "ms": "Envoyez-nous un message",
+        "mod": "Accueil",
+        "mod_header" : "Nous avons calculé le prix estimatif",
+        "mod_priceMin": "Le prix sera entre ",
+        "mod_priceMax": "€ et "
     },
     "formes": {
         "title": "Obtenez votre devis cosmétique gratuitement",
@@ -428,6 +432,7 @@
         "sahara": "Êtes-vous intéressé à visiter El Sahara",
         "yes": "Oui",
         "no": "Non",
-        "beach": "Êtes-vous intéressé à visiter les loisirs de plage"
+        "beach": "Êtes-vous intéressé à visiter les loisirs de plage",
+        "mod": "Section Esthétique"
     }
 }

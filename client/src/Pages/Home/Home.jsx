@@ -19,7 +19,7 @@ const Home = () => {
   let [blog, setBlog] = useState({});
   const {t} = useTranslation();
   useEffect(() => {
-    Axios.get("https://api.edenlightservice.com/api/getblogs").then((data) => {
+    Axios.get("http://localhost:3001/api/getblogs").then((data) => {
       setBlog(data.data[0]);
       console.log(data.data[0]);
     })

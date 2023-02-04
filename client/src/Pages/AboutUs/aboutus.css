@@ -3,8 +3,8 @@
     height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: start;
+    justify-content: flex-end;
+    align-items: flex-start;
     background-image: url(../../assets/about.png);
     background-size: cover;
     background-attachment: fixed;

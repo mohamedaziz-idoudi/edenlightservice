@@ -1,6 +1,6 @@
 import React from "react";
 import "./services.css";
-import { Fields, Procedure } from "../../Components";
+import { Procedure } from "../../Components";
 import { useTranslation } from "react-i18next";
 const Services = () => {
   const {t} = useTranslation();
@@ -8,11 +8,11 @@ const Services = () => {
     <React.Fragment>
       <div className="services__container section__padding">
         <article className="accordio-panel grey">
-          <input id="accordion-question1" name="accordion" type="radio" checked />
-          <label for="accordion-question1" >
+          <input id="accordion-question1" name="accordion" type="radio" defaultChecked />
+          <label htmlFor="accordion-question1" >
             Pre-Tunisia Services
-            <i class="ri-add-line open"></i>
-            <i class="ri-subtract-line close"></i>
+            <i className="ri-add-line open"></i>
+            <i className="ri-subtract-line close"></i>
           </label>
           <div className="accordion-body">
             <ul className="accordion-answer">
@@ -24,11 +24,11 @@ const Services = () => {
           </div>
         </article>
         <article className="accordio-panel dgrey">
-          <input id="accordion-question2" name="accordion" type="radio" checked />
-          <label for="accordion-question2" >
+          <input id="accordion-question2" name="accordion" type="radio" />
+          <label htmlFor="accordion-question2" >
             In-Tunisia Services
-            <i class="ri-add-line open"></i>
-            <i class="ri-subtract-line close"></i>
+            <i className="ri-add-line open"></i>
+            <i className="ri-subtract-line close"></i>
           </label>
           <div className="accordion-body">
             <ul className="accordion-answer">
@@ -41,11 +41,11 @@ const Services = () => {
           </div>
         </article>
         <article className="accordio-panel bgreen">
-          <input id="accordion-question3" name="accordion" type="radio" checked />
-          <label for="accordion-question3" >
+          <input id="accordion-question3" name="accordion" type="radio" />
+          <label htmlFor="accordion-question3" >
             Post-Tunisia Services
-            <i class="ri-add-line open"></i>
-            <i class="ri-subtract-line close"></i>
+            <i className="ri-add-line open"></i>
+            <i className="ri-subtract-line close"></i>
           </label>
           <div className="accordion-body">
             <ul className="accordion-answer">

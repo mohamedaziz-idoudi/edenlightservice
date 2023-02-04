@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import emailjs from '@emailjs/browser';
 import { Link, useNavigate } from 'react-router-dom';
 import Axios from 'axios';
@@ -6,19 +8,12 @@ import './form.css'
 import { t } from 'i18next';
 const FormEs = () => {
     const navigate = useNavigate();
-    const [listeEsth, setListeEsth] = useState([{}]);
-    const [listeLog, setListeLog] = useState([{}]);
     const form = useRef();
     const ref_name = useRef(null);
     const ref_email = useRef(null);
     const ref_phone = useRef(null);
     const ref_message = useRef(null);
-    const [type, setType] = useState('');
-    const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
-    const [email, setEmail] = useState('');
     const [contact, setContact] = useState('');
-    const [pension, setPension] = useState('');
     const [stars, setStars] = useState('');
     const [lodgingType, setLodgingType] = useState('');
     const [surgery, setSurgery] = useState([]);
@@ -27,20 +22,30 @@ const FormEs = () => {
     const [car, setCar] = useState('');
     const [sahara, setSahara] = useState(false);
     const [beach, setBeach] = useState(false);
+    const [priceMin,setPriceMin] = useState();
+    const [priceMax,setPriceMax] = useState();
     useEffect(() => {
-        Axios.get("https://api.edenlightservice.com/api/getops").then((data) => {
+        Axios.get("http://localhost:3001/api/getops").then((data) => {
             setOpList(data.data);
         })
     }, [])
+    const [show, setShow] = useState(false);
+    const handleClose = () => {
+        setShow(false);
+        navigate('/esth')
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
     const handleSubmit = async (e) => {
         await e.preventDefault();
-        await Axios.get("https://api.edenlightservice.com/api/sum_ops", {
+        
+        await Axios.get("http://localhost:3001/api/sum_ops", {
             params: {
                 operations: surgery
             }
         }).then(async (data) => {
+            console.log(surgery);
             let priceOps = await data.data[0].sum;
-            let logistics_sum = await Axios.get("https://api.edenlightservice.com/api/sum_logistics", {
+            let logistics_sum = await Axios.get("http://localhost:3001/api/sum_logistics", {
                 params: {
                     car: car,
                     stars: stars,
@@ -53,42 +58,22 @@ const FormEs = () => {
             let min = await logistics_sum.data.Minimum;
             max = await max + priceOps;
             min = await min + priceOps;
-            document.getElementById("overall_price").innerHTML = `The price will be in between ${min}€ and ${max}€`;
-            
-
+            setPriceMin(min);
+            setPriceMax(max);
+            setShow(true);
             emailjs.sendForm('service_2x0c7pl', 'template_r9fhtog', form.current, 'cHbwkvU2RmxIvZGi-')
                 .then((result) => {
                     console.log(result.text);
                 }, (error) => {
                     console.log(error.text);
                 });
-
             ref_name.current.value = null;
             ref_email.current.value = null;
             ref_phone.current.value = null;
             ref_message.current.value = null;
         })
     }
-    const handleSelection = (e) => {
-        setSurgery({ val: e.target.value });
-    }
-    const sendEmail = (e) => {
-
-        e.preventDefault();
-
-        emailjs.sendForm('service_m7wfjkm', 'template_gt9up8s', form.current, 'X5Y0NG0RZyPxtjPPT')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-
-        ref_name.current.value = null;
-        ref_email.current.value = null;
-        ref_phone.current.value = null;
-        ref_message.current.value = null;
-        document.getElementById("notification").innerHTML = "Message sent successfully!";
-    };
+    
     const [message, setMessage] = useState('');
     const [error, setError] = useState(null);
 
@@ -107,6 +92,19 @@ const FormEs = () => {
     };
     return (
         <React.Fragment>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>{t('form.mod_header')}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>{t('form.mod_priceMin')}{priceMin}{t('form.mod_priceMax')}{priceMax}€.</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={handleClose}>
+                        {t('formes.mod')}
+                    </Button>
+                </Modal.Footer>
+            </Modal>
             <div className="formbg">
                 <div className='form__title'>
                     <h1>{t('formes.title')}</h1>
@@ -156,7 +154,6 @@ const FormEs = () => {
                                                     value={key + 1}
                                                     onChange={(e) => {
                                                         surgery.push(+e.target.value);
-                                                        console.log(surgery);
 
                                                     }}
                                                 />
@@ -242,7 +239,6 @@ const FormEs = () => {
                         </select>
                     </div>
                     <input type="submit" value={t('form.button')} />
-                    <p id='overall_price'></p>
                 </form>
             </div >
         </React.Fragment >
