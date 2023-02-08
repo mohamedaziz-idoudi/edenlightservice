@@ -1,11 +1,11 @@
 {
     "home" : {
         "header" : {
-            "country": "La Tunisie",
-            "title": "Capitale des Soins Médicaux en Afrique",
-            "subtitle": "En savoir plus sur les dernières inventions et les réussites des médecins tunisiens",
-            "button": "En Savoir Plus",
-            "devis_title": "Obtenez votre devis gratuitement et faites-vous une idée sur nos tarifs",
+            "country": "EDEN Light Service",
+            "title": "We take care of planning your stay!",
+            "subtitle": "EDEN Light Service vous assure un séjour inoubliable pendant la phase du traitement",
+            "button": "Consultez nos partenaires",
+            "devis_title": "Obtenez votre devis instantanément et faites-vous une idée sur nos tarifs",
             "click": "Cliquez ici"
         },
         "latest" : {
@@ -248,7 +248,7 @@
             "touch": "Prenez contact avec nous",
             "contact": "Envoyez-nous un message",
             "prices": "Se faire une idée sur les tarifs",
-            "devis": "Obtenez votre devis gratuitement",
+            "devis": "Obtenez votre devis instantanné",
             "stay": "Passez un excellent séjour pendant la période de traitement",
             "reserve": "Réservez votre séjour",
             "after": "Quand il s'agit de traitement. EDEN Light Service continue de suivre ses patients une fois que c'est fait."

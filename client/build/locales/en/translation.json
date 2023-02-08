@@ -1,11 +1,11 @@
 {
     "home": {
         "header": {
-            "country": "Tunisia",
+            "country": "EDEN Light Service",
             "title": "Capital of Medical Healthcare in Africa",
-            "subtitle": "Learn about Tunisian Doctors' latest inventions & success stories",
-            "button": "Learn More",
-            "devis_title": "Obtain your quote for free and have an idea on our prices",
+            "subtitle": "EDEN Light Service ensures you an unforgettable stay during the treatment phase",
+            "button": "Consult our partners",
+            "devis_title": "Obtain your quote instantly and have an idea on our prices",
             "click": "Click Here"
         },
         "latest": {
@@ -243,7 +243,7 @@
             "touch": "Get in touch with us",
             "contact": "Send us a message",
             "prices": "Get an idea on the prices",
-            "devis": "Get your Quote for free",
+            "devis": "Get your instant Quote",
             "stay": "Have a great stay during the treatment period",
             "reserve": "Reserve your stay",
             "after": "When it comes to treatment. EDEN Light Service keeps on monitoring its patients once it's done."
