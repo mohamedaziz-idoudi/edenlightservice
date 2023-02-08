@@ -1,10 +1,12 @@
 .eden__header_container {
   box-sizing: border-box;
-  justify-content: flex-start;
-  align-items: flex-start;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
+  text-align: center;
 }
 .Titles {
   width: 100%;

@@ -11,7 +11,7 @@ const Blogs = () => {
     axios.get("https://api.edenlightservice.com/api/getposts").then((data) => {
       setPostList(data.data);
     })
-  },[postList])
+  },[])
   return (
     <div className='blogs__container'>
       <div className="blogs__container-header">

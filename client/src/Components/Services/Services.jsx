@@ -55,9 +55,6 @@ const Services = () => {
           </div>
         </article>
       </div>
-      <div className="services__procedure">
-        <Procedure />
-      </div>
     </React.Fragment>
   );
 };

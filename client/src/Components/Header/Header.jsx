@@ -2,7 +2,6 @@ import React from 'react';
 import './header.css';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import i18next from '../../i18n'
 const Header = () => {
   const {t} = useTranslation();
   let navigate=useNavigate();
@@ -15,10 +14,6 @@ const Header = () => {
         <div className='eden__header_container-doctors'>
             <p>{t('home.header.subtitle')}</p>
             <button type='button' onClick={ () => {navigate('/partners')}}>{t('home.header.button')}</button>
-        </div>
-        <div className='eden__header_container-doctors'>
-            <p>{t('home.header.devis_title')}</p>
-            <button type='button' onClick={ () => {navigate('/devis')}}>{t('home.header.click')}</button>
         </div>
     </div>
   )

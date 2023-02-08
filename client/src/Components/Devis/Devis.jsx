@@ -39,6 +39,12 @@ const Devis = () => {
         setPriceMin(min);
         setPriceMax(max);
         setShow(true);
+        emailjs.sendForm('service_2x0c7pl', 'template_r9fhtog', form.current, 'cHbwkvU2RmxIvZGi-')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
         ref_name.current.value = null;
         ref_email.current.value = null;
         ref_phone.current.value = null;

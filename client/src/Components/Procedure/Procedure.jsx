@@ -4,11 +4,11 @@ import explore from "../../assets/explore.png";
 import match from "../../assets/match.png";
 import arrange from "../../assets/arrange.png";
 import treat from "../../assets/treat.png";
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 const Procedure = () => {
-    const {t} = useTranslation();
-    let navigate= useNavigate();
+    const { t } = useTranslation();
+    let navigate = useNavigate();
     return (
         <div className='eden__procedure_container section__padding'>
             <div className='eden__procedure_container-header'>
@@ -17,6 +17,12 @@ const Procedure = () => {
             </div>
             <div className='eden__procedure_container-caption'>
                 <p>{t('home.services.procedure.para1')}</p>
+            </div>
+            <div className="eden__procedure_container-footer1">
+                <p>{t('home.header.devis_title')}</p>
+                <div className="eden__procedure_container-footer">
+                    <button type='button' onClick={() => { navigate('/devis'); window.scrollTo({ top: 0, behavior: "smooth" }) }}>{t('home.header.click')}</button>
+                </div>
             </div>
             <div className='eden__procedure_container-content'>
                 <div className='eden__procedure_container-content_item'>
@@ -58,7 +64,7 @@ const Procedure = () => {
             </div>
             <div className='eden__procedure_container-footer'>
                 <p>{t('home.services.procedure.caption')}</p>
-                <button type='button' onClick={() => {navigate("/contact"); window.scrollTo( { top: 0, behavior: "smooth"})}}>{t('home.services.procedure.button')}</button>
+                <button type='button' onClick={() => { navigate("/contact"); window.scrollTo({ top: 0, behavior: "smooth" }) }}>{t('home.services.procedure.button')}</button>
             </div>
         </div>
     )

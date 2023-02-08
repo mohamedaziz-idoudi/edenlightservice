@@ -7,6 +7,7 @@ import {
   Home_part_med,
   Services,
   Footer,
+  Procedure,
   Header,
   Stories,
 } from "../../Components";
@@ -29,20 +30,8 @@ const Home = () => {
       <div className="actualites">
         <Header />
       </div>
-      <div className="eden__latest-blog section__margin">
-        <div className="eden__latest-blog_title">
-          <h2 className="gradient__text">{blog?.title}</h2>
-          <h5>{new Date(blog?.date).toDateString()}</h5>
-        </div>
-        <div className="eden__latest-blog_content">
-          <p dangerouslySetInnerHTML={{ __html:  blog.paragraph?.substring(0, 400) + "..."  }} />
-          <div className="form__button">
-            <button onClick={() => {
-              navigate(`/post/${blog?.id}`);
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}>{t('home.latest.button')}</button>
-          </div>
-        </div>
+      <div className="services__procedure">
+        <Procedure />
       </div>
       <div className="eden__mission">
         <Mission />
@@ -68,7 +57,21 @@ const Home = () => {
       <div className="eden__services" id="services">
         <Services />
       </div>
-      
+      <div className="eden__latest-blog section__margin">
+        <div className="eden__latest-blog_title">
+          <h2 className="gradient__text">{blog?.title}</h2>
+          <h5>{new Date(blog?.date).toDateString()}</h5>
+        </div>
+        <div className="eden__latest-blog_content">
+          <p dangerouslySetInnerHTML={{ __html:  blog.paragraph?.substring(0, 400) + "..."  }} />
+          <div className="form__button">
+            <button onClick={() => {
+              navigate(`/post/${blog?.id}`);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}>{t('home.latest.button')}</button>
+          </div>
+        </div>
+      </div>
       {/*
       <div className="eden__footer">
         <Footer />

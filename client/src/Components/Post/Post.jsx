@@ -17,7 +17,7 @@ const Post = () => {
         Axios.get("https://api.edenlightservice.com/api/getblogs").then((result) => {
             setPostList(result.data);
         })
-    })
+    },[])
     return (
         <div className='single'>
             <div className='single__content section__padding'>

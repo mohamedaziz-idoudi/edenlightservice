@@ -407,7 +407,11 @@
         "bemail": "Business Email",
         "bph": "Business Phone Number",
         "desc": "Brief Description of the work",
-        "ms": "Send us a message"
+        "ms": "Send us a message",
+        "mod": "Home Page",
+        "mod_header" : "We have calculated the estimated price",
+        "mod_priceMin": "The price will be in between ",
+        "mod_priceMax": "€ and "
         
     },
     "formes": {
@@ -424,6 +428,7 @@
         "sahara": "Are you interested in visiting El Sahara",
         "yes": "Yes",
         "no": "No",
-        "beach": "Are you interested in visiting Beach Leisures"
+        "beach": "Are you interested in visiting Beach Leisures",
+        "mod": "Cosmetics Section"
     }
 }
