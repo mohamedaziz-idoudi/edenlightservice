@@ -22,7 +22,9 @@ const Dashboard = ({ setAuth }) => {
   const [video, setVideo] = useState("");
   const [vAfter, setVafter] = useState(false);
   const [image, setImage] = useState();
+  const [loading, setLoading] = useState(false);
   const uploadImage = (e) => {
+    setLoading(true);
     const formData = new FormData();
     formData.append("file", image);
     formData.append("upload_preset", "eden_upload_image");
@@ -33,7 +35,9 @@ const Dashboard = ({ setAuth }) => {
       await e.stopPropagation();
       setVblog(false);
       setVafter(true);
+      setLoading(false);
       axios.post("https://api.edenlightservice.com/api/post", { title: title, paragraph: text, image: response.data.secure_url, video: video });
+      setLoading(false);
     })
   }
 
@@ -79,6 +83,7 @@ const Dashboard = ({ setAuth }) => {
               setVblog(true);
               setVmessage(false);
               setVafter(false);
+              setLoading(false);
             }}>
               <FaIcons.FaBloggerB />
               <h5>Create a blog</h5>
@@ -165,9 +170,9 @@ const Dashboard = ({ setAuth }) => {
                     </tr>
                   </thead>
                   <tbody>
-                  {
-                    Array.from(businessList).map((val, key) => {
-                      return (
+                    {
+                      Array.from(businessList).map((val, key) => {
+                        return (
                           <tr key={key}>
                             <td>{val.id}</td>
                             <td>{val.personal_name}</td>
@@ -179,10 +184,10 @@ const Dashboard = ({ setAuth }) => {
                             <td>{val.business_desc}</td>
                             <td>{val.message}</td>
                           </tr>
+                        )
+                      }
                       )
                     }
-                    )
-                  }
                   </tbody>
 
                 </Table>
@@ -197,7 +202,7 @@ const Dashboard = ({ setAuth }) => {
       {vblog && (
         <div className="eden__dashboard-content">
           <label>Insert an image</label>
-          <input type="file" name='file' onChange={(e) => {
+          <input type="file" name='file' disabled={loading} onChange={(e) => {
             setImage(e.target.files[0]);
           }} />
           <label >Insert link to your video (Optional)</label>
@@ -210,6 +215,11 @@ const Dashboard = ({ setAuth }) => {
           }} />
           <label>BLOG: </label>
           <ReactQuill theme="snow" value={text} onChange={setText} className='blog_area' />
+          {loading && (
+            <div className="loading-animation">
+              Loading...
+            </div>
+          )}
           <div className='form__button'>
             <button onClick={uploadImage}>Submit</button>
           </div>

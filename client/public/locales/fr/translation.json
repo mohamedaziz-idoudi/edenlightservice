@@ -239,7 +239,7 @@
     "esth": {
         "header": {
             "title": "Chirurgie Esthétique en Tunisie",
-            "caption": "Consultez les informations relatives aux services cosmétiques que nous assurons"
+            "caption": "Consultez les informations relatives aux services esthétiques que nous assurons"
         },
         "procedure": {
             "quote": "Se faire opérer est un acte d'amour envers soi-même",
@@ -434,5 +434,8 @@
         "no": "Non",
         "beach": "Êtes-vous intéressé à visiter les loisirs de plage",
         "mod": "Section Esthétique"
+    },
+    "footer" : {
+        "rights": "Tous droits réservés : EDEN Light Service"
     }
 }

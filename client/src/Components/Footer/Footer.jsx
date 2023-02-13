@@ -1,8 +1,10 @@
 import React from 'react';
 import * as AiIcons from 'react-icons/ai'
 import * as GoIcons from 'react-icons/go'
+import {useTranslation} from 'react-i18next'
 import './footer.css';
 const Footer = () => {
+  const {t} = useTranslation();
   return (
     <div className='footer__container section__padding'>
       <footer>
@@ -30,7 +32,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/edenlight216/?hl=fr" target="_blank" rel="noreferrer"><i className="icon ion-social-instagram"></i></a>
               <p className="copyright">
                 <a href="https://www.facebook.com/profile.php?id=100085406739373" target="_blank" rel="noreferrer">
-                  © Created by MAW Digital - 2022
+                  © Created by ONCA Solution - 2022 || {t('footer.rights')}
                 </a>
               </p>
             </div>

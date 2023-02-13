@@ -430,5 +430,8 @@
         "no": "No",
         "beach": "Are you interested in visiting Beach Leisures",
         "mod": "Cosmetics Section"
+    },
+    "footer" : {
+        "rights" : "All Rights Reserved: EDEN Light Service"
     }
 }
